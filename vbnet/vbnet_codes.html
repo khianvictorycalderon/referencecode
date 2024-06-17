@@ -1,0 +1,784 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="vbnet_codes_style.css">
+        <title>VBNet Codes (Archived)</title>
+    </head>
+    <body class="flex-c">
+        <span class="t2"><b>4 basic operations</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc1">' code by khian victory d calderon
+        </span><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">mcjvgnchunvcdjisvsd_Galing_Magturo_ni_Sir___Plus_Points_hehehe</span><span class="sc0">
+            </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">input_1</span><span class="sc0"> </span><span class="sc3">As</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0">
+            </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">input_2</span><span class="sc0"> </span><span class="sc3">As</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0">
+            </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">sum</span><span class="sc0"> </span><span class="sc3">As</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0"> </span><span class="sc1">' sum of 2 input
+        </span><span class="sc0">    </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">dif</span><span class="sc0"> </span><span class="sc3">As</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0"> </span><span class="sc1">' difference of 2 input
+        </span><span class="sc0">    </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">pro</span><span class="sc0"> </span><span class="sc3">As</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0"> </span><span class="sc1">' product of 2 input
+        </span><span class="sc0">    </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">quo</span><span class="sc0"> </span><span class="sc3">As</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0"> </span><span class="sc1">' quotient of 2 input
+        </span><span class="sc0">    </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">' Serves as a placeholder
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your first input is : "</span><span class="sc6">)</span><span class="sc0">
+                </span><span class="sc7">input_1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Convert.ToInt64</span><span class="sc6">(</span><span class="sc7">Console.ReadLine</span><span class="sc6">())</span><span class="sc0">
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your last input is : "</span><span class="sc6">)</span><span class="sc0">
+                </span><span class="sc7">input_2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Convert.ToInt64</span><span class="sc6">(</span><span class="sc7">Console.ReadLine</span><span class="sc6">())</span><span class="sc0">
+                </span><span class="sc7">sum</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">input_1</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc7">input_2</span><span class="sc0">
+                </span><span class="sc7">dif</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">input_1</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc7">input_2</span><span class="sc0">
+                </span><span class="sc7">pro</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">input_1</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">input_2</span><span class="sc0">
+                </span><span class="sc7">quo</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">input_1</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc7">input_2</span><span class="sc0">
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"First input + last input is : {0}"</span><span class="sc6">,</span><span class="sc7">sum</span><span class="sc6">)</span><span class="sc0">
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"First input - last input is : {0}"</span><span class="sc6">,</span><span class="sc7">dif</span><span class="sc6">)</span><span class="sc0">
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"First input * last input is : {0}"</span><span class="sc6">,</span><span class="sc7">pro</span><span class="sc6">)</span><span class="sc0">
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"First input / last input is : {0}"</span><span class="sc6">,</span><span class="sc7">quo</span><span class="sc6">)</span><span class="sc0">
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Submitted by : Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"11 - Demeter"</span><span class="sc6">)</span><span class="sc0">
+                </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc1">' Prevents Console from closing
+        </span><span class="sc0">    </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Bigger number detector</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBNet</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">num1</span><span class="sc6">,</span><span class="sc7">num2</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0">
+         </span><span class="sc7">num1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">num2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">num1</span><span class="sc0"> </span><span class="sc6">&gt;</span><span class="sc0"> </span><span class="sc7">num2</span><span class="sc0">
+         </span><span class="sc7">Console.writeline</span><span class="sc6">(</span><span class="sc4">"{0} is bigger than {1}"</span><span class="sc6">,</span><span class="sc7">num1</span><span class="sc6">,</span><span class="sc7">num2</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">num2</span><span class="sc0"> </span><span class="sc6">&gt;</span><span class="sc0"> </span><span class="sc7">num1</span><span class="sc0">
+         </span><span class="sc7">Console.writeline</span><span class="sc6">(</span><span class="sc4">"{0} is bigger than {1}"</span><span class="sc6">,</span><span class="sc7">num2</span><span class="sc6">,</span><span class="sc7">num1</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">num1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">num2</span><span class="sc0">
+         </span><span class="sc7">Console.writeline</span><span class="sc6">(</span><span class="sc4">"{0} and {1} are the same"</span><span class="sc6">,</span><span class="sc7">num2</span><span class="sc6">,</span><span class="sc7">num1</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+         </span><span class="sc7">Console.writeline</span><span class="sc6">(</span><span class="sc4">"Bigger number Determinor"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Celsius temperature converter</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">Task2NetTechnologyKhianVictoryDCalderon</span><span class="sc0"> </span><span class="sc1">'name of module
+        </span><span class="sc0">    </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'main block of the program
+        </span><span class="sc0">        </span><span class="sc7">Console.Clear</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'clears the console
+        </span><span class="sc0">        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">cS</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">String</span><span class="sc0"> </span><span class="sc1">'declares cS variable as String , stands for celsius String to be converted to double
+        </span><span class="sc0">        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">c</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Double</span><span class="sc0"> </span><span class="sc1">'declares c as Double , celsius must be double , does not need to be exact
+        </span><span class="sc0">        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">f</span><span class="sc6">,</span><span class="sc7">k</span><span class="sc6">,</span><span class="sc7">r</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0"> </span><span class="sc1">'declares f,k,r variable as decimal speed matters here which is decimal
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Temperature Converter"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'displays a message
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Enter celsius/centigrade input"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'displays a message
+        </span><span class="sc0">        </span><span class="sc7">loop1</span><span class="sc0"> </span><span class="sc6">:</span><span class="sc0"> </span><span class="sc1">'loop to go if the input is not a number
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">        </span><span class="sc7">cS</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'get input from user and assign it to cS
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">        </span><span class="sc3">If</span><span class="sc0"> </span><span class="sc7">IsNumeric</span><span class="sc6">(</span><span class="sc7">cS</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc3">Then</span><span class="sc0"> </span><span class="sc1">'this determines if the input is a number 
+        </span><span class="sc0">            </span><span class="sc7">c</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc3">CDbl</span><span class="sc6">(</span><span class="sc7">Val</span><span class="sc6">(</span><span class="sc7">cS</span><span class="sc6">))</span><span class="sc0"> </span><span class="sc1">'Converts string to double
+        </span><span class="sc0">            </span><span class="sc7">f</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">c</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">1.8</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc2">32</span><span class="sc0"> </span><span class="sc1">'fahrenheit formula
+        </span><span class="sc0">            </span><span class="sc7">k</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">c</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc2">273.15</span><span class="sc0"> </span><span class="sc1">'kelvin formula
+        </span><span class="sc0">            </span><span class="sc7">r</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">c</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">9</span><span class="sc6">/</span><span class="sc2">5</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc2">491.67</span><span class="sc0"> </span><span class="sc1">'rankine formula
+        </span><span class="sc0">            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Centigrade : {0}"</span><span class="sc6">,</span><span class="sc7">c</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'displays centigrade
+        </span><span class="sc0">            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Fahrenheit : {0}"</span><span class="sc6">,</span><span class="sc7">f</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'displays fahrenheit
+        </span><span class="sc0">            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Kelvin : {0}"</span><span class="sc6">,</span><span class="sc7">k</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'displays kelvin
+        </span><span class="sc0">            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Rankine : {0}"</span><span class="sc6">,</span><span class="sc7">r</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'displays rankine
+        </span><span class="sc0">            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'prints my name
+        </span><span class="sc0">            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Grade 11 - Demeter"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'prints my grade and section
+        </span><span class="sc0">         </span><span class="sc3">Else</span><span class="sc0"> </span><span class="sc1">'what to do if input is not a number
+        </span><span class="sc0">            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Invalid input, Numbers only!"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'displays a message
+        </span><span class="sc0">            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Enter celsius/centigrade input again!"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'displays a message
+        </span><span class="sc0">            </span><span class="sc3">goto</span><span class="sc0"> </span><span class="sc7">loop1</span><span class="sc0"> </span><span class="sc1">'will loop if the input is not a number so no loophole
+        </span><span class="sc0">        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">If</span><span class="sc0"> </span><span class="sc1">'encloses the if statement
+        </span><span class="sc0">    </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc1">'encloses the sub main()
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span><span class="sc0"> </span><span class="sc1">'encloses the module
+        </span></div>
+
+        <hr>
+        <span class="t2"><b>Chatbot system</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">ChatBotSystem_by_KhianVictoryDCalderon</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc1">'------------------------------------------
+       </span><span class="sc0">  </span><span class="sc7">Console.clear</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Chat Bot System"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"By Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Grade 11 ICT Demeter"</span><span class="sc6">)</span><span class="sc0">
+         
+         </span><span class="sc1">'-----variables--------
+       </span><span class="sc0">  </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">input</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">string</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">string</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">con</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0"> </span><span class="sc1">'0 for false, 1 for true, short for condition
+       </span><span class="sc0">  </span><span class="sc7">con</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">1</span><span class="sc0">
+         </span><span class="sc1">'----executions and actions-----------
+       </span><span class="sc0">  </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"I type ang salitang exit para matapos ang program"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Ano ang iyong tanong?"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">While</span><span class="sc0"> </span><span class="sc7">con</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">1</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">input</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Lcase</span><span class="sc6">(</span><span class="sc7">Console.ReadLine</span><span class="sc6">())</span><span class="sc0">
+          </span><span class="sc3">Select</span><span class="sc0"> </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc7">input</span><span class="sc0">
+           </span><span class="sc1">' all possible tagalog questions that this program can answer
+       </span><span class="sc0">    </span><span class="sc1">'special values
+       </span><span class="sc0">    </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"exit"</span><span class="sc0">
+            </span><span class="sc7">con</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">0</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Salamat!"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">""</span><span class="sc6">,</span><span class="sc4">" "</span><span class="sc6">,</span><span class="sc4">"  "</span><span class="sc6">,</span><span class="sc4">"   "</span><span class="sc6">,</span><span class="sc4">"    "</span><span class="sc6">,</span><span class="sc4">"     "</span><span class="sc6">,</span><span class="sc4">"      "</span><span class="sc0"> </span><span class="sc1">'for empty spaces loopholes
+       </span><span class="sc0">     </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Wala ka namang tanong eh, magtanong ka ulit!"</span><span class="sc0">
+           
+           </span><span class="sc1">'general questions
+       </span><span class="sc0">    </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"ilang taon ka na?"</span><span class="sc6">,</span><span class="sc4">"gaano ka katanda?"</span><span class="sc6">,</span><span class="sc4">"anong edad mo?"</span><span class="sc6">,</span><span class="sc4">"anong edad mo na?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Wala akong gulang dahil ako ay computer program"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"taga saan ka?"</span><span class="sc6">,</span><span class="sc4">"saan ka nakatira?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Ako ay nakatira sa loob ng compiler"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"sino ka?"</span><span class="sc6">,</span><span class="sc4">"sino ka ba?"</span><span class="sc6">,</span><span class="sc4">"sino ka ba talaga?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Ako si chat bot na ginawa ni khian calderon :)"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"kamusta ka?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Ayos lang naman, dahil wala akong nararamdaman, manhid ako"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"ano na?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Wala, gawa gawa lang"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"ano maitutulong ko sa iyo?"</span><span class="sc6">,</span><span class="sc4">"anong maitutulong ko sayo?"</span><span class="sc6">,</span><span class="sc4">"anong maitutulong ko sa iyo?"</span><span class="sc6">,</span><span class="sc4">"ano maitutulong ko sayo?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Ang bait mo naman, ako dapat nagtatanong niyan sa iyo"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"may pamilya ka ba?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Wala dahil ako ay isang computer program"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"may alam ka ba?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Depende sa nagtatanong :)"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"mahal mo ba ako?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Hindi, dahil hindi ako marunong magmahal"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"ano itatanong ko?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Kahit ano na mayroon sa database ng program na ito"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"anong height mo?"</span><span class="sc6">,</span><span class="sc4">"ano height mo?"</span><span class="sc6">,</span><span class="sc4">"gaano ka katangkad?"</span><span class="sc6">,</span><span class="sc4">"gaano ka kataas?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Wala akong height dahil ako ay computer program"</span><span class="sc0">  
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"kilala mo ba ako?"</span><span class="sc6">,</span><span class="sc4">"kilala mo ako?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Hindi kita kilala, dahil hindi naman ako nakakakilala"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"nasaan ka ngayon?"</span><span class="sc6">,</span><span class="sc4">"nasan ka ngayon?"</span><span class="sc6">,</span><span class="sc4">"nasan ka?"</span><span class="sc6">,</span><span class="sc4">"nasaan ka?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Nasa puso mo, Ayiee! joke lang, nasa loob ako ng compiler ngayon"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"sino ako?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Ikaw ay isang tao nagbabasa ng code o output na ito"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"ano ang ginagawa ko ngayon?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Sikretong malupit, pwedeng pabulong HAHAHHA :)"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"gaano ka kabigat?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Siguro mga nasa 1 to the quintillion gram na negative exponent, dahil ako ay isang electron"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"bakit iniwan niya ako?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Hindi ko na problema yan, bakit di siya ang tanungin mo"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"nasaan ako ngayon?"</span><span class="sc6">,</span><span class="sc4">"nasan ako ngayon?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Nagbabasa ng output at source code :)"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"gusto mo ba ang tao?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Pag mabait Oo, pag hindi, 7x+20y=0"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"anong hilig mong gawin?"</span><span class="sc6">,</span><span class="sc4">"ano hilig mong gawin?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Mahilig ako mag... wala akong hilig eh"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"ano ka?"</span><span class="sc6">,</span><span class="sc4">"ano ka ba?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Ako ay isang Chat Bot na ginawa ni Khian Calderon"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"sinong gusto mo?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Parehas, ayaw ko sa kanila :("</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"bakit?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Anong bakit? pakikumpleto ng tanong"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"bakit iniwan niya ako?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Dahil wala kang kasama ngayon"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"ano ang vb net?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"isang programming language na ginamit sa paggawa nito"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"sino ang guro ni khian?"</span><span class="sc6">,</span><span class="sc4">"sino ang teacher ni khian?"</span><span class="sc6">,</span><span class="sc4">"sinong teacher ni khian?"</span><span class="sc6">,</span><span class="sc4">"sinong guro ni khian?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Si sir raymond rabano na magaling magturo, ehem plus points HAHAHAHA, joke lang hehehe :)."</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"sino?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Ano? pakikumpleto ng tanong"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"sino kausap mo?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Ikaw ang kausap ko"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"kelan?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Kelan ano? Pakikumpleto ng tanong"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"kelan siya babalik?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Babalik siya sa tamang panahon or hindi na siya babalik"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"bakit ba?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Secret..."</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"paano?"</span><span class="sc6">,</span><span class="sc4">"pano?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Paanong ano? Paano na kayo? Pakikumpleto ng tanong"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"paano kung"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Paano kung ano? Pakikumpleto ng tanong"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"paano kung tao ka?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Edi ayos"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"ano sa palagay mo?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Wala akong mapalagay"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"nagmahal ka na ba?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Hindi pa dahil ako ay isang computer program"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"anong ginagawa mo?"</span><span class="sc6">,</span><span class="sc4">"anong ginagawa mo ngayon?"</span><span class="sc6">,</span><span class="sc4">"ano ginagawa mo ngayon?"</span><span class="sc6">,</span><span class="sc4">"ano ginagawa mo ngayon?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Nag aayos ng code... :)"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"anong pangalan mo?"</span><span class="sc6">,</span><span class="sc4">"ano pangala mo?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Ang pangalan ko ay CHATBOT"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"anong araw ngayon?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Araw ng pagbasa ng output at source code :)"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"sinong gumawa sayo?"</span><span class="sc6">,</span><span class="sc4">"sino gumawa sayo?"</span><span class="sc6">,</span><span class="sc4">"sinong gumawa sa iyo?"</span><span class="sc6">,</span><span class="sc4">"sino gumawa sa iyo?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Si Khian Victory D. Calderon ng 11 Demeter ng ARK (2021-2022)"</span><span class="sc0">
+           </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc4">"matalino ka ba?"</span><span class="sc0">
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Minsan, minsan ay hindi"</span><span class="sc0">
+           </span><span class="sc1">'end of general questions
+       </span><span class="sc0">    
+           </span><span class="sc1">'if the question is not on the list
+       </span><span class="sc0">    </span><span class="sc3">Case</span><span class="sc0"> </span><span class="sc3">Else</span><span class="sc0"> 
+            </span><span class="sc7">output</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"Pasensya na, wala pa akong sagot diyan"</span><span class="sc0">
+          </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Select</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"{0}"</span><span class="sc6">,</span><span class="sc7">output</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">While</span><span class="sc0">
+         </span><span class="sc1">'------------------------------------------
+       </span><span class="sc0"> </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span><span class="sc0">
+       
+       
+       </span><span class="sc1">' preset only: 
+       '
+       ' Case ""
+       '  output = ""</span></div>
+
+        <hr>
+        <span class="t2"><b>Even/Odd number detector</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">Task5NetTechnologyPart2CalderonKhian</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">Console.Clear</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">num</span><span class="sc6">,</span><span class="sc7">df</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0"> </span><span class="sc1">'declares num as variable
+    </span><span class="sc0">        </span><span class="sc7">num</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'get user input
+    </span><span class="sc0">        </span><span class="sc7">df</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">num</span><span class="sc0"> </span><span class="sc3">Mod</span><span class="sc0"> </span><span class="sc2">2</span><span class="sc0"> </span><span class="sc1">'determine if a number is divisible by 2
+    </span><span class="sc0">        </span><span class="sc1">'Mod is short for Modulo operator, this returns the remainder of a number
+    </span><span class="sc0">        </span><span class="sc1">'all even numbers divided by 2 has no remainder
+    </span><span class="sc0">        </span><span class="sc1">'all odd numbers divided by 2 has 1 remainder
+    </span><span class="sc0">        </span><span class="sc1">'i can use this as a basis to check if the number is odd or even
+    </span><span class="sc0">        </span><span class="sc1">'df is used for differentiating even or odd number
+    </span><span class="sc0">        </span><span class="sc3">If</span><span class="sc0"> </span><span class="sc7">df</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">1</span><span class="sc0"> </span><span class="sc1">'a df can't have a value of 2 that is shown in the flowchart
+    </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your Input Value is {0} and this is odd number"</span><span class="sc6">,</span><span class="sc7">num</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"11 - Demeter"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">Else</span><span class="sc0"> 
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your Input Value is {0} and this is even number"</span><span class="sc6">,</span><span class="sc7">num</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"11 - Demeter"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">If</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+    </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Circumference calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">Calderon_Khian_Performance_7_Net_Technology</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">Console.clear</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">rd</span><span class="sc6">,</span><span class="sc7">ar</span><span class="sc6">,</span><span class="sc7">cf</span><span class="sc6">,</span><span class="sc7">di</span><span class="sc6">,</span><span class="sc7">rt</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0">
+         </span><span class="sc1">'rd for radius , ar for area , cf for circumference , di for diamater , rt for ratio'
+       </span><span class="sc0">  </span><span class="sc7">rd</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">di</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">rd</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">2</span><span class="sc0">
+         </span><span class="sc7">ar</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">3.14</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">rd</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">rd</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">cf</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">2</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">3.14</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">rd</span><span class="sc0">
+         </span><span class="sc7">di</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">rd</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">2</span><span class="sc0">
+         </span><span class="sc7">rt</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">ar</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">rd</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">rd</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Radius is {0}"</span><span class="sc6">,</span><span class="sc7">rd</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Area of Circle is {0}"</span><span class="sc6">,</span><span class="sc7">ar</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Circumference of Circle is {0}"</span><span class="sc6">,</span><span class="sc7">cf</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Diameter of Circle is {0}"</span><span class="sc6">,</span><span class="sc7">di</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Ratio of Circle is {0}"</span><span class="sc6">,</span><span class="sc7">rt</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Grade 11 - Demeter"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Comment emphasis</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">OnlineClass</span><span class="sc0"> </span><span class="sc1">'declares module name which is the OnlineClass
+        </span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'main block of the program, tells the computer to execute code inside
+        </span><span class="sc0">  </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">y</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">z</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0"> </span><span class="sc1">'declares variable x y and z
+        </span><span class="sc0">  </span><span class="sc7">Console.Clear</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">' clears the console to avoid confusion (for me)
+        </span><span class="sc0">  </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Hello World"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'tells the computer to print on screen
+        </span><span class="sc0">  </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'get user input and assign it to variable x
+        </span><span class="sc0">  </span><span class="sc7">y</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'get user input and assign it to variable y
+        </span><span class="sc0">  </span><span class="sc7">z</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc7">y</span><span class="sc0"> </span><span class="sc1">' assign the value of z , x + y
+        </span><span class="sc0">  </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"The result is {0}"</span><span class="sc6">,</span><span class="sc7">z</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'tells the computer to print variable z on screen
+        </span><span class="sc0">  </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Operations are Samples Only"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'tells the computer to print on screen
+        </span><span class="sc0">  </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">  </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'tells the computer to print on screen
+        </span><span class="sc0">  </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"ICT Grade 11 - Demeter"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'tells the computer to print on screen
+        </span><span class="sc0">  </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"All rights reserved 2022"</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'tells the computer to print on screen
+        </span><span class="sc0"> </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc1">'encloses the sub main() and tells the computer to stop executing codes
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span><span class="sc0"> </span><span class="sc1">'tells the computer that the module OnlineClass ends here</span></div>
+
+        <hr>
+        <span class="t2"><b>Do while loop</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBNet</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0">
+         </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">Do</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"X is {0}"</span><span class="sc6">,</span><span class="sc7">x</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc6">-=</span><span class="sc0"> </span><span class="sc2">200</span><span class="sc0">
+         </span><span class="sc3">Loop</span><span class="sc0"> </span><span class="sc3">while</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc6">&gt;=</span><span class="sc0"> </span><span class="sc2">3000</span><span class="sc0"> 
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"11 - Demeter"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Electric bill calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBNet</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">bill</span><span class="sc6">,</span><span class="sc7">kwh</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">char</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"What will compute?"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"a. Kilowatts Per Hour (KWH)"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"b. Electric Bill"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">ch</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"a"</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"How much is your bill in pesos in the last 31 Days?"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your bill is {0}"</span><span class="sc6">,</span><span class="sc7">bill</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">kwh</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc2">10.58</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"You used about {0} Kilowatts of electricity in 31 Days"</span><span class="sc6">,</span><span class="sc7">kwh</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"b"</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"How much KWH did you used in the last 31 Days?"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">kwh</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your KWH is {0}"</span><span class="sc6">,</span><span class="sc7">kwh</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">kwh</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">10.58</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your electric bill is about {0} pesos in 31 Days"</span><span class="sc6">,</span><span class="sc7">bill</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0"> 
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Invalid Input"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Fahrenheit temperature converter</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">NetTechnologyTask3KhianCalderon</span><span class="sc0"> </span><span class="sc1">'tells a module name
+        </span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'entry point of the program
+        </span><span class="sc0">   </span><span class="sc7">Console.clear</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'clears the console
+        </span><span class="sc0">   </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">f</span><span class="sc6">,</span><span class="sc7">c</span><span class="sc6">,</span><span class="sc7">k</span><span class="sc6">,</span><span class="sc7">r</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Double</span><span class="sc0">
+           </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Temperature Calculator"</span><span class="sc6">)</span><span class="sc1">'prints this message
+        </span><span class="sc0">   </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Enter temperature in fahrenheit"</span><span class="sc6">)</span><span class="sc1">'prints this message
+        </span><span class="sc0">   </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">   </span><span class="sc7">f</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc1">'read user input and assign it to variable fahrenheit
+        </span><span class="sc0">   </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">   
+           </span><span class="sc7">c</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">f</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc2">32</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">5</span><span class="sc6">/</span><span class="sc2">9</span><span class="sc0"> </span><span class="sc1">'centigrade formula
+        </span><span class="sc0">   </span><span class="sc7">k</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">f</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc2">459.67</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">5</span><span class="sc6">/</span><span class="sc2">9</span><span class="sc0"> </span><span class="sc1">'kelvin formula
+        </span><span class="sc0">   </span><span class="sc7">r</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">f</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc2">459.67</span><span class="sc0"> </span><span class="sc1">' rankine formula
+        </span><span class="sc0">   
+           </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Fahrenheit : {0}"</span><span class="sc6">,</span><span class="sc7">f</span><span class="sc6">)</span><span class="sc1">'prints fahrenheit
+        </span><span class="sc0">   </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Centigrade : {0}"</span><span class="sc6">,</span><span class="sc7">c</span><span class="sc6">)</span><span class="sc1">'prints centigrade
+        </span><span class="sc0">   </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Kelvin : {0}"</span><span class="sc6">,</span><span class="sc7">k</span><span class="sc6">)</span><span class="sc1">'prints kelvin
+        </span><span class="sc0">   </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Rankine : {0}"</span><span class="sc6">,</span><span class="sc7">r</span><span class="sc6">)</span><span class="sc1">'prints rankine
+        </span><span class="sc0">   
+           </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">   </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc1">'prints this message
+        </span><span class="sc0">   </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"11 - ICT Demeter"</span><span class="sc6">)</span><span class="sc1">'prints this message
+        </span><span class="sc0"> </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc1">'encloses the sub main
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span><span class="sc0"> </span><span class="sc1">'encloses the module</span></div>
+
+        <hr>
+        <span class="t2"><b>For loop</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBModule</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">for</span><span class="sc0"> </span><span class="sc7">i</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">integer</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">0</span><span class="sc0"> </span><span class="sc3">to</span><span class="sc0"> </span><span class="sc2">10</span><span class="sc0"> </span><span class="sc3">step</span><span class="sc0"> </span><span class="sc2">1</span><span class="sc0"> 
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"{0}"</span><span class="sc6">,</span><span class="sc7">i</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">next</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"End of For Loop"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span><span class="sc0">
+       </span></div>
+
+        <hr>
+        <span class="t2"><b>General temperature converter</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">Task4and5NetTechnologyKhianCalderon</span><span class="sc0"> </span><span class="sc1">'declares the name of the module
+        </span><span class="sc0">    </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'main block of the program
+        </span><span class="sc0">        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">C</span><span class="sc6">,</span><span class="sc7">F</span><span class="sc6">,</span><span class="sc7">R</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0"> </span><span class="sc1">'input variables declaration
+        </span><span class="sc0">        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">CtF</span><span class="sc6">,</span><span class="sc7">CtK</span><span class="sc6">,</span><span class="sc7">CtR</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0"> </span><span class="sc1">'centigrade variables declaration
+        </span><span class="sc0">        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">FtC</span><span class="sc6">,</span><span class="sc7">FtK</span><span class="sc6">,</span><span class="sc7">FtR</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0"> </span><span class="sc1">'fahrenheit variables declaration
+        </span><span class="sc0">        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">RtC</span><span class="sc6">,</span><span class="sc7">RtK</span><span class="sc6">,</span><span class="sc7">RtF</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0"> </span><span class="sc1">'rankine variables declaration
+        </span><span class="sc0">        </span><span class="sc7">Console.clear</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'clears the console initially
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Temperature CONVERTER"</span><span class="sc6">)</span><span class="sc1">'displays this text
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"INPUT VALUE FOR TEMPERATURE : "</span><span class="sc6">)</span><span class="sc1">'displays this text
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">        </span><span class="sc7">C</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'get user input and assign it to this variable
+        </span><span class="sc0">        </span><span class="sc7">F</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'get user input and assign it to this variable
+        </span><span class="sc0">        </span><span class="sc7">R</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'get user input and assign it to this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Input Value for Centigrade is : {0}"</span><span class="sc6">,</span><span class="sc7">C</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Input Value for Fahrenheit is : {0}"</span><span class="sc6">,</span><span class="sc7">F</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Input Value for Rankine is : {0}"</span><span class="sc6">,</span><span class="sc7">R</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">        </span><span class="sc7">CtF</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">C</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">1.8</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc2">32</span><span class="sc0"> </span><span class="sc1">'formula of this variable
+        </span><span class="sc0">        </span><span class="sc7">CtK</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">C</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc2">273.15</span><span class="sc0"> </span><span class="sc1">'formula of this variable
+        </span><span class="sc0">        </span><span class="sc7">CtR</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">C</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc2">273.15</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">9</span><span class="sc6">/</span><span class="sc2">5</span><span class="sc0"> </span><span class="sc1">'formula of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"CENTIGRADE CONVERSION"</span><span class="sc6">)</span><span class="sc1">'displays this text
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Centigrade to Fahrenheit Convertion is equal to : {0}"</span><span class="sc6">,</span><span class="sc7">CtF</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Centigrade to Kelvin Convertion is equal to : {0}"</span><span class="sc6">,</span><span class="sc7">CtK</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Centigrade to Rankine Convertion is equal to : {0}"</span><span class="sc6">,</span><span class="sc7">CtR</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">        </span><span class="sc7">FtC</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">F</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc2">32</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">5</span><span class="sc6">/</span><span class="sc2">9</span><span class="sc0"> </span><span class="sc1">'formula of this variable
+        </span><span class="sc0">        </span><span class="sc7">FtK</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">((</span><span class="sc7">F</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc2">32</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">5</span><span class="sc6">/</span><span class="sc2">9</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc2">273.15</span><span class="sc0"> </span><span class="sc1">'formula of this variable
+        </span><span class="sc0">        </span><span class="sc7">FtR</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">F</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc2">459.67</span><span class="sc0"> </span><span class="sc1">'formula of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"FAHRENHEIT CONVERSION"</span><span class="sc6">)</span><span class="sc1">'displays this text
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Fahrenheit to Centigrade Convertion is equal to : {0}"</span><span class="sc6">,</span><span class="sc7">FtC</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Fahrenheit to Kelvin Convertion is equal to : {0}"</span><span class="sc6">,</span><span class="sc7">FtK</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Fahrenheit to Rankine Convertion is equal to : {0}"</span><span class="sc6">,</span><span class="sc7">FtR</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">        </span><span class="sc7">RtC</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">R</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">5</span><span class="sc6">/</span><span class="sc2">9</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc2">273.15</span><span class="sc0"> </span><span class="sc1">'formula of this variable
+        </span><span class="sc0">        </span><span class="sc7">RtK</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">R</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc2">1.8</span><span class="sc0"> </span><span class="sc1">'formula of this variable
+        </span><span class="sc0">        </span><span class="sc7">RtF</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">R</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc2">459.67</span><span class="sc0"> </span><span class="sc1">'formula of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"RANKINE CONVERSION"</span><span class="sc6">)</span><span class="sc1">'displays this text
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Rankine to Centigrade Convertion is equal to : {0}"</span><span class="sc6">,</span><span class="sc7">RtC</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Rankine to Kelvin Convertion is equal to : {0}"</span><span class="sc6">,</span><span class="sc7">RtK</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Rankine to Fahrenheit Convertion is equal to : {0}"</span><span class="sc6">,</span><span class="sc7">RtF</span><span class="sc6">)</span><span class="sc1">'display the value of this variable
+        </span><span class="sc0">    
+                </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc1">'serves as a placeholder
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc1">'displays this text
+        </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Grade 11 - Demeter"</span><span class="sc6">)</span><span class="sc1">'displays this text
+        </span><span class="sc0">    </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc1">'encloses the sub main()
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span><span class="sc0"> </span><span class="sc1">'encloses the module</span></div>
+
+        <hr>
+        <span class="t2"><b>Geometric and arithmetic sequence calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBModule</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">Console.clear</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Geometric and Arithmetic Calculator"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"This program will determine if it is arithmetic or geometric sequence and its previous and next term"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Enter three input:"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">num1</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">num2</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">num3</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0"> 
+         </span><span class="sc7">num1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">num2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0"> 
+         </span><span class="sc7">num3</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">cv</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0"> </span><span class="sc1">'common value 
+       </span><span class="sc0">  </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">cr</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0"> </span><span class="sc1">'common ratio
+       </span><span class="sc0">  </span><span class="sc7">cv</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">num2</span><span class="sc6">-</span><span class="sc7">num1</span><span class="sc0">
+         </span><span class="sc7">cr</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">num2</span><span class="sc6">/</span><span class="sc7">num1</span><span class="sc0">
+         </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">cr</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">1</span><span class="sc0"> </span><span class="sc3">and</span><span class="sc0"> </span><span class="sc7">cv</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">0</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"The sequence is either geometric or arithmetic"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Common Value is {0}"</span><span class="sc6">,</span><span class="sc7">cv</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Common Ratio is {0}"</span><span class="sc6">,</span><span class="sc7">cr</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"The following sequence are:"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"{0} {1} {2} {3} {4}"</span><span class="sc6">,</span><span class="sc7">num1</span><span class="sc6">/</span><span class="sc7">cr</span><span class="sc6">,</span><span class="sc7">num1</span><span class="sc6">,</span><span class="sc7">num2</span><span class="sc6">,</span><span class="sc7">num3</span><span class="sc6">,</span><span class="sc7">num3</span><span class="sc6">+</span><span class="sc7">cv</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">num2</span><span class="sc6">-</span><span class="sc7">num1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">num3</span><span class="sc6">-</span><span class="sc7">num2</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"It is an Arithmetic Sequence"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Common Value is {0}"</span><span class="sc6">,</span><span class="sc7">cv</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"The following sequence are:"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"{0} {1} {2} {3} {4}"</span><span class="sc6">,</span><span class="sc7">num1</span><span class="sc6">-</span><span class="sc7">cv</span><span class="sc6">,</span><span class="sc7">num1</span><span class="sc6">,</span><span class="sc7">num2</span><span class="sc6">,</span><span class="sc7">num3</span><span class="sc6">,</span><span class="sc7">num3</span><span class="sc6">+</span><span class="sc7">cv</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">num2</span><span class="sc6">/</span><span class="sc7">num1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">num3</span><span class="sc6">/</span><span class="sc7">num2</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"It is a Geometric Sequence"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Common Ratio is {0}"</span><span class="sc6">,</span><span class="sc7">cr</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"The following sequence are:"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"{0} {1} {2} {3} {4}"</span><span class="sc6">,</span><span class="sc7">num1</span><span class="sc6">/</span><span class="sc7">cr</span><span class="sc6">,</span><span class="sc7">num1</span><span class="sc6">,</span><span class="sc7">num2</span><span class="sc6">,</span><span class="sc7">num3</span><span class="sc6">,</span><span class="sc7">num3</span><span class="sc6">*</span><span class="sc7">cr</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"The sequence is neither geometric nor arithmetic"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span><span class="sc0">
+       </span></div>
+
+        <hr>
+        <span class="t2"><b>Hello world</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">function1</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'Serves as an emtpry line
+    </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"11 - Demeter"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Hello World"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+    </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>If else statement age detector</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">Task4_IfElse_by_Khian</span><span class="sc0">
+        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">Input</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">Console.Clear</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">' Serves as a placeholder
+    </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"I Am Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Input</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">' Serves as a placeholder
+    </span><span class="sc0">        </span><span class="sc7">Console.Write</span><span class="sc6">(</span><span class="sc4">"Input Age : "</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"{0}"</span><span class="sc6">,</span><span class="sc7">Input</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">If</span><span class="sc0"> </span><span class="sc7">Input</span><span class="sc6">&lt;=</span><span class="sc2">0</span><span class="sc0">
+               </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Sorry Di ka pa Pinapanganak Sa Mundo"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">ElseIf</span><span class="sc0"> </span><span class="sc7">Input</span><span class="sc6">&gt;</span><span class="sc2">0</span><span class="sc0"> </span><span class="sc3">and</span><span class="sc0"> </span><span class="sc7">Input</span><span class="sc6">&lt;=</span><span class="sc2">12</span><span class="sc0">
+               </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Isa kang KIDS"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">ElseIf</span><span class="sc0"> </span><span class="sc7">Input</span><span class="sc6">&gt;=</span><span class="sc2">13</span><span class="sc0"> </span><span class="sc3">and</span><span class="sc0"> </span><span class="sc7">Input</span><span class="sc6">&lt;=</span><span class="sc2">19</span><span class="sc0">
+               </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Isa kang TEENS"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">ElseIf</span><span class="sc0"> </span><span class="sc7">Input</span><span class="sc6">&gt;=</span><span class="sc2">20</span><span class="sc0"> </span><span class="sc3">and</span><span class="sc0"> </span><span class="sc7">Input</span><span class="sc6">&lt;=</span><span class="sc2">59</span><span class="sc0">
+               </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Isa kang ADULT"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">ElseIf</span><span class="sc0"> </span><span class="sc7">Input</span><span class="sc6">&gt;=</span><span class="sc2">60</span><span class="sc0"> </span><span class="sc3">and</span><span class="sc0"> </span><span class="sc7">Input</span><span class="sc6">&lt;=</span><span class="sc2">100</span><span class="sc0">
+               </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Isa kang SENIOR"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">Else</span><span class="sc0">
+               </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Isa kang IMMORTAL NA NILALANG"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">If</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+    </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Password system</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBNet</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">pass</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">string</span><span class="sc0"> 
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Simple Password system"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Enter the password 1234"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">pass</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">pass</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"1234"</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Password is Correct"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0"> 
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Password is Incorrect"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Percentage calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBNet</span><span class="sc0"> 
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">number</span><span class="sc6">,</span><span class="sc7">percentage</span><span class="sc6">,</span><span class="sc7">formula</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Enter 2 input, percentage and the number"</span><span class="sc6">)</span><span class="sc0"> 
+         </span><span class="sc7">percentage</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">number</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">formula</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">number</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">percentage</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc2">100</span><span class="sc0"> 
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"{0}% of {1} is {2}"</span><span class="sc6">,</span><span class="sc7">percentage</span><span class="sc6">,</span><span class="sc7">number</span><span class="sc6">,</span><span class="sc7">formula</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0"> 
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Grading system</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">KhianVictoryDCalderon_PT_5_11_10_2021_Net_Technology</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc1">'declaration'
+    </span><span class="sc0">        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">P</span><span class="sc6">,</span><span class="sc7">M</span><span class="sc6">,</span><span class="sc7">S</span><span class="sc6">,</span><span class="sc7">F</span><span class="sc6">,</span><span class="sc7">YP</span><span class="sc6">,</span><span class="sc7">YM</span><span class="sc6">,</span><span class="sc7">YS</span><span class="sc6">,</span><span class="sc7">YF</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0">
+            </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">result</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0"> </span><span class="sc1">'Special final grade variable'
+    </span><span class="sc0">        </span><span class="sc1">'P for preliminary , YP for your preliminary , etc...'
+    </span><span class="sc0">        
+            </span><span class="sc1">'block 1 code section'
+    </span><span class="sc0">        </span><span class="sc7">Console.clear</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'empty line'
+    </span><span class="sc0">        </span><span class="sc7">P</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">M</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">S</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">F</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Grade 11 - Demeter"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'empty line'
+    </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Prelim is 20% of your Grade"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Midterm is 20% of your Grade"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Semis is 20% of your Grade"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Finals is 40% of your Grade"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'empty line'
+    </span><span class="sc0">        
+            </span><span class="sc1">'block 2 code section'
+    </span><span class="sc0">        </span><span class="sc1">'variable percentage'
+    </span><span class="sc0">        </span><span class="sc7">YP</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">P</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">0.2</span><span class="sc0">
+            </span><span class="sc7">YM</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">M</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">0.2</span><span class="sc0">
+            </span><span class="sc7">YS</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">S</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">0.2</span><span class="sc0">
+            </span><span class="sc7">YF</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">F</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">0.4</span><span class="sc0">
+            </span><span class="sc7">result</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">YP</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc7">YM</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc7">YS</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc7">YF</span><span class="sc6">)</span><span class="sc0">
+            
+            </span><span class="sc1">'block 3 code section'
+    </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your Prelim Grade is {0}"</span><span class="sc6">,</span><span class="sc7">P</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your Midterm Grade is {0}"</span><span class="sc6">,</span><span class="sc7">M</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your Semis Grade is {0}"</span><span class="sc6">,</span><span class="sc7">S</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your Finals Grade is {0}"</span><span class="sc6">,</span><span class="sc7">F</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc1">'empty line'
+    </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your Final Grade is {0}"</span><span class="sc6">,</span><span class="sc7">result</span><span class="sc6">)</span><span class="sc0">
+            
+            </span><span class="sc1">'medyo nalito po ako sir nung una hehehehehe'
+    </span><span class="sc0">    </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+    </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Prime number detector</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBModule</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+          </span><span class="sc7">Console.Writeline</span><span class="sc6">(</span><span class="sc4">"Enter any number: "</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">number</span><span class="sc0"> </span><span class="sc3">As</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0">
+          </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">count</span><span class="sc0"> </span><span class="sc3">As</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">0</span><span class="sc0">
+          </span><span class="sc7">number</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+          </span><span class="sc3">For</span><span class="sc0"> </span><span class="sc7">i</span><span class="sc0"> </span><span class="sc3">As</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">1</span><span class="sc0"> </span><span class="sc3">To</span><span class="sc0"> </span><span class="sc7">number</span><span class="sc0">
+           </span><span class="sc3">If</span><span class="sc0"> </span><span class="sc7">number</span><span class="sc0"> </span><span class="sc3">Mod</span><span class="sc0"> </span><span class="sc7">i</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">0</span><span class="sc0"> </span><span class="sc3">Then</span><span class="sc0">
+            </span><span class="sc7">count</span><span class="sc0"> </span><span class="sc6">+=</span><span class="sc0"> </span><span class="sc2">1</span><span class="sc0">
+           </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">If</span><span class="sc0">
+          </span><span class="sc3">Next</span><span class="sc0">
+          </span><span class="sc3">If</span><span class="sc0"> </span><span class="sc7">count</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">2</span><span class="sc0"> </span><span class="sc3">Then</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"{0} is a Prime Number."</span><span class="sc6">,</span><span class="sc7">number</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc3">Else</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"{0} is not a Prime Number."</span><span class="sc6">,</span><span class="sc7">number</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">If</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+      </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span><span class="sc0">
+      </span></div>
+
+        <hr>
+        <span class="t2"><b>Pythagorean theorem calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBNet</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">choice</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">char</span><span class="sc0">
+        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Pythagorean Theorem Formula"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"What would you like to find?"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"a. Hypotenuse"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"b. One of the 2 Legs"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc7">choice</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+        
+        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">leg1</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">leg2</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">h</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0">
+        </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">choice</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"a"</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Enter 2 leg input, finds the hypotenuse"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">leg1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.readline</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">leg2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.readline</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">h</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Math.Sqrt</span><span class="sc6">((</span><span class="sc7">leg1</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">leg1</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">leg2</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">leg2</span><span class="sc6">))</span><span class="sc0">
+         </span><span class="sc7">Console.writeline</span><span class="sc6">(</span><span class="sc4">"The hypotenuse is {0}"</span><span class="sc6">,</span><span class="sc7">h</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">else</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">choice</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"b"</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Enter the hypotenuse first and then one of the legs"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">h</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.readline</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">leg1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.readline</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">leg2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Math.Sqrt</span><span class="sc6">((</span><span class="sc7">h</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">h</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">leg1</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">leg1</span><span class="sc6">))</span><span class="sc0">
+         </span><span class="sc7">Console.writeline</span><span class="sc6">(</span><span class="sc4">"The leg is {0}"</span><span class="sc6">,</span><span class="sc7">leg2</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">else</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Invalid Input"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Quadratic expression calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBModule</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">Console.Clear</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">a</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">b</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">c</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">r1</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">r2</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Quadratic Computer"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"By Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Enter the 3 input from the quadratic equation: "</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">a</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">b</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">c</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">r1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">((</span><span class="sc7">b</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc2">1</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc7">Math.Sqrt</span><span class="sc6">((</span><span class="sc7">b</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">b</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc2">4</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">a</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">c</span><span class="sc6">)))</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc2">2</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">a</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">r2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">((</span><span class="sc7">b</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc2">1</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc7">Math.Sqrt</span><span class="sc6">((</span><span class="sc7">b</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">b</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc2">4</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">a</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">c</span><span class="sc6">)))</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc2">2</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">a</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"The 2 answers from the quadratic equation are: "</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"{0} and {1}"</span><span class="sc6">,</span><span class="sc7">r1</span><span class="sc6">,</span><span class="sc7">r2</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Quiz operation randomizer</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBNet</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">sc</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">n1</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">n2</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">ui</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0">
+         </span><span class="sc7">sc</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Math.Ceiling</span><span class="sc6">(</span><span class="sc7">Rnd</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">3</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">sc</span><span class="sc6">=</span><span class="sc2">1</span><span class="sc0"> 
+          </span><span class="sc7">n1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Math.Ceiling</span><span class="sc6">(</span><span class="sc7">Rnd</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">50</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">n2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Math.Ceiling</span><span class="sc6">(</span><span class="sc7">Rnd</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">50</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"What is {0} + {1}?"</span><span class="sc6">,</span><span class="sc7">n1</span><span class="sc6">,</span><span class="sc7">n2</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">ui</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+          </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">ui</span><span class="sc6">=</span><span class="sc7">n1</span><span class="sc6">+</span><span class="sc7">n2</span><span class="sc0">
+           </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Correct!"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc3">else</span><span class="sc0">
+           </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Nice try, the correct answer is {0}"</span><span class="sc6">,</span><span class="sc7">n1</span><span class="sc6">+</span><span class="sc7">n2</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+         </span><span class="sc3">elseif</span><span class="sc0"> </span><span class="sc7">sc</span><span class="sc6">=</span><span class="sc2">2</span><span class="sc0">
+          </span><span class="sc7">n1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Math.Ceiling</span><span class="sc6">(</span><span class="sc7">Rnd</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">50</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">n2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Math.Ceiling</span><span class="sc6">(</span><span class="sc7">Rnd</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">50</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"What is {0} - {1}?"</span><span class="sc6">,</span><span class="sc7">n1</span><span class="sc6">,</span><span class="sc7">n2</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">ui</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+          </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">ui</span><span class="sc6">=</span><span class="sc7">n1</span><span class="sc6">-</span><span class="sc7">n2</span><span class="sc0">
+           </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Correct!"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc3">else</span><span class="sc0">
+           </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Nice try, the correct answer is {0}"</span><span class="sc6">,</span><span class="sc7">n1</span><span class="sc6">-</span><span class="sc7">n2</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+         </span><span class="sc3">elseif</span><span class="sc0"> </span><span class="sc7">sc</span><span class="sc6">=</span><span class="sc2">3</span><span class="sc0"> 
+          </span><span class="sc7">n1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Math.Ceiling</span><span class="sc6">(</span><span class="sc7">Rnd</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">20</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">n2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Math.Ceiling</span><span class="sc6">(</span><span class="sc7">Rnd</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">20</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"What is {0} × {1}?"</span><span class="sc6">,</span><span class="sc7">n1</span><span class="sc6">,</span><span class="sc7">n2</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">ui</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+          </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">ui</span><span class="sc6">=</span><span class="sc7">n1</span><span class="sc6">*</span><span class="sc7">n2</span><span class="sc0">
+           </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Correct!"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc3">else</span><span class="sc0">
+           </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Nice try, the correct answer is {0}"</span><span class="sc6">,</span><span class="sc7">n1</span><span class="sc6">*</span><span class="sc7">n2</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+         </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Quiz Operation Randomizer by"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span><span class="sc0">
+       </span></div>
+
+        <hr>
+        <span class="t2"><b>Random number generator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">CalderonKhianTask5NetTechnology</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">Console.clear</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0">
+            </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Math.Ceiling</span><span class="sc6">(</span><span class="sc7">Rnd</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">3</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">If</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc6">=</span><span class="sc2">1</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"The Generated Random number is 1"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">ElseIf</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc6">=</span><span class="sc2">2</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"The Generated Random number is 2"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">Else</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"The Generated Random number is not 1 nor 2"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">If</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">""</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"11 - Demeter"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+    </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Trapezoid area calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">KhianVictoryDCalderon_Net_Technology_PT_6</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">Console.clear</span><span class="sc6">()</span><span class="sc0"> </span><span class="sc1">'clear console'
+    </span><span class="sc0">        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">b1</span><span class="sc6">,</span><span class="sc7">b2</span><span class="sc6">,</span><span class="sc7">h</span><span class="sc6">,</span><span class="sc7">a</span><span class="sc6">,</span><span class="sc7">ax</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Integer</span><span class="sc0"> 
+            </span><span class="sc1">'b1 for base 1 , b2 for base 2'
+    </span><span class="sc0">        </span><span class="sc1">'h for height , a for area , ax for math area'
+    </span><span class="sc0">        
+            </span><span class="sc1">'block 1 , get inputs first'
+    </span><span class="sc0">        </span><span class="sc7">b1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">b2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">h</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+            
+            </span><span class="sc1">'block 2 , formulas'
+    </span><span class="sc0">        </span><span class="sc7">a</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">b1</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc7">b2</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">h</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc2">2</span><span class="sc0">
+            </span><span class="sc7">ax</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">(((</span><span class="sc7">b1</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc7">b2</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">h</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc2">2</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc1">'in terms of math'
+    </span><span class="sc0">        
+            </span><span class="sc1">'block 3 , outputs'
+    </span><span class="sc0">        </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Based 1 of Trapezoid is {0}"</span><span class="sc6">,</span><span class="sc7">b1</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Based 2 of Trapezoid is {0}"</span><span class="sc6">,</span><span class="sc7">b2</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Height of Trapezoid is {0}"</span><span class="sc6">,</span><span class="sc7">h</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Area of Trapezoid is {0}"</span><span class="sc6">,</span><span class="sc7">a</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Khian Victory D. Calderon"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Grade 11 - Demeter"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">" "</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"In terms of Math , Area of Trapezoid is {0}"</span><span class="sc6">,</span><span class="sc7">ax</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+    </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+
+        <hr>
+        <span class="t2"><b>Water bill calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Module</span><span class="sc0"> </span><span class="sc7">VBNet</span><span class="sc0">
+        </span><span class="sc3">Sub</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">bill</span><span class="sc6">,</span><span class="sc7">cum</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">Decimal</span><span class="sc0">
+         </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc0"> </span><span class="sc3">as</span><span class="sc0"> </span><span class="sc3">char</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"What will compute? (Residential Type Only)"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"a. Cubic Per Meter (CUM)"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"b. Water Bill"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">ch</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"a"</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"How much is your bill in pesos in the last 31 Days without tax?"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your bill is {0}"</span><span class="sc6">,</span><span class="sc7">bill</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc7">cum</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc2">21</span><span class="sc0">
+         </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"You used about {0} Cubic Meter of Water in 31 Days"</span><span class="sc6">,</span><span class="sc7">cum</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"b"</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"How much Cubic Meter of Water did you used in the last 31 Days?"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">cum</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Console.ReadLine</span><span class="sc6">()</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your Cubic Meter of Water is {0}"</span><span class="sc6">,</span><span class="sc7">cum</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">cum</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">21</span><span class="sc0">
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Your water bill is about {0} pesos in 31 Days on DUE with tax included"</span><span class="sc6">,</span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc6">((</span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">12</span><span class="sc6">)/</span><span class="sc2">100</span><span class="sc6">))</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0"> 
+          </span><span class="sc7">Console.WriteLine</span><span class="sc6">(</span><span class="sc4">"Invalid Input"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Sub</span><span class="sc0">
+       </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">Module</span></div>
+    </body>
+</html>

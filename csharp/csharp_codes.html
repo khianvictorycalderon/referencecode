@@ -1,0 +1,163 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="csharp_codes_style.css">
+        <title>C# Unity Codes</title>
+    </head>
+    <body class="flex-c">
+        <span class="t2"><b>Unity C# Codes</b></span>
+        
+<hr>
+<span class="t2"><b>Unity useful functions</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">using</span><span class="sc0"> </span><span class="sc11">UnityEngine</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">using</span><span class="sc0"> </span><span class="sc11">UnityEngine</span><span class="sc10">.</span><span class="sc11">SceneManagement</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">using</span><span class="sc0"> </span><span class="sc11">UnityEngine</span><span class="sc10">.</span><span class="sc11">UI</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">class</span><span class="sc0"> </span><span class="sc11">UserDefinedCustomFunctions</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">MonoBehaviour</span><span class="sc0">
+</span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc2">// These methods do not have error handling
+</span><span class="sc0">    </span><span class="sc1">/*
+
+    Public variables are variables to be displayed in the Unity Editor's Inspector window
+    Example:
+    public Text highScoreText;
+
+    Private variables are variables that are only accessible within this script
+    Example:
+    private int highScore;
+
+    */</span><span class="sc0">
+
+    </span><span class="sc2">// Method to open a URL defined by the user
+</span><span class="sc0">    </span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">OpenURL</span><span class="sc10">(</span><span class="sc16">string</span><span class="sc0"> </span><span class="sc11">definedInUserInterfaceURL</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">Application</span><span class="sc10">.</span><span class="sc11">OpenURL</span><span class="sc10">(</span><span class="sc11">definedInUserInterfaceURL</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc2">// Method to exit the application
+</span><span class="sc0">    </span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">AppExit</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">Debug</span><span class="sc10">.</span><span class="sc11">Log</span><span class="sc10">(</span><span class="sc6">"Application Closed!"</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">Application</span><span class="sc10">.</span><span class="sc11">Quit</span><span class="sc10">();</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc2">// Method to switch to a different scene
+</span><span class="sc0">    </span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">GoToScene</span><span class="sc10">(</span><span class="sc16">string</span><span class="sc0"> </span><span class="sc11">sceneName</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">SceneManager</span><span class="sc10">.</span><span class="sc11">LoadScene</span><span class="sc10">(</span><span class="sc11">sceneName</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc2">// Method to add to the score variable in another script
+</span><span class="sc0">    </span><span class="sc1">/*
+    The variable in the other script must be public and static, example:
+
+    public static int Score = 0;
+
+    Then:
+    */</span><span class="sc0">
+    </span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">AddScore</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">OtherScriptName</span><span class="sc10">.</span><span class="sc11">Score</span><span class="sc0"> </span><span class="sc10">+=</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc2">// Method to pause the game
+</span><span class="sc0">    </span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">Pause</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">Time</span><span class="sc10">.</span><span class="sc11">timeScale</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">0.0f</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+    
+    </span><span class="sc2">// Method to enable or disable a GameObject
+</span><span class="sc0">    </span><span class="sc5">private</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">SetGameObjectState</span><span class="sc10">(</span><span class="sc11">GameObject</span><span class="sc0"> </span><span class="sc11">gameObject</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc16">bool</span><span class="sc0"> </span><span class="sc11">isActive</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">gameObject</span><span class="sc10">.</span><span class="sc11">SetActive</span><span class="sc10">(</span><span class="sc11">isActive</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc2">// Example usage:
+</span><span class="sc0">    </span><span class="sc2">// SetGameObjectState(car, true); // Enables the 'car' GameObject
+</span><span class="sc0">    </span><span class="sc2">// SetGameObjectState(car, false); // Disables the 'car' GameObject
+</span><span class="sc0">    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc2">// Method to resume the game
+</span><span class="sc0">    </span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">Resume</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">Time</span><span class="sc10">.</span><span class="sc11">timeScale</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">1.0f</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc2">// This method runs once when the script is loaded
+</span><span class="sc0">    </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">Start</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc2">// This method runs once per frame
+</span><span class="sc0">    </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">Update</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc2">// This method runs at a fixed interval, independent of the frame rate
+</span><span class="sc0">    </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">FixedUpdate</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+    
+    </span><span class="sc2">// Other useful tips:
+</span><span class="sc0">    </span><span class="sc1">/*
+    
+    1. To generate a random number, use Random.Range(min,max);
+       Example usage:
+       Random.Range(5,10);
+       This code will generate a number between 5 and 10
+    */</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span></div>
+        
+<hr>
+<span class="t2"><b>Unity display text in user interface</b>:</span>
+<div  class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">using</span><span class="sc0"> </span><span class="sc11">UnityEngine</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">using</span><span class="sc0"> </span><span class="sc11">UnityEngine</span><span class="sc10">.</span><span class="sc11">UI</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">class</span><span class="sc0"> </span><span class="sc11">DisplayTextScript</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">MonoBehaviour</span><span class="sc0">
+</span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc2">// Public so that it can be defined in the Unity Editor's Inspector window
+</span><span class="sc0">    </span><span class="sc5">public</span><span class="sc0"> </span><span class="sc11">Text</span><span class="sc0"> </span><span class="sc11">text1</span><span class="sc10">;</span><span class="sc0">
+    
+    </span><span class="sc2">// A private int to hold the number to display
+</span><span class="sc0">    </span><span class="sc5">private</span><span class="sc0"> </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">numberToDisplay</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">42</span><span class="sc10">;</span><span class="sc0">
+
+    </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">Start</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">DisplayText</span><span class="sc10">();</span><span class="sc0"> </span><span class="sc2">// Calls the function to display the text
+</span><span class="sc0">        </span><span class="sc11">text1</span><span class="sc10">.</span><span class="sc11">text</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc2">// Empties the text in the user interface initially
+</span><span class="sc0">    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc2">// Method to display the text
+</span><span class="sc0">    </span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">DisplayText</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">text1</span><span class="sc10">.</span><span class="sc11">text</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">numberToDisplay</span><span class="sc10">.</span><span class="sc11">ToString</span><span class="sc10">();</span><span class="sc0"> </span><span class="sc2">// Converts int to string and sets the text
+</span><span class="sc0">    </span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span></div>
+        
+<hr>
+<span class="t2"><b>Unity playerprefs setting new highscore</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">using</span><span class="sc0"> </span><span class="sc11">UnityEngine</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">class</span><span class="sc0"> </span><span class="sc11">HighScoreManager</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">MonoBehaviour</span><span class="sc0">
+</span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">public</span><span class="sc0"> </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">score</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">private</span><span class="sc0"> </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">highScore</span><span class="sc10">;</span><span class="sc0">
+
+    </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">Start</span><span class="sc10">()</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">LoadHighScore</span><span class="sc10">();</span><span class="sc0">
+        </span><span class="sc2">// Example: Check if the current score is higher than the saved high score
+</span><span class="sc0">        </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">score</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc11">highScore</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc10">{</span><span class="sc0">
+            </span><span class="sc11">highScore</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">score</span><span class="sc10">;</span><span class="sc0"> 
+            </span><span class="sc11">SaveHighScore</span><span class="sc10">();</span><span class="sc0">
+        </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">LoadHighScore</span><span class="sc10">()</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc2">// Load the high score from PlayerPrefs, or set to 0 if it doesn't exist
+</span><span class="sc0">        </span><span class="sc11">highScore</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">PlayerPrefs</span><span class="sc10">.</span><span class="sc11">GetInt</span><span class="sc10">(</span><span class="sc6">"HighScore"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">SaveHighScore</span><span class="sc10">()</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc2">// Save the high score to PlayerPrefs
+</span><span class="sc0">        </span><span class="sc11">PlayerPrefs</span><span class="sc10">.</span><span class="sc11">SetInt</span><span class="sc10">(</span><span class="sc6">"HighScore"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">highScore</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">PlayerPrefs</span><span class="sc10">.</span><span class="sc11">Save</span><span class="sc10">();</span><span class="sc0"> </span><span class="sc2">// Always save
+</span><span class="sc0">    </span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span></div>
+
+        </body>
+</html>

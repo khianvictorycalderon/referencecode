@@ -1,0 +1,345 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="sql_codes_style.css">
+        <title>Structured Query Language (MySQL) Codes</title>
+    </head>
+    <body class="flex-c">
+      <span class="t2"><b><i>MySQL</i></b></span>
+
+      <hr>
+      <span class="t2"><b>Alter table constraints</b>:</span>
+      <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+    </span><span class="sc2">-- Altering table properties
+    </span><span class="sc0">
+    </span><span class="sc2">-- Using MODIFY (redefining entire set of rules)
+    </span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+    </span><span class="sc5">MODIFY</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc0"> 
+    </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc0"> </span><span class="sc5">UNIQUE</span><span class="sc10">;</span><span class="sc0">
+    
+    </span><span class="sc2">-- Using add and drop CONSTRAINTS
+    </span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+    </span><span class="sc5">ADD</span><span class="sc0"> </span><span class="sc5">CONSTRAINT</span><span class="sc0"> </span><span class="sc11">constraint_name</span><span class="sc0">
+    </span><span class="sc5">CHECK</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">&gt;=</span><span class="sc0"> </span><span class="sc4">18</span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+     </span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">CONSTRAINT</span><span class="sc0"> </span><span class="sc11">constraint_name</span><span class="sc10">;</span></div>
+
+
+     <hr>
+     <span class="t2"><b>Between clause</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+    </span><span class="sc2">-- Similar to Range
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc0">
+     </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+     </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0">
+     </span><span class="sc5">BETWEEN</span><span class="sc0"> </span><span class="sc4">18</span><span class="sc0"> </span><span class="sc5">AND</span><span class="sc0"> </span><span class="sc4">60</span><span class="sc0">
+    </span><span class="sc2">-- Adult, Not minor and senior</span></div>
+
+     <hr>
+     <span class="t2"><b>Create index</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">INDEX</span><span class="sc0"> </span><span class="sc11">email_index</span><span class="sc0"> </span><span class="sc5">ON</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">(</span><span class="sc11">email</span><span class="sc10">)</span></div>
+
+     <hr>
+     <span class="t2"><b>Create table</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">Users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc11">email</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">255</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc0"> </span><span class="sc5">UNIQUE</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc11">bio</span><span class="sc0"> </span><span class="sc19">TEXT</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc11">country</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">2</span><span class="sc10">)</span><span class="sc0">
+  </span><span class="sc10">);</span></div>
+
+     <hr>
+     <span class="t2"><b>Data integrity</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+    </span><span class="sc1">/*
+    
+     Data Integrity:
+     The following categories of the data integrity exist with each RDBMS:
+    
+     - Entity Integrity : There are no duplicate rows in a table.
+     - Domain Integrity : Enforces valid entries for a given column by restricting the type, the format, or the range of values.
+     - Referential Integrity : Rows cannot be deleted which are used by other records.
+     - User-Defined Integrity : Enforces some specific business rules that do not fall into entity, domain, or referential integrity.
+    
+    */</span></div>
+
+     <hr>
+     <span class="t2"><b>Inserting multiple data</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+    </span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">email</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">bio</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">country</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0"> 
+    </span><span class="sc2">-- You can insert multiple data by using commas and semicolon to end
+    </span><span class="sc0"> </span><span class="sc10">(</span><span class="sc7">'aj@gmail.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'i know who you are'</span><span class="sc10">,</span><span class="sc7">'PH'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'fsa@gmail.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'who what?'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'JP'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'faskl@gmail.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'where to go?'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'SP'</span><span class="sc10">);</span></div>
+
+     <hr>
+     <span class="t2"><b>Inserting single data</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">email</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">bio</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">country</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0"> 
+    </span><span class="sc10">(</span><span class="sc7">'aj@gmail.com'</span><span class="sc10">,</span><span class="sc7">'i know who you are'</span><span class="sc10">,</span><span class="sc7">'PH'</span><span class="sc10">)</span></div>
+
+     <hr>
+     <span class="t2"><b>Normalization</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+    </span><span class="sc1">/*
+    
+     First normal form normalization:
+     - Define the data items required, because they become the columns in a table. Place related data items in a table.
+     - Ensure that there are no repeating groups of data.
+     - Ensure that there is a primary key.
+    
+    */</span><span class="sc0">
+    
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">CUSTOMERS</span><span class="sc10">(</span><span class="sc0">
+     </span><span class="sc11">ID</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">NAME</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc4">20</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">AGE</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">ADDRESS</span><span class="sc0"> </span><span class="sc19">CHAR</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc4">25</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">ID</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">ORDERS</span><span class="sc10">(</span><span class="sc0">
+     </span><span class="sc11">ID</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">CUSTOMER_ID</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">ORDERS</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">155</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">ID</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc1">/*
+    
+     Second Normal Form:
+     Second normal form states that it should meet all the rules for 1NF and there must be no partial dependences of any of the columns on the primary key:
+     - Consider a customer-order relation and you want to store customer ID, customer name, order ID and order detail, and date of purchase:
+    
+     To make this table comply with second normal form, you need to separate the columns into three tables
+    */</span><span class="sc0">
+    
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">CUSTOMERS</span><span class="sc10">(</span><span class="sc0">
+     </span><span class="sc11">CUST_ID</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">CUST_NAME</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc4">20</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">CUST_ID</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">ORDERS</span><span class="sc10">(</span><span class="sc0">
+     </span><span class="sc11">ORDER_ID</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">ORDER_DETAIL</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc4">20</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">ORDER_ID</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">CUSTMERORDERS</span><span class="sc10">(</span><span class="sc0">
+     </span><span class="sc11">CUST_ID</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">ORDER_ID</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">SALE_DATE</span><span class="sc0"> </span><span class="sc19">DATETIME</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">CUST_ID</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">ORDER_ID</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc1">/*
+    
+     Third Normal Form:
+     A table is in third normal form when the following conditions are met:
+     - It is in second normal form.
+     - All nonprimary fields are dependent on the primary key.
+    
+    */</span><span class="sc0">
+    
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">ADDRESS</span><span class="sc10">(</span><span class="sc0">
+     </span><span class="sc11">ZIP</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">12</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc11">STREET</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc11">CITY</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">100</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc5">STATE</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">100</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">ZIP</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">CUSTOMERS</span><span class="sc10">(</span><span class="sc0">
+     </span><span class="sc11">CUST_ID</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">CUST_NAME</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc4">20</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">DOB</span><span class="sc0"> </span><span class="sc19">DATE</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">ZIP</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">12</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc11">EMAIL_ID</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">256</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">CUST_ID</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc1">/*
+     tips:
+     - Avoid data duplication
+     - Always use primary key
+     - Create relationships
+     - Depend only on primary key not non-key attributes and composite keys
+     - Group related data into separate table
+     - Ensure each field contains only one piece of information
+    */</span></div>
+
+     <hr>
+     <span class="t2"><b>Relational database sample 1</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">-- @Create first table 
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+       </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">email</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc0"> </span><span class="sc5">UNIQUE</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">bio</span><span class="sc0"> </span><span class="sc19">TEXT</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">country</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">2</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Insert 20 sample values (Sample Data Only)
+    </span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">email</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">bio</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">country</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'john@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hi, I am John. I love hiking and photography.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'US'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'emma@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hey there! I am Emma. I am passionate about painting and traveling.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'CA'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'michael@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hello, I am Michael. I enjoy playing guitar and reading sci-fi novels.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'UK'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'sophia@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hi, I am Sophia. I am a food enthusiast and love to explore new cuisines.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'AU'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'lucas@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hello, I am Lucas. I enjoy traveling and learning new languages.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'DE'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'olivia@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hi, I am Olivia. I love skiing and trying out French cuisine.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'FR'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'carlos@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hello, I am Carlos. I love soccer and Latin music.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'ES'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'giulia@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hi, I am Giulia. I enjoy Italian fashion and traditional cooking.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'takeshi@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hello, I am Takeshi. I am interested in Japanese culture and history.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'JP'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'samantha@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hi, I am Samantha. I enjoy hiking and practicing yoga.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'US'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'william@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hello, I am William. I love playing hockey and camping.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'CA'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'amelia@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hi, I am Amelia. I am passionate about classical music and gardening.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'UK'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'noah@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hello, I am Noah. I enjoy cricket and exploring Indian cuisine.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'AU'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'hannah@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hi, I am Hannah. I love painting and exploring nature.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'DE'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'antoine@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hello, I am Antoine. I love cooking and playing rugby.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'FR'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'mateo@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hi, I am Mateo. I enjoy surfing and Mexican food.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'ES'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'chiara@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hi, I am Chiara. I love art and traveling the world.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'yuki@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hello, I am Yuki. I love Japanese anime and games.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'JP'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'james@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hi, I am James. I enjoy playing basketball and coding.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'US'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'olivia2@example.com'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Hello, I am Olivia. I love playing the piano and volunteering.'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'CA'</span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Select Condition 1 ( * or star means everything):
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+      </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">country</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'US'</span><span class="sc0">
+      </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc0">
+      </span><span class="sc5">ORDER</span><span class="sc0"> </span><span class="sc5">BY</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc5">ASC</span><span class="sc0">
+      </span><span class="sc5">LIMIT</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc10">;</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Select Condition 2 ('a%' = starts with a):
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">email</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">country</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+      </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">country</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'US'</span><span class="sc0">
+      </span><span class="sc5">AND</span><span class="sc0"> </span><span class="sc11">email</span><span class="sc0"> </span><span class="sc5">LIKE</span><span class="sc0"> </span><span class="sc7">'a%'</span><span class="sc0">
+      </span><span class="sc5">ORDER</span><span class="sc0"> </span><span class="sc5">BY</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc5">DESC</span><span class="sc0">
+      </span><span class="sc5">LIMIT</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc10">;</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Create index on email to retrieve data faster
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">INDEX</span><span class="sc0"> </span><span class="sc11">email_index</span><span class="sc0"> </span><span class="sc5">ON</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">(</span><span class="sc11">email</span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Create second table (relational)
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">rooms</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+       </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">street</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">),</span><span class="sc0">
+       </span><span class="sc11">owner_id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">id</span><span class="sc10">),</span><span class="sc0">
+       </span><span class="sc5">FOREIGN</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">owner_id</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">REFERENCES</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">(</span><span class="sc11">id</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Sample insert in table 2
+    </span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">rooms</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">street</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">owner_id</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'lucena'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'sariaya'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'tayabas'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'lucban'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'pagbilao'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'tiaong'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'atimonan'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Select Relational 1:
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+      </span><span class="sc5">INNER</span><span class="sc0"> </span><span class="sc5">JOIN</span><span class="sc0"> </span><span class="sc11">rooms</span><span class="sc0">
+      </span><span class="sc5">ON</span><span class="sc0"> </span><span class="sc11">rooms</span><span class="sc10">.</span><span class="sc11">owner_id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc10">;</span></div>
+
+     <hr>
+     <span class="t2"><b>Relational database sample 2</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">-- @Create table 1
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">IF</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">EXISTS</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+      </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+      </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">100</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Insert sample data in table 1
+    </span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">name</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'Blake'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'Ryan'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'Jesse'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'Glaiza'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'Kyla'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc7">'Lee'</span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Create table 2
+    </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">IF</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">EXISTS</span><span class="sc0"> </span><span class="sc11">hobbies</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+      </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc10">,</span><span class="sc0">
+      </span><span class="sc5">user_id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+      </span><span class="sc11">hobby</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">100</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+      </span><span class="sc5">FOREIGN</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc5">user_id</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">REFERENCES</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">(</span><span class="sc11">id</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Insert sample data in table 2
+    </span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">hobbies</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc5">user_id</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">hobby</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc4">1</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Swimming'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc4">2</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Cycling'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc4">3</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Singing'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc4">5</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Skydiving'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc4">5</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Sleeping'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc4">6</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Walking'</span><span class="sc10">),</span><span class="sc0">
+     </span><span class="sc10">(</span><span class="sc4">7</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Running'</span><span class="sc10">);</span><span class="sc0">  </span><span class="sc2">-- Assuming id 7 has no corresponding user
+    </span><span class="sc0">
+    </span><span class="sc2">-- @Select INNER JOIN
+    </span><span class="sc5">SELECT</span><span class="sc0"> 
+       </span><span class="sc11">users</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">users_id</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">users</span><span class="sc10">.</span><span class="sc11">name</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">users_name</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">hobbies</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">hobbies_id</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">hobbies</span><span class="sc10">.</span><span class="sc11">hobby</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">hobby</span><span class="sc0">
+       </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> 
+       </span><span class="sc5">INNER</span><span class="sc0"> </span><span class="sc5">JOIN</span><span class="sc0"> </span><span class="sc11">hobbies</span><span class="sc0"> </span><span class="sc5">ON</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">hobbies</span><span class="sc10">.</span><span class="sc5">user_id</span><span class="sc10">;</span><span class="sc0">
+    
+    </span><span class="sc2">-- @Full Outer Join using UNION
+    </span><span class="sc5">SELECT</span><span class="sc0"> 
+       </span><span class="sc11">users</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">users_id</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">users</span><span class="sc10">.</span><span class="sc11">name</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">users_name</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">hobbies</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">hobbies_id</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">hobbies</span><span class="sc10">.</span><span class="sc11">hobby</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">hobby</span><span class="sc0">
+       </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> 
+       </span><span class="sc5">LEFT</span><span class="sc0"> </span><span class="sc5">JOIN</span><span class="sc0"> </span><span class="sc11">hobbies</span><span class="sc0"> </span><span class="sc5">ON</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">hobbies</span><span class="sc10">.</span><span class="sc5">user_id</span><span class="sc0">
+    </span><span class="sc5">UNION</span><span class="sc0"> </span><span class="sc5">SELECT</span><span class="sc0"> 
+       </span><span class="sc11">users</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">users_id</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">users</span><span class="sc10">.</span><span class="sc11">name</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">users_name</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">hobbies</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">hobbies_id</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc11">hobbies</span><span class="sc10">.</span><span class="sc11">hobby</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">hobby</span><span class="sc0">
+       </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> 
+       </span><span class="sc5">RIGHT</span><span class="sc0"> </span><span class="sc5">JOIN</span><span class="sc0"> </span><span class="sc11">hobbies</span><span class="sc0"> </span><span class="sc5">ON</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">hobbies</span><span class="sc10">.</span><span class="sc5">user_id</span><span class="sc10">;</span></div>
+
+     <hr>
+     <span class="t2"><b>Select data</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+    </span><span class="sc2">-- Return rows
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">email</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+     </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">country</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'PH'</span><span class="sc0">
+     </span><span class="sc5">AND</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0">
+     </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">email</span><span class="sc0"> </span><span class="sc5">LIKE</span><span class="sc0"> </span><span class="sc6">"z%"</span><span class="sc0">
+     </span><span class="sc5">ORDER</span><span class="sc0"> </span><span class="sc5">BY</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc5">ASC</span><span class="sc0">
+     </span><span class="sc5">LIMIT</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc10">;</span></div>
+
+     <hr>
+     <span class="t2"><b>Select distinct</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+    </span><span class="sc2">-- Select Data even with the same name (no data duplication)
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc5">DISTINCT</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc0">
+     </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">;</span></div>
+
+     <hr>
+     <span class="t2"><b>Select in clause</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+    </span><span class="sc2">-- Similar to OR but simplified
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc0">
+     </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+     </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">department</span><span class="sc0"> </span><span class="sc5">IN</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc7">'HR'</span><span class="sc10">,</span><span class="sc7">'IT'</span><span class="sc10">)</span></div>
+
+     <hr>
+     <span class="t2"><b>Update data</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+    </span><span class="sc2">-- Update DATABASE
+    </span><span class="sc5">UPDATE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+     </span><span class="sc5">SET</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">=</span><span class="sc7">'Changed Name'</span><span class="sc0">
+     </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc10">=</span><span class="sc4">1</span><span class="sc0">
+    
+    </span><span class="sc2">-- Add conditions if necessary</span></div>
+
+    </body>
+</html>

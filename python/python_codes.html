@@ -1,0 +1,228 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="python_codes_style.css">
+        <title>Python Codes</title>
+    </head>
+    <body class="flex-c">
+<span class="t2"><b>Sample register and login system</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Python Register &amp; Login System \nby Khian Calderon \n"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Type 'exit' to terminate the program\n--------------"</span><span class="sc10">)</span><span class="sc0">
+
+</span><span class="sc11">usernames</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[]</span><span class="sc0">
+</span><span class="sc11">passwords</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[]</span><span class="sc0">
+
+</span><span class="sc5">def</span><span class="sc0"> </span><span class="sc9">loggedin</span><span class="sc10">():</span><span class="sc0">
+    </span><span class="sc11">logout</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">input</span><span class="sc10">(</span><span class="sc3">"Type 'Logout' to log out\n"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"--------------"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">logout</span><span class="sc10">.</span><span class="sc11">lower</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc3">"logout"</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+        </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Logging out...."</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Logged Out"</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"--------------"</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc11">ask</span><span class="sc10">()</span><span class="sc0">
+    </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+        </span><span class="sc11">loggedin</span><span class="sc10">()</span><span class="sc0">
+        
+</span><span class="sc5">def</span><span class="sc0"> </span><span class="sc9">login</span><span class="sc10">():</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"--------------"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Login"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc11">log_name</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">input</span><span class="sc10">(</span><span class="sc3">"Enter your username: \n"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">log_name</span><span class="sc0"> </span><span class="sc5">in</span><span class="sc0"> </span><span class="sc11">usernames</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+        </span><span class="sc11">log_pass</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">input</span><span class="sc10">(</span><span class="sc3">"Enter your password: \n"</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc11">ind</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">usernames</span><span class="sc10">.</span><span class="sc11">index</span><span class="sc10">(</span><span class="sc11">log_name</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">log_pass</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc11">passwords</span><span class="sc10">[</span><span class="sc11">ind</span><span class="sc10">])</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+            </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc16">f"Welcome {</span><span class="sc11">log_name</span><span class="sc16">}"</span><span class="sc10">)</span><span class="sc0">
+            </span><span class="sc11">loggedin</span><span class="sc10">()</span><span class="sc0">
+        </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+            </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Incorrect Password!"</span><span class="sc10">)</span><span class="sc0">
+            </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"--------------"</span><span class="sc10">)</span><span class="sc0">
+            </span><span class="sc11">ask</span><span class="sc10">()</span><span class="sc0">
+    </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+        </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"User does not exist"</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"--------------"</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc11">ask</span><span class="sc10">()</span><span class="sc0">
+        
+
+</span><span class="sc5">def</span><span class="sc0"> </span><span class="sc9">reg</span><span class="sc10">():</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"--------------"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Register"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc11">reg_name</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">input</span><span class="sc10">(</span><span class="sc3">"Enter your username: \n"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">reg_name</span><span class="sc10">.</span><span class="sc11">lower</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc5">in</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">username</span><span class="sc10">.</span><span class="sc11">lower</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc5">for</span><span class="sc0"> </span><span class="sc11">username</span><span class="sc0"> </span><span class="sc5">in</span><span class="sc0"> </span><span class="sc11">usernames</span><span class="sc10">])</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+        </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Username already taken, try again"</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"--------------"</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc11">ask</span><span class="sc10">()</span><span class="sc0">
+    </span><span class="sc5">else</span><span class="sc10">:</span><span class="sc0">
+        </span><span class="sc11">reg_pass</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">input</span><span class="sc10">(</span><span class="sc3">"Enter your password: \n"</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc11">reg_confirmpass</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">input</span><span class="sc10">(</span><span class="sc3">"Confirm your password: \n"</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">reg_pass</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc11">reg_confirmpass</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+            </span><span class="sc11">usernames</span><span class="sc10">.</span><span class="sc11">append</span><span class="sc10">(</span><span class="sc11">reg_name</span><span class="sc10">)</span><span class="sc0">
+            </span><span class="sc11">passwords</span><span class="sc10">.</span><span class="sc11">append</span><span class="sc10">(</span><span class="sc11">reg_pass</span><span class="sc10">)</span><span class="sc0">
+            </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"You are now a registered user, you may login now!"</span><span class="sc10">)</span><span class="sc0">
+            </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"--------------"</span><span class="sc10">)</span><span class="sc0">
+            </span><span class="sc11">ask</span><span class="sc10">()</span><span class="sc0">
+        </span><span class="sc5">else</span><span class="sc10">:</span><span class="sc0">
+            </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Password does not match, registration failed, try again"</span><span class="sc10">)</span><span class="sc0">
+            </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"--------------"</span><span class="sc10">)</span><span class="sc0">
+            </span><span class="sc11">ask</span><span class="sc10">()</span><span class="sc0">
+
+</span><span class="sc5">def</span><span class="sc0"> </span><span class="sc9">exit</span><span class="sc10">():</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"--------------"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Thank you for using my program\nHave a good day!"</span><span class="sc10">)</span><span class="sc0">
+
+</span><span class="sc5">def</span><span class="sc0"> </span><span class="sc9">ask</span><span class="sc10">():</span><span class="sc0">
+    </span><span class="sc11">x</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">input</span><span class="sc10">(</span><span class="sc3">"Hello user, register or login? \n"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">.</span><span class="sc11">lower</span><span class="sc10">()==</span><span class="sc3">"login"</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+        </span><span class="sc11">login</span><span class="sc10">()</span><span class="sc0">
+    </span><span class="sc5">elif</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">.</span><span class="sc11">lower</span><span class="sc10">()==</span><span class="sc3">"register"</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+        </span><span class="sc11">reg</span><span class="sc10">()</span><span class="sc0">
+    </span><span class="sc5">elif</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">.</span><span class="sc11">lower</span><span class="sc10">()==</span><span class="sc3">"exit"</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0">
+        </span><span class="sc14">exit</span><span class="sc10">()</span><span class="sc0">
+    </span><span class="sc5">else</span><span class="sc10">:</span><span class="sc0">
+        </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Invalid input, try again\n--------------"</span><span class="sc10">)</span><span class="sc0">
+        </span><span class="sc11">ask</span><span class="sc10">()</span><span class="sc0">
+
+</span><span class="sc11">ask</span><span class="sc10">()</span></div>
+
+<hr>
+<span class="t2"><b>Array</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">names</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc3">"Jake"</span><span class="sc10">,</span><span class="sc3">"Bob"</span><span class="sc10">,</span><span class="sc3">"Faith"</span><span class="sc10">]</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">names</span><span class="sc10">[</span><span class="sc2">0</span><span class="sc10">])</span><span class="sc0">
+</span><span class="sc11">names</span><span class="sc10">[</span><span class="sc2">0</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc3">"Jay"</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">names</span><span class="sc10">[</span><span class="sc2">0</span><span class="sc10">])</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">names</span><span class="sc10">[-</span><span class="sc2">1</span><span class="sc10">])</span><span class="sc0"> </span><span class="sc1"># from last</span><span class="sc0">
+      
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"\n--------- \n"</span><span class="sc10">)</span><span class="sc0">
+      
+</span><span class="sc11">nums</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc2">11</span><span class="sc10">,</span><span class="sc2">12</span><span class="sc10">,</span><span class="sc2">13</span><span class="sc10">,</span><span class="sc2">14</span><span class="sc10">,</span><span class="sc2">15</span><span class="sc10">]</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">nums</span><span class="sc10">[</span><span class="sc2">0</span><span class="sc10">:</span><span class="sc2">3</span><span class="sc10">])</span></div>
+      
+<hr>
+<span class="t2"><b>Boolean operator</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">a</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc2">5</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc2">10</span><span class="sc0"> </span><span class="sc1"># greater than</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">a</span><span class="sc10">)</span><span class="sc0">
+      
+</span><span class="sc11">b</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc2">10</span><span class="sc0"> </span><span class="sc10">!=</span><span class="sc0"> </span><span class="sc2">9</span><span class="sc0"> </span><span class="sc1"># not equal</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">b</span><span class="sc10">)</span></div>
+      
+<hr>
+<span class="t2"><b>Clear console</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">os</span><span class="sc0">
+</span><span class="sc5">def</span><span class="sc0"> </span><span class="sc9">clear_console</span><span class="sc10">():</span><span class="sc0">
+    </span><span class="sc11">os</span><span class="sc10">.</span><span class="sc11">system</span><span class="sc10">(</span><span class="sc4">'cls'</span><span class="sc0"> </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc11">os</span><span class="sc10">.</span><span class="sc11">name</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc4">'nt'</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc4">'clear'</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc11">clear_console</span><span class="sc10">()</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Console Cleared!"</span><span class="sc10">)</span></div>
+      
+<hr>
+<span class="t2"><b>Data type conversion</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">num1</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">input</span><span class="sc10">(</span><span class="sc3">"Enter your first input \n"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc11">num2</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">input</span><span class="sc10">(</span><span class="sc3">"Enter your second input \n"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc11">result</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">float</span><span class="sc10">(</span><span class="sc11">num1</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc14">float</span><span class="sc10">(</span><span class="sc11">num2</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc16">f"{</span><span class="sc11">num1</span><span class="sc16">} + {</span><span class="sc11">num2</span><span class="sc16">} = {</span><span class="sc11">result</span><span class="sc16">} using F-String"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc14">str</span><span class="sc10">(</span><span class="sc11">num1</span><span class="sc10">)+</span><span class="sc3">" + "</span><span class="sc10">+</span><span class="sc14">str</span><span class="sc10">(</span><span class="sc11">num2</span><span class="sc10">)+</span><span class="sc3">" = "</span><span class="sc10">+</span><span class="sc14">str</span><span class="sc10">(</span><span class="sc11">result</span><span class="sc10">)+</span><span class="sc3">" using Concatenation"</span><span class="sc10">)</span></div>
+      
+<hr>
+<span class="t2"><b>For loops</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">numbers</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc2">10</span><span class="sc10">,</span><span class="sc2">20</span><span class="sc10">,</span><span class="sc2">30</span><span class="sc10">,</span><span class="sc2">40</span><span class="sc10">,</span><span class="sc2">50</span><span class="sc10">,</span><span class="sc2">60</span><span class="sc10">,</span><span class="sc2">70</span><span class="sc10">,</span><span class="sc2">80</span><span class="sc10">]</span><span class="sc0">
+
+</span><span class="sc5">for</span><span class="sc0"> </span><span class="sc11">item</span><span class="sc0"> </span><span class="sc5">in</span><span class="sc0"> </span><span class="sc11">numbers</span><span class="sc10">:</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">item</span><span class="sc10">)</span><span class="sc0">
+    
+</span><span class="sc1"># using while with similar result</span><span class="sc0">
+</span><span class="sc11">i</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc2">0</span><span class="sc0">
+</span><span class="sc5">while</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc0"> </span><span class="sc14">len</span><span class="sc10">(</span><span class="sc11">numbers</span><span class="sc10">):</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">numbers</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">])</span><span class="sc0">
+    </span><span class="sc11">i</span><span class="sc0"> </span><span class="sc10">+=</span><span class="sc0"> </span><span class="sc2">1</span></div>
+      
+<hr>
+<span class="t2"><b>Hello world</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Hello World"</span><span class="sc10">)</span></div>
+      
+<hr>
+<span class="t2"><b>If statement</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">tmp</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc2">35</span><span class="sc0">
+
+</span><span class="sc5">if</span><span class="sc0"> </span><span class="sc11">tmp</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc2">30</span><span class="sc10">:</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"It's a hot day"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc5">elif</span><span class="sc0"> </span><span class="sc11">tmp</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc2">25</span><span class="sc10">:</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"It's a slightly hot day"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc5">else</span><span class="sc10">:</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"It's cold"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"Thank you!"</span><span class="sc10">)</span></div>
+      
+<hr>
+<span class="t2"><b>Input</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">name</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">input</span><span class="sc10">(</span><span class="sc3">"What is your name? "</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc16">f"Hello {</span><span class="sc11">name</span><span class="sc16">}"</span><span class="sc10">)</span></div>
+      
+<hr>
+<span class="t2"><b>List methods</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">nums</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc2">10</span><span class="sc10">,</span><span class="sc2">20</span><span class="sc10">,</span><span class="sc2">30</span><span class="sc10">,</span><span class="sc2">40</span><span class="sc10">,</span><span class="sc2">50</span><span class="sc10">]</span><span class="sc0">
+</span><span class="sc11">nums</span><span class="sc10">.</span><span class="sc11">append</span><span class="sc10">(</span><span class="sc2">60</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc11">nums</span><span class="sc10">.</span><span class="sc11">insert</span><span class="sc10">(-</span><span class="sc2">1</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc2">5</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc11">nums</span><span class="sc10">.</span><span class="sc11">remove</span><span class="sc10">(</span><span class="sc2">30</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">nums</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc2">25</span><span class="sc0"> </span><span class="sc5">in</span><span class="sc0"> </span><span class="sc11">nums</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc14">len</span><span class="sc10">(</span><span class="sc11">nums</span><span class="sc10">))</span></div>
+      
+<hr>
+<span class="t2"><b>Logical operators</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">price</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc2">15</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">price</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc2">10</span><span class="sc0"> </span><span class="sc5">and</span><span class="sc0"> </span><span class="sc11">price</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc0"> </span><span class="sc2">20</span><span class="sc10">)</span><span class="sc0">
+
+</span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc2">10</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc2">10</span><span class="sc0"> </span><span class="sc5">or</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc0"> </span><span class="sc2">20</span><span class="sc10">)</span><span class="sc0">
+
+</span><span class="sc11">name</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">'khian'</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc5">not</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc4">'albert'</span><span class="sc10">)</span></div>
+      
+<hr>
+<span class="t2"><b>Range</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">for</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc0"> </span><span class="sc5">in</span><span class="sc0"> </span><span class="sc14">range</span><span class="sc10">(</span><span class="sc2">5</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc2">15</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc2">2</span><span class="sc10">):</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">)</span><span class="sc0">
+</span></div>
+      
+<hr>
+<span class="t2"><b>String methods</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">x</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">'This a Sample String'</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">.</span><span class="sc11">upper</span><span class="sc10">())</span><span class="sc0"> </span><span class="sc1"># converts to upper case</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">.</span><span class="sc11">lower</span><span class="sc10">())</span><span class="sc0"> </span><span class="sc1"># converts to lower case</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">.</span><span class="sc11">find</span><span class="sc10">(</span><span class="sc4">'a'</span><span class="sc10">))</span><span class="sc0"> </span><span class="sc1"># returns the index of the string (case-sensitive)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">.</span><span class="sc11">replace</span><span class="sc10">(</span><span class="sc4">'This'</span><span class="sc10">,</span><span class="sc4">'what?'</span><span class="sc10">))</span><span class="sc0"> </span><span class="sc1"># reaplce the strings</span><span class="sc0">
+
+</span><span class="sc1"># returns true or false (case-sensitive)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc4">'This'</span><span class="sc0"> </span><span class="sc5">in</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc4">'this'</span><span class="sc0"> </span><span class="sc5">in</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc10">)</span><span class="sc0">
+
+</span></div>
+      
+<hr>
+<span class="t2"><b>Tuples</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">x</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc2">1</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc2">2</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc2">3</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc2">3</span><span class="sc10">)</span><span class="sc0"> 
+</span><span class="sc1"># Exactly like arrays but cannot be changed</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">.</span><span class="sc11">count</span><span class="sc10">(</span><span class="sc2">3</span><span class="sc10">))</span><span class="sc0">
+</span><span class="sc1"># how many instances</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">.</span><span class="sc11">index</span><span class="sc10">(</span><span class="sc2">2</span><span class="sc10">))</span><span class="sc0">
+</span><span class="sc1"># first instance</span></div>
+      
+<hr>
+<span class="t2"><b>Variables</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc11">name</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc3">"John Smith"</span><span class="sc0">
+</span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc2">20</span><span class="sc0">
+</span><span class="sc11">new_patient</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc14">True</span><span class="sc0">
+
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc16">f"Hello {</span><span class="sc11">name</span><span class="sc16">}, you are {</span><span class="sc11">age</span><span class="sc16">} years old"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"You are new patient"</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc11">new_patient</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc14">True</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc3">"You are not a new patient"</span><span class="sc10">)</span></div>
+      
+<hr>
+<span class="t2"><b>While loop</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+</span><span class="sc11">x</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc2">1</span><span class="sc0">
+</span><span class="sc5">while</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc0"> </span><span class="sc10">&lt;=</span><span class="sc0"> </span><span class="sc2">5</span><span class="sc10">:</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc14">print</span><span class="sc10">(</span><span class="sc4">'-'</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc11">x</span><span class="sc0"> </span><span class="sc10">+=</span><span class="sc0"> </span><span class="sc2">1</span></div>
+    </body>
+</html>

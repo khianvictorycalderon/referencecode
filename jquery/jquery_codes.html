@@ -1,0 +1,310 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="jquery_codes_style.css">
+        <title>JQuery Codes</title>
+    </head>
+    <body class="flex-c">
+        <span class="t2"><b><a href="https://code.jquery.com/jquery-3.7.1.js" download>Download JQuery</a></b>:</span>
+        <hr>
+
+        <span class="t2"><b>Animate</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;title&gt;&lt;/title&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;script</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"jquery.js"</span><span class="sc8"> </span><span class="sc3">lang</span><span class="sc8">=</span><span class="sc6">"javascript"</span><span class="sc1">&gt;&lt;/script&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;style&gt;</span><span class="sc0">
+              #lm {
+                position:absolute;
+              }
+            </span><span class="sc1">&lt;/style&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;&lt;br&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn1"</span><span class="sc1">&gt;</span><span class="sc0">Animate 1</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn2"</span><span class="sc1">&gt;</span><span class="sc0">Animate 2</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;&lt;hr&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;img</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"lm"</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"js.img"</span><span class="sc8"> </span><span class="sc3">width</span><span class="sc8">=</span><span class="sc6">"400px"</span><span class="sc8"> </span><span class="sc1">&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;script&gt;</span><span class="sc40">
+        </span><span class="sc41">    $</span><span class="sc50">(</span><span class="sc48">"document"</span><span class="sc50">).</span><span class="sc46">ready</span><span class="sc50">(()</span><span class="sc41"> </span><span class="sc50">=&gt;</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+              $</span><span class="sc50">(</span><span class="sc48">"#btn1"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">animate</span><span class="sc50">({</span><span class="sc41">
+                  </span><span class="sc46">left</span><span class="sc50">:</span><span class="sc49">'150px'</span><span class="sc50">,</span><span class="sc41">
+                  </span><span class="sc46">opacity</span><span class="sc50">:</span><span class="sc49">'0'</span><span class="sc41">
+                </span><span class="sc50">},</span><span class="sc45">2000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+              $</span><span class="sc50">(</span><span class="sc48">"#btn2"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">animate</span><span class="sc50">({</span><span class="sc41">
+                  </span><span class="sc46">left</span><span class="sc50">:</span><span class="sc49">'0px'</span><span class="sc50">,</span><span class="sc41">
+                  </span><span class="sc46">opacity</span><span class="sc50">:</span><span class="sc49">'1'</span><span class="sc41">
+                </span><span class="sc50">},</span><span class="sc45">2000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+            </span><span class="sc50">});</span><span class="sc41">
+          </span><span class="sc1">&lt;/script&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/html&gt;</span><span class="sc0">
+        </span></div>
+
+        <hr>
+        <span class="t2"><b>Double click event</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;title&gt;</span><span class="sc0">JQuery Sample Event</span><span class="sc1">&lt;/title&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;script</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"jquery.js"</span><span class="sc8"> </span><span class="sc3">lang</span><span class="sc8">=</span><span class="sc6">"javascript"</span><span class="sc1">&gt;&lt;/script&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;img</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"ijm"</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"chess.img"</span><span class="sc1">&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn"</span><span class="sc1">&gt;</span><span class="sc0">Click</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;script&gt;</span><span class="sc40">
+        </span><span class="sc41">  $</span><span class="sc50">(</span><span class="sc48">"#btn"</span><span class="sc50">).</span><span class="sc46">dblclick</span><span class="sc50">(()</span><span class="sc41"> </span><span class="sc50">=&gt;</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41"> </span><span class="sc43">// click or dbl click</span><span class="sc41">
+             $</span><span class="sc50">(</span><span class="sc48">"#ijm"</span><span class="sc50">).</span><span class="sc46">css</span><span class="sc50">(</span><span class="sc49">'width'</span><span class="sc50">,</span><span class="sc49">'500px'</span><span class="sc50">);</span><span class="sc41">
+          </span><span class="sc50">});</span><span class="sc41">
+        
+          $</span><span class="sc50">(</span><span class="sc48">"document"</span><span class="sc50">).</span><span class="sc46">ready</span><span class="sc50">(()</span><span class="sc41"> </span><span class="sc50">=&gt;</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+            </span><span class="sc46">alert</span><span class="sc50">(</span><span class="sc48">"Hello user"</span><span class="sc50">);</span><span class="sc41">
+          </span><span class="sc50">});</span><span class="sc41">
+        </span><span class="sc1">&lt;/script&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/html&gt;</span><span class="sc0">
+        </span></div>
+
+        <hr>
+        <span class="t2"><b>Effects</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;title&gt;&lt;/title&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;script</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"jquery.js"</span><span class="sc8"> </span><span class="sc3">lang</span><span class="sc8">=</span><span class="sc6">"javascript"</span><span class="sc1">&gt;&lt;/script&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;&lt;br&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn1"</span><span class="sc1">&gt;</span><span class="sc0">Hide</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn2"</span><span class="sc1">&gt;</span><span class="sc0">Show</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn3"</span><span class="sc1">&gt;</span><span class="sc0">Toggle</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;&lt;br&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn4"</span><span class="sc1">&gt;</span><span class="sc0">Fade In</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn5"</span><span class="sc1">&gt;</span><span class="sc0">Fade Out</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn6"</span><span class="sc1">&gt;</span><span class="sc0">Toggle Fade</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;&lt;br&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn7"</span><span class="sc1">&gt;</span><span class="sc0">Slide Up</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn8"</span><span class="sc1">&gt;</span><span class="sc0">Slide Down</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn9"</span><span class="sc1">&gt;</span><span class="sc0">Slide Toggle</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;&lt;br&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"btn10"</span><span class="sc1">&gt;</span><span class="sc0">Stop</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;&lt;hr&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;img</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"lm"</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"js.img"</span><span class="sc8"> </span><span class="sc3">width</span><span class="sc8">=</span><span class="sc6">"400px"</span><span class="sc8"> </span><span class="sc1">&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;script&gt;</span><span class="sc40">
+        </span><span class="sc41">    $</span><span class="sc50">(</span><span class="sc48">"document"</span><span class="sc50">).</span><span class="sc46">ready</span><span class="sc50">(()</span><span class="sc41"> </span><span class="sc50">=&gt;</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+              $</span><span class="sc50">(</span><span class="sc48">"#btn1"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">hide</span><span class="sc50">(</span><span class="sc45">1000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+              $</span><span class="sc50">(</span><span class="sc48">"#btn2"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">show</span><span class="sc50">(</span><span class="sc45">1000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+              $</span><span class="sc50">(</span><span class="sc48">"#btn3"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">toggle</span><span class="sc50">(</span><span class="sc45">2000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+        
+              $</span><span class="sc50">(</span><span class="sc48">"#btn4"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">fadeIn</span><span class="sc50">(</span><span class="sc45">1000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+              $</span><span class="sc50">(</span><span class="sc48">"#btn5"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">fadeOut</span><span class="sc50">(</span><span class="sc45">1000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+              $</span><span class="sc50">(</span><span class="sc48">"#btn6"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">fadeToggle</span><span class="sc50">(</span><span class="sc45">2000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+        
+              $</span><span class="sc50">(</span><span class="sc48">"#btn7"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">slideUp</span><span class="sc50">(</span><span class="sc45">1000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+              $</span><span class="sc50">(</span><span class="sc48">"#btn8"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">slideDown</span><span class="sc50">(</span><span class="sc45">1000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+              $</span><span class="sc50">(</span><span class="sc48">"#btn9"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">slideToggle</span><span class="sc50">(</span><span class="sc45">2000</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+        
+              $</span><span class="sc50">(</span><span class="sc48">"#btn10"</span><span class="sc50">).</span><span class="sc46">click</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#lm"</span><span class="sc50">).</span><span class="sc46">stop</span><span class="sc50">();</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+            </span><span class="sc50">});</span><span class="sc41">
+          </span><span class="sc1">&lt;/script&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/html&gt;</span><span class="sc0">
+        </span></div>
+
+        <hr>
+        <span class="t2"><b>Fade toggle</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;title&gt;</span><span class="sc0">JQuery Fade Toggle</span><span class="sc1">&lt;/title&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;script</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"jquery.js"</span><span class="sc8"> </span><span class="sc3">lang</span><span class="sc8">=</span><span class="sc6">"javascript"</span><span class="sc1">&gt;&lt;/script&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;script&gt;</span><span class="sc40">
+        </span><span class="sc41">     </span><span class="sc47">function</span><span class="sc41"> </span><span class="sc46">gg</span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+               $</span><span class="sc50">(</span><span class="sc48">"#hj"</span><span class="sc50">).</span><span class="sc46">fadeToggle</span><span class="sc50">(</span><span class="sc45">100</span><span class="sc50">);</span><span class="sc41"> </span><span class="sc43">// milliseconds inside the parenthesis</span><span class="sc41">
+             </span><span class="sc50">}</span><span class="sc41">
+           </span><span class="sc1">&lt;/script&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;img</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"hj"</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"js.img"</span><span class="sc1">&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">onclick</span><span class="sc8">=</span><span class="sc6">"gg();"</span><span class="sc1">&gt;</span><span class="sc0">Click me</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/html&gt;</span><span class="sc0">
+        </span></div>
+
+        <hr>
+        <span class="t2"><b>Mouse event</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;title&gt;</span><span class="sc0">JQuery Sample Event 2</span><span class="sc1">&lt;/title&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;script</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"jquery.js"</span><span class="sc8"> </span><span class="sc3">lang</span><span class="sc8">=</span><span class="sc6">"javascript"</span><span class="sc1">&gt;&lt;/script&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;h1&gt;</span><span class="sc0">Hover on pictures</span><span class="sc1">&lt;/h1&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;img</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"ijm"</span><span class="sc8"> </span><span class="sc3">width</span><span class="sc8">=</span><span class="sc6">"300px"</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"chess.img"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;hr&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;img</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"ikm"</span><span class="sc8"> </span><span class="sc3">width</span><span class="sc8">=</span><span class="sc6">"300px"</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"chess.img"</span><span class="sc1">&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;script&gt;</span><span class="sc40">
+        </span><span class="sc41">    $</span><span class="sc50">(</span><span class="sc48">"document"</span><span class="sc50">).</span><span class="sc46">ready</span><span class="sc50">(</span><span class="sc47">function</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+        
+              $</span><span class="sc50">(</span><span class="sc48">"#ijm"</span><span class="sc50">).</span><span class="sc46">mouseenter</span><span class="sc50">(()</span><span class="sc41"> </span><span class="sc50">=&gt;</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#ijm"</span><span class="sc50">).</span><span class="sc46">css</span><span class="sc50">(</span><span class="sc48">"width"</span><span class="sc50">,</span><span class="sc41"> </span><span class="sc48">"700px"</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+              $</span><span class="sc50">(</span><span class="sc48">"#ijm"</span><span class="sc50">).</span><span class="sc46">mouseleave</span><span class="sc50">(()</span><span class="sc41"> </span><span class="sc50">=&gt;</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+                $</span><span class="sc50">(</span><span class="sc48">"#ijm"</span><span class="sc50">).</span><span class="sc46">css</span><span class="sc50">(</span><span class="sc48">"width"</span><span class="sc50">,</span><span class="sc41"> </span><span class="sc48">"300px"</span><span class="sc50">);</span><span class="sc41">
+              </span><span class="sc50">});</span><span class="sc41">
+        
+        
+              $</span><span class="sc50">(</span><span class="sc48">"#ikm"</span><span class="sc50">).</span><span class="sc46">hover</span><span class="sc50">(</span><span class="sc41">
+                </span><span class="sc47">function</span><span class="sc50">(){</span><span class="sc41">
+                  $</span><span class="sc50">(</span><span class="sc48">"#ikm"</span><span class="sc50">).</span><span class="sc46">css</span><span class="sc50">(</span><span class="sc48">"width"</span><span class="sc50">,</span><span class="sc41"> </span><span class="sc48">"700px"</span><span class="sc50">);</span><span class="sc41">
+                </span><span class="sc50">},</span><span class="sc41">
+                </span><span class="sc47">function</span><span class="sc50">(){</span><span class="sc41">
+                  $</span><span class="sc50">(</span><span class="sc48">"#ikm"</span><span class="sc50">).</span><span class="sc46">css</span><span class="sc50">(</span><span class="sc48">"width"</span><span class="sc50">,</span><span class="sc41"> </span><span class="sc48">"300px"</span><span class="sc50">);</span><span class="sc41">
+                </span><span class="sc50">});</span><span class="sc41">
+            </span><span class="sc50">});</span><span class="sc41">
+          </span><span class="sc1">&lt;/script&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/html&gt;</span><span class="sc0">
+        </span></div>
+
+        <hr>
+        <span class="t2"><b>Multiple selector</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;title&gt;&lt;/title&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;style&gt;</span><span class="sc0">
+            #x {
+              background:gray;
+              padding:2%;
+            }
+           </span><span class="sc1">&lt;/style&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;script</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"jquery.js"</span><span class="sc8"> </span><span class="sc3">lang</span><span class="sc8">=</span><span class="sc6">"javascript"</span><span class="sc1">&gt;&lt;/script&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;script&gt;</span><span class="sc40">
+        </span><span class="sc41">     </span><span class="sc47">function</span><span class="sc41"> </span><span class="sc46">func1</span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+               $</span><span class="sc50">(</span><span class="sc48">"#x li"</span><span class="sc50">).</span><span class="sc46">css</span><span class="sc50">(</span><span class="sc48">"background"</span><span class="sc50">,</span><span class="sc48">"red"</span><span class="sc50">);</span><span class="sc41">
+             </span><span class="sc50">}</span><span class="sc41">
+             </span><span class="sc47">function</span><span class="sc41"> </span><span class="sc46">func2</span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+               $</span><span class="sc50">(</span><span class="sc48">"li:even"</span><span class="sc50">).</span><span class="sc46">css</span><span class="sc50">(</span><span class="sc48">"font-style"</span><span class="sc50">,</span><span class="sc48">"italic"</span><span class="sc50">);</span><span class="sc41">
+             </span><span class="sc50">}</span><span class="sc41">
+           </span><span class="sc1">&lt;/script&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;div</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"x"</span><span class="sc1">&gt;</span><span class="sc0">
+             </span><span class="sc1">&lt;ul&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;li&gt;</span><span class="sc0">item 1</span><span class="sc1">&lt;/li&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;li&gt;</span><span class="sc0">item 2</span><span class="sc1">&lt;/li&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;li&gt;</span><span class="sc0">item 3</span><span class="sc1">&lt;/li&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;li&gt;</span><span class="sc0">item 4</span><span class="sc1">&lt;/li&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;li&gt;</span><span class="sc0">item 5</span><span class="sc1">&lt;/li&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;li&gt;</span><span class="sc0">item 6</span><span class="sc1">&lt;/li&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;li&gt;</span><span class="sc0">item 7</span><span class="sc1">&lt;/li&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;li&gt;</span><span class="sc0">item 8</span><span class="sc1">&lt;/li&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;li&gt;</span><span class="sc0">item 9</span><span class="sc1">&lt;/li&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;li&gt;</span><span class="sc0">item 10</span><span class="sc1">&lt;/li&gt;</span><span class="sc0">
+             </span><span class="sc1">&lt;/ul&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;/div&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">onclick</span><span class="sc8">=</span><span class="sc6">"func1();"</span><span class="sc1">&gt;</span><span class="sc0">Change background color</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">onclick</span><span class="sc8">=</span><span class="sc6">"func2();"</span><span class="sc1">&gt;</span><span class="sc0">Change font style</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/html&gt;</span><span class="sc0">
+        </span></div>
+
+        <hr>
+        <span class="t2"><b>Single selector</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;title&gt;</span><span class="sc0">JQuery selector</span><span class="sc1">&lt;/title&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;script</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"jquery.js"</span><span class="sc8"> </span><span class="sc3">lang</span><span class="sc8">=</span><span class="sc6">"javascript"</span><span class="sc1">&gt;&lt;/script&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;script&gt;</span><span class="sc40">
+        </span><span class="sc41">     </span><span class="sc47">const</span><span class="sc41"> </span><span class="sc46">func1</span><span class="sc41"> </span><span class="sc50">=</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">=&gt;</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+               $</span><span class="sc50">(</span><span class="sc48">"#div1"</span><span class="sc50">).</span><span class="sc46">css</span><span class="sc50">(</span><span class="sc48">"background-color"</span><span class="sc50">,</span><span class="sc48">"orange"</span><span class="sc50">);</span><span class="sc41">
+               $</span><span class="sc50">(</span><span class="sc48">"#div2"</span><span class="sc50">).</span><span class="sc46">css</span><span class="sc50">(</span><span class="sc48">"background-color"</span><span class="sc50">,</span><span class="sc48">"blue"</span><span class="sc50">);</span><span class="sc41">
+             </span><span class="sc50">}</span><span class="sc41">
+             </span><span class="sc47">const</span><span class="sc41"> </span><span class="sc46">func2</span><span class="sc41"> </span><span class="sc50">=</span><span class="sc41"> </span><span class="sc50">()</span><span class="sc41"> </span><span class="sc50">=&gt;</span><span class="sc41"> </span><span class="sc50">{</span><span class="sc41">
+               $</span><span class="sc50">(</span><span class="sc48">".para"</span><span class="sc50">).</span><span class="sc46">css</span><span class="sc50">(</span><span class="sc48">"font-style"</span><span class="sc50">,</span><span class="sc48">"italic"</span><span class="sc50">);</span><span class="sc41">
+             </span><span class="sc50">}</span><span class="sc41">
+           </span><span class="sc1">&lt;/script&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;style&gt;</span><span class="sc0">
+            #div1 {
+              padding: 1%;
+              background:red;
+            }
+            #div2 {
+              padding: 1%;
+              background:yellow;
+            }
+            button {
+              margin:1%;
+            }
+           </span><span class="sc1">&lt;/style&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;h1&gt;</span><span class="sc0">JQuery Selectors</span><span class="sc1">&lt;/h1&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;div</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"div1"</span><span class="sc1">&gt;</span><span class="sc0">
+             </span><span class="sc1">&lt;p</span><span class="sc8"> </span><span class="sc3">class</span><span class="sc8">=</span><span class="sc6">"para"</span><span class="sc1">&gt;</span><span class="sc0">Paragraph 1</span><span class="sc1">&lt;/p&gt;</span><span class="sc0">
+             </span><span class="sc1">&lt;p</span><span class="sc8"> </span><span class="sc3">class</span><span class="sc8">=</span><span class="sc6">"para"</span><span class="sc1">&gt;</span><span class="sc0">Paragraph 2</span><span class="sc1">&lt;/p&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;/div&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;div</span><span class="sc8"> </span><span class="sc3">id</span><span class="sc8">=</span><span class="sc6">"div2"</span><span class="sc1">&gt;</span><span class="sc0">
+             </span><span class="sc1">&lt;p</span><span class="sc8"> </span><span class="sc3">class</span><span class="sc8">=</span><span class="sc6">"para"</span><span class="sc1">&gt;</span><span class="sc0">Paragraph 3</span><span class="sc1">&lt;/p&gt;</span><span class="sc0">
+             </span><span class="sc1">&lt;p</span><span class="sc8"> </span><span class="sc3">class</span><span class="sc8">=</span><span class="sc6">"para"</span><span class="sc1">&gt;</span><span class="sc0">Paragraph 4</span><span class="sc1">&lt;/p&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;/div&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">onclick</span><span class="sc8">=</span><span class="sc6">"func1();"</span><span class="sc1">&gt;</span><span class="sc0">Change Background</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;button</span><span class="sc8"> </span><span class="sc3">onclick</span><span class="sc8">=</span><span class="sc6">"func2();"</span><span class="sc1">&gt;</span><span class="sc0">Change Font Style</span><span class="sc1">&lt;/button&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+           
+         </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/html&gt;</span><span class="sc0">
+        </span></div>
+
+        <hr>
+        <span class="t2"><b>Template</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;title&gt;&lt;/title&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;script</span><span class="sc8"> </span><span class="sc3">src</span><span class="sc8">=</span><span class="sc6">"jquery.js"</span><span class="sc8"> </span><span class="sc3">lang</span><span class="sc8">=</span><span class="sc6">"javascript"</span><span class="sc1">&gt;&lt;/script&gt;</span><span class="sc0">
+           </span><span class="sc1">&lt;script&gt;</span><span class="sc40">
+        </span><span class="sc41">     
+           </span><span class="sc1">&lt;/script&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+         </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+           
+         </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/html&gt;</span><span class="sc0">
+        </span></div>
+        
+        </body>
+</html>
