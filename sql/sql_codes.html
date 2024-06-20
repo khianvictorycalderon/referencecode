@@ -341,5 +341,102 @@
     
     </span><span class="sc2">-- Add conditions if necessary</span></div>
 
+<hr>
+<span class="t2"><b>Order, Group, And Aggregated Functions</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+</span><span class="sc2">-- @ Order clause
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">&gt;=</span><span class="sc0"> </span><span class="sc4">18</span><span class="sc0">
+ </span><span class="sc5">ORDER</span><span class="sc0"> </span><span class="sc5">BY</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc5">DESC</span><span class="sc10">;</span><span class="sc0">
+ 
+ </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">&gt;=</span><span class="sc0"> </span><span class="sc4">18</span><span class="sc0">
+ </span><span class="sc5">ORDER</span><span class="sc0"> </span><span class="sc5">BY</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc5">ASC</span><span class="sc10">;</span><span class="sc0">
+ 
+ 
+</span><span class="sc2">-- @ Group and Count clause
+-- Group columns with the same data value
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc11">age</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">(</span><span class="sc11">name</span><span class="sc10">,</span><span class="sc11">age</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc7">'John Doe'</span><span class="sc10">,</span><span class="sc4">18</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc7">'Patrick Reyes'</span><span class="sc10">,</span><span class="sc4">19</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc7">'Isaac Newton'</span><span class="sc10">,</span><span class="sc4">18</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc7">'Albert Guinto'</span><span class="sc10">,</span><span class="sc4">18</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc7">'Jericho Disanta'</span><span class="sc10">,</span><span class="sc4">19</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc7">'Cara Nepo'</span><span class="sc10">,</span><span class="sc4">20</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc7">'Cristine Apacio'</span><span class="sc10">,</span><span class="sc4">20</span><span class="sc10">);</span><span class="sc0">
+ 
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc2">-- Displays the number of columns with the same age
+</span><span class="sc0"> </span><span class="sc5">COUNT</span><span class="sc10">(</span><span class="sc11">name</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">name_with_same_age</span><span class="sc10">,</span><span class="sc0">
+ </span><span class="sc11">age</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+ </span><span class="sc5">GROUP</span><span class="sc0"> </span><span class="sc5">BY</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc10">;</span><span class="sc0">
+ 
+</span><span class="sc1">/*
+
+ Aggregate Functions:
+ SUM() = Returns the total sum of a numeric column.
+ COUNT() = Returns the number of rows.
+ AVG() = Returns the average value of a numeric column.
+ MAX() = Returns the maximum value.
+ MIN() = Returns the minimum value.
+ 
+*/</span><span class="sc0">
+
+</span><span class="sc2">-- Having Clause, like WHERE but has aggregated functions
+</span><span class="sc0">
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc5">COUNT</span><span class="sc10">(*)</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">user_count</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+ </span><span class="sc5">GROUP</span><span class="sc0"> </span><span class="sc5">BY</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0">
+ </span><span class="sc5">HAVING</span><span class="sc0"> </span><span class="sc5">COUNT</span><span class="sc10">(*)</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0">
+ </span><span class="sc5">ORDER</span><span class="sc0"> </span><span class="sc5">BY</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0"> </span><span class="sc5">DESC</span><span class="sc10">;</span><span class="sc0">
+ 
+ 
+</span><span class="sc2">-- @ Describe Clause , column parameters
+</span><span class="sc5">DESC</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">DESCRIBE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">;</span><span class="sc0">
+
+
+</span><span class="sc2">-- @ Truncate, empties all the rows of a TABLE
+</span><span class="sc5">TRUNCATE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc2">-- @ Delete row, selected rows ONLY
+</span><span class="sc5">DELETE</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+</span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">&lt;=</span><span class="sc0"> </span><span class="sc4">18</span><span class="sc10">;</span><span class="sc0">
+
+
+</span><span class="sc2">-- @ Rename a table using ALTER
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+</span><span class="sc5">RENAME</span><span class="sc0"> </span><span class="sc5">TO</span><span class="sc0"> </span><span class="sc11">new_table_name</span><span class="sc10">;</span><span class="sc0">
+
+
+</span><span class="sc2">-- @ Create and delete DATABASE
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">DATABASE</span><span class="sc0"> </span><span class="sc11">new_database</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">DATABASE</span><span class="sc0"> </span><span class="sc11">old_database</span><span class="sc10">;</span><span class="sc0">
+
+
+</span><span class="sc2">-- @ Use database
+</span><span class="sc5">USE</span><span class="sc0"> </span><span class="sc5">DATABASE</span><span class="sc0"> </span><span class="sc11">database_name</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc2">-- @ Create database if not exist
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">DATABASE</span><span class="sc0"> </span><span class="sc5">IF</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">EXISTS</span><span class="sc0"> </span><span class="sc11">mydatabase</span><span class="sc10">;</span><span class="sc0">
+
+
+</span><span class="sc2">-- @ Commit and rollback, rollback is like an undo
+</span><span class="sc0">
+</span><span class="sc5">START</span><span class="sc0"> </span><span class="sc5">TRANSACTION</span><span class="sc10">;</span><span class="sc0">
+ </span><span class="sc2">-- SQL statements
+</span><span class="sc5">COMMIT</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc2">-- Permanently saved data
+</span><span class="sc0">
+</span><span class="sc5">START</span><span class="sc0"> </span><span class="sc5">TRANSACTION</span><span class="sc10">;</span><span class="sc0">
+ </span><span class="sc2">-- SQL statements
+</span><span class="sc5">ROLLBACK</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc2">-- Discards saved data</span></div>
     </body>
 </html>
