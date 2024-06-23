@@ -438,5 +438,174 @@
 </span><span class="sc5">START</span><span class="sc0"> </span><span class="sc5">TRANSACTION</span><span class="sc10">;</span><span class="sc0">
  </span><span class="sc2">-- SQL statements
 </span><span class="sc5">ROLLBACK</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc2">-- Discards saved data</span></div>
-    </body>
+    
+<hr>
+<span class="t2"><b>Subquery and Operators</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+</span><span class="sc2">-- @ Subquery, a query inside a query, results of a column are independent from each other
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc5">MAX</span><span class="sc10">(</span><span class="sc11">age</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">max_age</span><span class="sc0">
+</span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">;</span><span class="sc0">
+
+
+</span><span class="sc2">-- @ Creating a sub table (sample data)
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">cellphone_no</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+   </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+   </span><span class="sc11">owner_id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+   </span><span class="sc11">cellphone_number</span><span class="sc0"> </span><span class="sc19">TEXT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+   </span><span class="sc5">FOREIGN</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">owner_id</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">REFERENCES</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">(</span><span class="sc11">id</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc2">-- @ Cellphone numbers example (sample data)
+</span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">cellphone_no</span><span class="sc10">(</span><span class="sc11">owner_id</span><span class="sc10">,</span><span class="sc11">cellphone_number</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc4">1</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'0999 421 4285'</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc4">2</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'0999 123 4567'</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc4">3</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'0999 234 5678'</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc4">4</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'0999 345 6789'</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc4">5</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'0999 456 7890'</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc4">6</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'0999 567 8901'</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc4">7</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'0999 678 9012'</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc2">-- @ Resetting auto_increment to 1
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">cellphone_no</span><span class="sc0">
+ </span><span class="sc11">AUTO_INCREMENT</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc2">-- @ Arithmetic operators
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+   </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc0">
+   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc0"> </span><span class="sc10">-</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc0">
+   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc0">
+   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc0"> </span><span class="sc10">/</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc10">;</span><span class="sc0">
+   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc0"> </span><span class="sc10">%</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc2">-- 0 remainder
+</span><span class="sc0">   
+   
+</span><span class="sc2">-- @ Comparison operators
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+   </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0"> </span><span class="sc2">-- equal
+</span><span class="sc0">   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0"> </span><span class="sc2">-- greater than
+</span><span class="sc0">   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0"> </span><span class="sc2">-- less than
+</span><span class="sc0">   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">&gt;=</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0"> </span><span class="sc2">-- greater than or equal
+</span><span class="sc0">   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">&lt;=</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0"> </span><span class="sc2">-- less than or equal
+</span><span class="sc0">   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">!=</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0"> </span><span class="sc2">-- not equal
+</span><span class="sc0">   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">&lt;&gt;</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0"> </span><span class="sc2">-- less than or greater than (similar to not equal)
+</span><span class="sc0">   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">!&gt;</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0"> </span><span class="sc2">-- not greater than
+</span><span class="sc0">   </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">!&lt;</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0"> </span><span class="sc2">-- not less than
+</span><span class="sc0">   
+   
+   
+</span><span class="sc2">-- @ Logical operator (sample data)
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+  </span><span class="sc11">employee_id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">employee_name</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc19">CHAR</span><span class="sc10">(</span><span class="sc4">50</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">employees_salary</span><span class="sc0"> </span><span class="sc19">DECIMAL</span><span class="sc10">(</span><span class="sc4">20</span><span class="sc10">,</span><span class="sc4">2</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc11">employees_generated_revenue</span><span class="sc0"> </span><span class="sc19">DECIMAL</span><span class="sc10">(</span><span class="sc4">20</span><span class="sc10">,</span><span class="sc4">2</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc10">(</span><span class="sc11">employee_name</span><span class="sc10">,</span><span class="sc11">employee_department</span><span class="sc10">,</span><span class="sc11">employees_salary</span><span class="sc10">,</span><span class="sc11">employees_generated_revenue</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'John Smith'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Marketing'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">50000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">65000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Mary Johnson'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'HR'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">48000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">55000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Michael Williams'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Sales'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">55000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">70000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Jennifer Brown'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Finance'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">60000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">72000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'William Jones'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">52000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">58000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Linda Garcia'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Marketing'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">48000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">50000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'David Martinez'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Sales'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">60000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">65000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Susan Davis'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Finance'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">55000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">60000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Robert Rodriguez'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'HR'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">48000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">45000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Karen Wilson'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">52000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">48000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Daniel Hernandez'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Marketing'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">50000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">55000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Lisa Gonzalez'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Sales'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">58000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">63000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Paul Taylor'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Finance'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">62000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">70000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Mark Anderson'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">54000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">59000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Betty Thomas'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'HR'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">47000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">48000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Donald Moore'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Marketing'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">49000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">48000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Helen Walker'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Sales'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">57000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">60000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Christopher Hill'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'Finance'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">63000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">65000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Amy Lee'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">53000.00</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">50000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'Richard Scott'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'HR'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">42000.00</span><span class="sc10">);</span><span class="sc0">
+ 
+ 
+</span><span class="sc2">-- @ reseting
+</span><span class="sc5">TRUNCATE</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc11">AUTO_INCREMENT</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">1000</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc2">-- @ Logical operators
+</span><span class="sc0">
+</span><span class="sc2">-- ALL
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">ALL</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0">
+    </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+    </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'HR'</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+</span><span class="sc2">-- ANY and SOME (can be use interchangably)
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">ANY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0">
+    </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+    </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'Finance'</span><span class="sc0">
+        </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">SOME</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0">
+    </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+    </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'Finance'</span><span class="sc0">
+        </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    
+</span><span class="sc2">-- AND
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employees_salary</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc4">50000.00</span><span class="sc0">
+ </span><span class="sc5">AND</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc10">;</span><span class="sc0">
+    
+</span><span class="sc2">-- BETWEEN
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employees_salary</span><span class="sc0">
+ </span><span class="sc5">BETWEEN</span><span class="sc0"> </span><span class="sc4">40000.00</span><span class="sc0"> </span><span class="sc5">AND</span><span class="sc0"> </span><span class="sc4">50000.00</span><span class="sc10">;</span><span class="sc0">
+ 
+</span><span class="sc2">-- EXISTS (can be more efficient when checking for the existence of rows, especially in scenarios where the subquery may return a large result set.)
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc5">EXISTS</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc0">
+    </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0"> </span><span class="sc11">e</span><span class="sc0">
+    </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc10">.</span><span class="sc11">employee_id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">e</span><span class="sc10">.</span><span class="sc11">employee_id</span><span class="sc0">
+    </span><span class="sc5">AND</span><span class="sc0"> </span><span class="sc11">employees_generated_revenue</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc11">employees_salary</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc2">-- IN (often faster for smaller result sets or when comparing against a small set of values.)
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employee_id</span><span class="sc0"> </span><span class="sc5">IN</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc11">employee_id</span><span class="sc0">
+    </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+    </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employees_generated_revenue</span><span class="sc0"> </span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc11">employees_salary</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc2">-- LIKE
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employee_id</span><span class="sc0">
+ </span><span class="sc5">LIKE</span><span class="sc0"> </span><span class="sc6">"%hello%"</span><span class="sc10">;</span><span class="sc0">
+ 
+</span><span class="sc2">-- NOT &amp; OR (returns the same results)
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> 
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc0">
+ </span><span class="sc5">OR</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc10">!=</span><span class="sc0"> </span><span class="sc7">'IT'</span><span class="sc10">;</span><span class="sc0">
+ 
+</span><span class="sc2">-- IS NULL
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0">
+ </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
+ </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">employees_salary</span><span class="sc0"> </span><span class="sc5">IS</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">;</span><span class="sc0">
+ 
+
+</span><span class="sc2">-----------------------------------------------------------</span></div>
+</body>
 </html>
