@@ -607,5 +607,31 @@
  
 
 </span><span class="sc2">-----------------------------------------------------------</span></div>
+
+<hr>
+<span class="t2"><b>Expressions</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+</span><span class="sc2">-- SQL Expresisons
+</span><span class="sc0">
+</span><span class="sc1">/*
+
+ An expression is a combination of one or more values, operators, 
+ and SQL functions that evaluate to a value.
+ 
+ SQL EXPRESSIONs are like formulas and they are written in query language. 
+ You can also use them to query the database for specific set of data.
+
+*/</span><span class="sc0">
+
+
+</span><span class="sc2">-- Numeric Expression
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc4">15</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc4">6</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">numbers_sum</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc5">POWER</span><span class="sc10">(</span><span class="sc4">42</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> `</span><span class="sc11">squared</span><span class="sc0">`</span><span class="sc10">,</span><span class="sc0">
+       </span><span class="sc10">(</span><span class="sc4">100</span><span class="sc0"> </span><span class="sc10">/</span><span class="sc0"> </span><span class="sc4">10</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> `</span><span class="sc11">quotient</span><span class="sc0">`</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc5">COUNT</span><span class="sc10">(*)</span><span class="sc0"> </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">number_of_rows</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc2">-- Date expression
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc5">CURRENT_TIMESTAMP</span><span class="sc10">;</span></div>
+
 </body>
 </html>
