@@ -701,5 +701,26 @@
     </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$mixed}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
    </span><span class="sc18">?&gt;</span></div>
 
+
+<hr>
+<span class="t2"><b>Base 64 encoder</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118">
+</span><span class="sc121">function</span><span class="sc118"> fileToBase64</span><span class="sc127">(</span><span class="sc123">$filePath</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(!</span><span class="sc121">file_exists</span><span class="sc127">(</span><span class="sc123">$filePath</span><span class="sc127">))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc121">null</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+    </span><span class="sc123">$fileContent</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">file_get_contents</span><span class="sc127">(</span><span class="sc123">$filePath</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$base64File</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">base64_encode</span><span class="sc127">(</span><span class="sc123">$fileContent</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc123">$base64File</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc18">?&gt;</span></div>
+
     </body>
 </html>
+
+<!-- 
+
+<hr>
+<span class="t2"><b>__</b>:</span>
+
+-->
