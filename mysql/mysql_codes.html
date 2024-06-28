@@ -759,5 +759,114 @@
  </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">employees</span><span class="sc0">
  </span><span class="sc5">ORDER</span><span class="sc0"> </span><span class="sc5">BY</span><span class="sc0"> </span><span class="sc11">employee_department</span><span class="sc0"> </span><span class="sc5">DESC</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">employees_salary</span><span class="sc10">;</span><span class="sc0">
  </span><span class="sc2">-- in this case, there are multiple employees with the same department, so it will move to their salary instead</span></div>
+
+<hr>
+<span class="t2"><b>General constraints</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+</span><span class="sc2">-- @ General CONSTRAINTS
+</span><span class="sc0">
+</span><span class="sc2">-- NOT NULL
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+  </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc2">-- Modify column to add NOT NULL constraint
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc0">
+  </span><span class="sc5">MODIFY</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc2">-- Modify column to drop NOT NULL constraint
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc0">
+  </span><span class="sc5">MODIFY</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">;</span><span class="sc0">
+
+
+</span><span class="sc2">-- DEFAULT (provides a default value)
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+  </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc11">salary</span><span class="sc0"> </span><span class="sc19">DECIMAL</span><span class="sc10">(</span><span class="sc4">18</span><span class="sc10">,</span><span class="sc4">2</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">DEFAULT</span><span class="sc0"> </span><span class="sc4">5000.00</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc2">-- Modify column to change the default value
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc0">
+  </span><span class="sc5">MODIFY</span><span class="sc0"> </span><span class="sc5">COLUMN</span><span class="sc0"> </span><span class="sc11">salary</span><span class="sc0"> </span><span class="sc19">DECIMAL</span><span class="sc10">(</span><span class="sc4">18</span><span class="sc10">,</span><span class="sc4">2</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">DEFAULT</span><span class="sc0"> </span><span class="sc4">6000.00</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc2">-- Modify column to drop the default value
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc0">
+  </span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">COLUMN</span><span class="sc0"> </span><span class="sc11">salary</span><span class="sc0"> </span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">DEFAULT</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc2">-- Inserting with default values
+-- Method 1, omit the default:
+</span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc10">(</span><span class="sc11">name</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc7">'jake'</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc2">-- Method 2, explicitly state:
+</span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc10">(</span><span class="sc11">name</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">salary</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc7">'jake'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc5">DEFAULT</span><span class="sc10">);</span><span class="sc0">
+
+ 
+ 
+</span><span class="sc2">-- UNIQUE
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">customers</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+   </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc10">,</span><span class="sc0">
+   </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">),</span><span class="sc0">
+   </span><span class="sc11">table_number</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">UNIQUE</span><span class="sc0">
+ </span><span class="sc10">);</span><span class="sc0"> 
+ 
+</span><span class="sc2">-- Adding unique constraint (only if not already defined)
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">customers</span><span class="sc0">
+ </span><span class="sc5">ADD</span><span class="sc0"> </span><span class="sc5">CONSTRAINT</span><span class="sc0"> </span><span class="sc11">uniqueness</span><span class="sc0"> </span><span class="sc5">UNIQUE</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">table_number</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc2">-- Dropping the unique constraint
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">customers</span><span class="sc0">
+ </span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">INDEX</span><span class="sc0"> </span><span class="sc11">table_number</span><span class="sc10">;</span><span class="sc0">
+
+
+</span><span class="sc2">-- PRIMARY KEY
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+  </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc0">
+ </span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0">
+ 
+
+</span><span class="sc2">-- FOREIGN KEY
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">orders</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+  </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">owner_id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">item</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc5">FOREIGN</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">owner_id</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">REFERENCES</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc10">(</span><span class="sc11">id</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc0">
+ </span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">FOREIGN</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0">
+ 
+ 
+</span><span class="sc2">-- CHECK
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+  </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc11">age</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">CHECK</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">&gt;=</span><span class="sc0"> </span><span class="sc4">18</span><span class="sc10">)</span><span class="sc0">
+  </span><span class="sc11">height</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+
+ </span><span class="sc2">-- multiple conditions
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+  </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc11">age</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">height</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc5">CHECK</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">&gt;=</span><span class="sc0"> </span><span class="sc4">18</span><span class="sc0"> </span><span class="sc5">AND</span><span class="sc0"> </span><span class="sc11">height</span><span class="sc0"> </span><span class="sc10">&gt;=</span><span class="sc0"> </span><span class="sc4">5</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+ </span><span class="sc5">ADD</span><span class="sc0"> </span><span class="sc5">CONSTRAINT</span><span class="sc0"> </span><span class="sc11">mycondition</span><span class="sc0">
+ </span><span class="sc5">CHECK</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">&gt;=</span><span class="sc0"> </span><span class="sc4">18</span><span class="sc0"> </span><span class="sc5">AND</span><span class="sc0"> </span><span class="sc11">height</span><span class="sc0"> </span><span class="sc10">&gt;=</span><span class="sc0"> </span><span class="sc4">5</span><span class="sc10">);</span><span class="sc0">
+ 
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc5">user</span><span class="sc0">
+ </span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">CONSTRAINT</span><span class="sc0"> </span><span class="sc11">mycondition</span><span class="sc10">;</span><span class="sc0">
+ 
+
+</span><span class="sc2">-- INDEX
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">INDEX</span><span class="sc0"> </span><span class="sc11">age_index</span><span class="sc0"> </span><span class="sc5">ON</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">(</span><span class="sc11">age</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
+ </span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">INDEX</span><span class="sc0"> </span><span class="sc11">age_index</span><span class="sc10">;</span></div>
 </body>
 </html>
