@@ -868,5 +868,88 @@
 
 </span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0">
  </span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">INDEX</span><span class="sc0"> </span><span class="sc11">age_index</span><span class="sc10">;</span></div>
+
+ <hr>
+ <span class="t2"><b>View and transactions</b>:</span>
+ <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+
+ </span><span class="sc2">-- Views (Virtual Tables)
+ </span><span class="sc0">
+ </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">VIEW</span><span class="sc0"> </span><span class="sc11">myview</span><span class="sc0"> 
+  </span><span class="sc5">AS</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0">
+  </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">;</span><span class="sc0">
+  
+ </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">myview</span><span class="sc10">;</span><span class="sc0">
+ 
+ </span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">VIEW</span><span class="sc0"> </span><span class="sc11">myview</span><span class="sc0">
+ 
+ 
+ </span><span class="sc2">-- Transactions
+ </span><span class="sc0">
+ </span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">accounts</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+   </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc10">,</span><span class="sc0">
+   </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">),</span><span class="sc0">
+   </span><span class="sc11">balance</span><span class="sc0"> </span><span class="sc19">DECIMAL</span><span class="sc10">(</span><span class="sc4">18</span><span class="sc10">,</span><span class="sc4">2</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">NOT</span><span class="sc0"> </span><span class="sc5">NULL</span><span class="sc0"> </span><span class="sc5">DEFAULT</span><span class="sc0"> </span><span class="sc4">0.0</span><span class="sc0">
+ </span><span class="sc10">);</span><span class="sc0">
+ 
+ </span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">accounts</span><span class="sc10">(</span><span class="sc11">name</span><span class="sc10">,</span><span class="sc11">balance</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'john'</span><span class="sc10">,</span><span class="sc4">5000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'jake'</span><span class="sc10">,</span><span class="sc4">8000.00</span><span class="sc10">),</span><span class="sc0">
+  </span><span class="sc10">(</span><span class="sc7">'aimee'</span><span class="sc10">,</span><span class="sc4">2000.00</span><span class="sc10">);</span><span class="sc0">
+ 
+ </span><span class="sc5">START</span><span class="sc0"> </span><span class="sc5">TRANSACTION</span><span class="sc10">;</span><span class="sc0">
+ 
+ </span><span class="sc5">UPDATE</span><span class="sc0"> </span><span class="sc11">accounts</span><span class="sc0">
+  </span><span class="sc5">SET</span><span class="sc0"> </span><span class="sc11">balance</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">balance</span><span class="sc0"> </span><span class="sc10">-</span><span class="sc0"> </span><span class="sc4">100</span><span class="sc0">
+  </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc5">SAVEPOINT</span><span class="sc0"> </span><span class="sc11">A</span><span class="sc10">;</span><span class="sc0">
+ 
+ </span><span class="sc5">UPDATE</span><span class="sc0"> </span><span class="sc11">accounts</span><span class="sc0">
+  </span><span class="sc5">SET</span><span class="sc0"> </span><span class="sc11">balance</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">balance</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc4">100</span><span class="sc0">
+  </span><span class="sc5">WHERE</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc5">SAVEPOINT</span><span class="sc0"> </span><span class="sc11">B</span><span class="sc10">;</span><span class="sc0">
+  
+ </span><span class="sc5">ROLLBACK</span><span class="sc0"> </span><span class="sc5">TO</span><span class="sc0"> </span><span class="sc5">SAVEPOINT</span><span class="sc0"> </span><span class="sc11">A</span><span class="sc10">;</span><span class="sc0">
+ 
+ </span><span class="sc5">COMMIT</span><span class="sc10">;</span><span class="sc0">
+ 
+ </span><span class="sc5">RELEASE</span><span class="sc0"> </span><span class="sc5">SAVEPOINT</span><span class="sc0"> </span><span class="sc11">A</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc2">-- Removes the SAVEPOINT</span></div>
+
+ 
+<hr>
+<span class="t2"><b>Temporary and clone table</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+</span><span class="sc2">-- TEMPORARY TABLE
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TEMPORARY</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+  </span><span class="sc11">id</span><span class="sc0"> </span><span class="sc19">INT</span><span class="sc0"> </span><span class="sc5">PRIMARY</span><span class="sc0"> </span><span class="sc5">KEY</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc19">VARCHAR</span><span class="sc10">(</span><span class="sc4">200</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc5">ALTER</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc0"> </span><span class="sc11">AUTO_INCREMENT</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">1001</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">(</span><span class="sc11">name</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">VALUES</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc7">'zyrus'</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc7">'patrick'</span><span class="sc10">),</span><span class="sc0">
+ </span><span class="sc10">(</span><span class="sc7">'james'</span><span class="sc10">);</span><span class="sc0">
+ 
+</span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">DROP</span><span class="sc0"> </span><span class="sc5">TEMPORARY</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">users</span><span class="sc10">;</span><span class="sc0">
+
+
+</span><span class="sc2">-- Clone tables
+</span><span class="sc1">/*
+  Similar to CREATE TABLE table_name( SELECT * FROM )
+  but includes indexes and all
+*/</span><span class="sc0">
+
+</span><span class="sc5">CREATE</span><span class="sc0"> </span><span class="sc5">TABLE</span><span class="sc0"> </span><span class="sc11">new_table_name</span><span class="sc0"> </span><span class="sc5">LIKE</span><span class="sc0"> </span><span class="sc11">original_table_name</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">INSERT</span><span class="sc0"> </span><span class="sc5">INTO</span><span class="sc0"> </span><span class="sc11">new_table_name</span><span class="sc0"> </span><span class="sc5">SELECT</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc5">FROM</span><span class="sc0"> </span><span class="sc11">original_table_name</span><span class="sc10">;</span></div>
 </body>
 </html>
+
+<!-- 
+
+<hr>
+<span class="t2"><b>__</b>:</span>
+
+-->
