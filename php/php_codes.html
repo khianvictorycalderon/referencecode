@@ -1,0 +1,971 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="php_codes_style.css">
+        <title>PHP (Hypertext Preprocessor) Codes</title>
+    </head>
+    <body class="flex-c">
+      <span class="t2"><b>Array</b>:</span>
+      <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+      </span><span class="sc123">$sample_array</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">array</span><span class="sc127">(</span><span class="sc122">10</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"Hello"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">true</span><span class="sc127">);</span><span class="sc118">
+      </span><span class="sc121">print_r</span><span class="sc127">(</span><span class="sc123">$sample_array</span><span class="sc127">);</span><span class="sc118">
+      </span><span class="sc121">print_r</span><span class="sc127">(</span><span class="sc119">"&lt;br&gt;&lt;br&gt;"</span><span class="sc127">);</span><span class="sc118">
+      </span><span class="sc121">print_r</span><span class="sc127">(</span><span class="sc123">$sample_array</span><span class="sc127">[</span><span class="sc122">0</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;br&gt;"</span><span class="sc127">);</span><span class="sc118">
+      </span><span class="sc121">print_r</span><span class="sc127">(</span><span class="sc123">$sample_array</span><span class="sc127">[</span><span class="sc122">1</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;br&gt;"</span><span class="sc127">);</span><span class="sc118">
+      </span><span class="sc121">print_r</span><span class="sc127">(</span><span class="sc123">$sample_array</span><span class="sc127">[</span><span class="sc122">2</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;br&gt;"</span><span class="sc127">);</span><span class="sc118">
+     
+      </span><span class="sc125">// advance array functions</span><span class="sc118">
+      </span><span class="sc123">$x</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">array</span><span class="sc127">(</span><span class="sc119">"Banana"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"Apple"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"Orange"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"Kiwi"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"Pineapple"</span><span class="sc127">);</span><span class="sc118">
+      </span><span class="sc121">array_push</span><span class="sc127">(</span><span class="sc123">$x</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"Dalandan"</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// Adds a last value</span><span class="sc118">
+      </span><span class="sc121">array_pop</span><span class="sc127">(</span><span class="sc123">$x</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// Removes the last value</span><span class="sc118">
+      </span><span class="sc121">array_shift</span><span class="sc127">(</span><span class="sc123">$x</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// Removes the first value</span><span class="sc118">
+      </span><span class="sc121">array_unshift</span><span class="sc127">(</span><span class="sc123">$x</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"Lettuce"</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// Adds a first value</span><span class="sc118">
+      </span><span class="sc123">$th</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">array_reverse</span><span class="sc127">(</span><span class="sc123">$x</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// Reverses the array and returns a new value</span><span class="sc118">
+     
+      </span><span class="sc121">forEach</span><span class="sc127">(</span><span class="sc123">$x</span><span class="sc118"> </span><span class="sc121">as</span><span class="sc118"> </span><span class="sc123">$item</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+         </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt; </span><span class="sc104">{$item}</span><span class="sc119"> &lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+      </span><span class="sc127">}</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt; How many values in array: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">count</span><span class="sc127">(</span><span class="sc123">$x</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+      </span><span class="sc121">print_r</span><span class="sc127">(</span><span class="sc123">$th</span><span class="sc127">);</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+     </span><span class="sc18">?&gt;</span></div>
+
+
+     <hr>
+     <span class="t2"><b>Associative array</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc123">$capitals</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">array</span><span class="sc127">(</span><span class="sc118">
+       </span><span class="sc119">"USA"</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc119">"Washington DC"</span><span class="sc127">,</span><span class="sc118">
+       </span><span class="sc119">"Japan"</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc119">"Tokyo"</span><span class="sc127">,</span><span class="sc118">
+       </span><span class="sc119">"South Korea"</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc119">"Seoul"</span><span class="sc127">,</span><span class="sc118">
+       </span><span class="sc119">"Philippines"</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc119">"Manila"</span><span class="sc118">
+    </span><span class="sc127">);</span><span class="sc118">
+   
+    </span><span class="sc123">$filp_capitals</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">array_flip</span><span class="sc127">(</span><span class="sc123">$capitals</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// returns the flip values of the associative array</span><span class="sc118">
+   
+    </span><span class="sc123">$capitals</span><span class="sc127">[</span><span class="sc119">"China"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"Beijing"</span><span class="sc127">;</span><span class="sc118">
+    
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;"</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$capitals</span><span class="sc127">[</span><span class="sc120">'USA'</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt; &lt;hr&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">foreach</span><span class="sc127">(</span><span class="sc123">$capitals</span><span class="sc118"> </span><span class="sc121">as</span><span class="sc118"> </span><span class="sc123">$x</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc123">$y</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+       </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt; </span><span class="sc104">{$x}</span><span class="sc119">, Capital: </span><span class="sc104">{$y}</span><span class="sc119"> &lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+   
+   </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Cookies</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc125">// Syntax:</span><span class="sc118">
+    </span><span class="sc125">// (Value ID, Value, Expiration Time, File Path)</span><span class="sc118">
+    </span><span class="sc121">setcookie</span><span class="sc127">(</span><span class="sc119">"Favorite_Color"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"Black"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">time</span><span class="sc127">()</span><span class="sc118"> </span><span class="sc127">+</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc122">100</span><span class="sc127">),</span><span class="sc118"> </span><span class="sc119">"/"</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">setcookie</span><span class="sc127">(</span><span class="sc119">"Favorite_Music"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"Love_Music"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">time</span><span class="sc127">()</span><span class="sc118"> </span><span class="sc127">+</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc122">100</span><span class="sc127">),</span><span class="sc118"> </span><span class="sc119">"/"</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">setcookie</span><span class="sc127">(</span><span class="sc119">"Favorite_Food"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"Bulgogi"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">time</span><span class="sc127">()</span><span class="sc118"> </span><span class="sc127">+</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc122">100</span><span class="sc127">),</span><span class="sc118"> </span><span class="sc119">"/"</span><span class="sc127">);</span><span class="sc118">
+   
+    </span><span class="sc125">// to delete a cookie, set the time to -0</span><span class="sc118">
+    </span><span class="sc121">setcookie</span><span class="sc127">(</span><span class="sc119">"Favorite_Music"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">""</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">time</span><span class="sc127">()</span><span class="sc118"> </span><span class="sc127">-</span><span class="sc118"> </span><span class="sc122">0</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"/"</span><span class="sc127">);</span><span class="sc118">
+   
+    </span><span class="sc121">foreach</span><span class="sc127">(</span><span class="sc123">$_COOKIE</span><span class="sc118"> </span><span class="sc121">as</span><span class="sc118"> </span><span class="sc123">$key</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc123">$value</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+       </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$key}</span><span class="sc119"> = </span><span class="sc104">{$value}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+   
+    </span><span class="sc125">// Sample advertisements</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc121">isset</span><span class="sc127">(</span><span class="sc123">$_COOKIE</span><span class="sc127">[</span><span class="sc119">"Favorite_Food"</span><span class="sc127">]))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+       </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Hungry?, Buy Some </span><span class="sc104">{$_COOKIE['Favorite_Food']}</span><span class="sc119">! &lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+       </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;I don't know what kind of food you like&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+   </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Foreach</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118">
+ 
+     </span><span class="sc123">$nums</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">array</span><span class="sc127">(</span><span class="sc122">10</span><span class="sc127">,</span><span class="sc122">20</span><span class="sc127">,</span><span class="sc122">30</span><span class="sc127">,</span><span class="sc122">40</span><span class="sc127">,</span><span class="sc122">50</span><span class="sc127">,</span><span class="sc122">60</span><span class="sc127">,</span><span class="sc122">70</span><span class="sc127">,</span><span class="sc122">80</span><span class="sc127">);</span><span class="sc118">
+     </span><span class="sc121">foreach</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$nums</span><span class="sc118"> </span><span class="sc121">as</span><span class="sc118"> </span><span class="sc123">$xn</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc126">$xn</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+     </span><span class="sc127">}</span><span class="sc118">
+    
+    </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Form sanitation and validation</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+        </span><span class="sc9">&lt;!-- This is more advanced now--&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;form</span><span class="sc8"> </span><span class="sc3">method</span><span class="sc8">=</span><span class="sc6">"post"</span><span class="sc8"> </span><span class="sc3">action</span><span class="sc8">=</span><span class="sc6">"</span><span class="sc18">&lt;?php</span><span class="sc118"> </span><span class="sc121">htmlspecialchars</span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc120">'PHP_SELF'</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc18">?&gt;</span><span class="sc6">"</span><span class="sc1">&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"username"</span><span class="sc1">&gt;</span><span class="sc0">Username: </span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"username"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc1">&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"age"</span><span class="sc1">&gt;</span><span class="sc0">Age: </span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"age"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc1">&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"email"</span><span class="sc1">&gt;</span><span class="sc0">Email: </span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"email"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc1">&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+               </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"submit1"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"submit"</span><span class="sc8"> </span><span class="sc3">value</span><span class="sc8">=</span><span class="sc6">"Send"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;/form&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;hr&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;h1&gt;</span><span class="sc0">Output:</span><span class="sc1">&lt;/h1&gt;</span><span class="sc0">
+            </span><span class="sc18">&lt;?php</span><span class="sc118">
+            </span><span class="sc125">// PHP code here:</span><span class="sc118">
+              </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc119">"REQUEST_METHOD"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"POST"</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc121">isset</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"submit1"</span><span class="sc127">]))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    
+                 </span><span class="sc125">// Sanitize = Removes characters</span><span class="sc118">
+                 </span><span class="sc125">// Validate = Returns empty string if it doesn't pass</span><span class="sc118">
+                 </span><span class="sc125">// Works best when in combination of both</span><span class="sc118">
+    
+                 </span><span class="sc123">$sanitized_username</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">filter_input</span><span class="sc127">(</span><span class="sc121">INPUT_POST</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"username"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">FILTER_SANITIZE_SPECIAL_CHARS</span><span class="sc127">);</span><span class="sc118">
+                 </span><span class="sc123">$sanitized_age</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">filter_input</span><span class="sc127">(</span><span class="sc121">INPUT_POST</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"age"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">FILTER_SANITIZE_NUMBER_INT</span><span class="sc127">);</span><span class="sc118">
+                 </span><span class="sc123">$sanitized_email</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">filter_input</span><span class="sc127">(</span><span class="sc121">INPUT_POST</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"email"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">FILTER_SANITIZE_EMAIL</span><span class="sc127">);</span><span class="sc118">
+    
+                 </span><span class="sc123">$validated_age</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">filter_input</span><span class="sc127">(</span><span class="sc121">INPUT_POST</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"age"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">FILTER_VALIDATE_INT</span><span class="sc127">);</span><span class="sc118">
+                 </span><span class="sc123">$validated_email</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">filter_input</span><span class="sc127">(</span><span class="sc121">INPUT_POST</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"email"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">FILTER_VALIDATE_EMAIL</span><span class="sc127">);</span><span class="sc118">
+                 </span><span class="sc125">// filters user input</span><span class="sc118">
+                 </span><span class="sc125">// 3 arguments:, Input post or input get, variable to filter, types of filter</span><span class="sc118">
+    
+                 </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Hello </span><span class="sc104">{$sanitized_username}</span><span class="sc119">, You are </span><span class="sc104">{$sanitized_age}</span><span class="sc119"> years old, You're email is </span><span class="sc104">{$sanitized_email}</span><span class="sc119">, This is Sanitization&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+                 </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;hr&gt;"</span><span class="sc127">;</span><span class="sc118">
+    
+                 </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc121">empty</span><span class="sc127">(</span><span class="sc123">$validated_age</span><span class="sc127">))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                  </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Invalid Number&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+                 </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                  </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;You Are </span><span class="sc104">{$validated_age}</span><span class="sc119"> Years Old&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+                 </span><span class="sc127">}</span><span class="sc118">
+                 </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc121">empty</span><span class="sc127">(</span><span class="sc123">$validated_email</span><span class="sc127">))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                  </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Invalid Email&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+                 </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                  </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;You're Email is </span><span class="sc104">{$validated_email}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+                 </span><span class="sc127">}</span><span class="sc118">
+    
+                </span><span class="sc127">}</span><span class="sc118">
+              </span><span class="sc127">}</span><span class="sc118">
+            </span><span class="sc18">?&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/html&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Form template action self</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+        </span><span class="sc9">&lt;!-- This is more advanced now--&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;form</span><span class="sc8"> </span><span class="sc3">method</span><span class="sc8">=</span><span class="sc6">""</span><span class="sc8"> </span><span class="sc3">action</span><span class="sc8">=</span><span class="sc6">"</span><span class="sc18">&lt;?php</span><span class="sc118"> </span><span class="sc121">htmlspecialchars</span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc120">'PHP_SELF'</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc18">?&gt;</span><span class="sc6">"</span><span class="sc1">&gt;</span><span class="sc0">
+             
+             </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">""</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"submit"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;/form&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;hr&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;h1&gt;</span><span class="sc0">Output:</span><span class="sc1">&lt;/h1&gt;</span><span class="sc0">
+            </span><span class="sc18">&lt;?php</span><span class="sc118">
+            </span><span class="sc125">// PHP code here:</span><span class="sc118">
+            </span><span class="sc18">?&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/html&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Hashing</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc123">$entered_password</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"i like Srogramming"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$database_password</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"i like programming"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$hash</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">password_hash</span><span class="sc127">(</span><span class="sc123">$database_password</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">PASSWORD_DEFAULT</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$hash}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+   
+    </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc121">password_verify</span><span class="sc127">(</span><span class="sc123">$entered_password</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$hash</span><span class="sc127">))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;You are logged in&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+       </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Invalid!&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+   </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Header</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc121">header</span><span class="sc127">(</span><span class="sc119">"Location:PHP_Sample_Post.php"</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc125">// redirects to php file above</span><span class="sc118">
+    </span><span class="sc121">exit</span><span class="sc127">;</span><span class="sc118">
+   </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Hello world</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Hello World&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h2&gt;Khian Calderon&lt;/h2&gt;"</span><span class="sc127">;</span><span class="sc118">
+ </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>If statement</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc123">$age</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc122">15</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc123">$age</span><span class="sc118"> </span><span class="sc127">&gt;=</span><span class="sc118"> </span><span class="sc122">18</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+       </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc119">"You are an adult"</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+       </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc119">"You are a minor"</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+   </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Include</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc121">include</span><span class="sc127">(</span><span class="sc119">"PHP_Foreach.php"</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">include</span><span class="sc127">(</span><span class="sc119">"PHP_Sample_Post.php"</span><span class="sc127">);</span><span class="sc118">
+   </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Math</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc123">$x</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc122">15</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$y</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc127">-</span><span class="sc122">7.5</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$z</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc122">10.13</span><span class="sc127">;</span><span class="sc118">
+   
+    </span><span class="sc123">$a</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">abs</span><span class="sc127">(</span><span class="sc123">$y</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// returns the absolute value of the number</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$a}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$b</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">round</span><span class="sc127">(</span><span class="sc123">$y</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// returns nearest rounded of the number</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$b}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$c</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">floor</span><span class="sc127">(</span><span class="sc123">$z</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// returns the rounded low of the number</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$c}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$d</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">ceil</span><span class="sc127">(</span><span class="sc123">$z</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// returns the rounded high of the number</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$d}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+   
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;"</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">pow</span><span class="sc127">(</span><span class="sc123">$x</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc122">2</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118"> </span><span class="sc125">// returns the power of the argument</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;"</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$x</span><span class="sc118"> </span><span class="sc127">**</span><span class="sc118"> </span><span class="sc122">2</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118"> </span><span class="sc125">// returns the power of the argument</span><span class="sc118">
+   
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;"</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">sqrt</span><span class="sc127">(</span><span class="sc122">100</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118"> </span><span class="sc125">// returns the square root of argument</span><span class="sc118">
+   
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;"</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">max</span><span class="sc127">(</span><span class="sc122">1</span><span class="sc127">,</span><span class="sc122">2</span><span class="sc127">,</span><span class="sc122">3</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118"> </span><span class="sc125">// returns the highest argument</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;"</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">min</span><span class="sc127">(</span><span class="sc122">1</span><span class="sc127">,</span><span class="sc122">2</span><span class="sc127">,</span><span class="sc122">3</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118"> </span><span class="sc125">// returns the lowest argument</span><span class="sc118">
+   
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;"</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">pi</span><span class="sc127">()</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118"> </span><span class="sc125">// returns the value of pi</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;"</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">rand</span><span class="sc127">(</span><span class="sc122">1</span><span class="sc127">,</span><span class="sc122">6</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118"> </span><span class="sc125">// returns the random number between 2 input</span><span class="sc118">
+   </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Sample login form</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+    
+    </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;title&gt;</span><span class="sc0">
+            Sample Data Processing
+        </span><span class="sc1">&lt;/title&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+    
+    </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;form</span><span class="sc8"> </span><span class="sc3">action</span><span class="sc8">=</span><span class="sc6">"</span><span class="sc18">&lt;?php</span><span class="sc118"> </span><span class="sc121">htmlspecialchars</span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc120">'PHP_SELF'</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc18">?&gt;</span><span class="sc6">"</span><span class="sc8"> </span><span class="sc3">method</span><span class="sc8">=</span><span class="sc6">"POST"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"username"</span><span class="sc1">&gt;</span><span class="sc0">Username: </span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"username"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"password"</span><span class="sc1">&gt;</span><span class="sc0">Password: </span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"password"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"submit"</span><span class="sc1">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/form&gt;</span><span class="sc0">
+    
+        </span><span class="sc18">&lt;?php</span><span class="sc118">
+        </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc119">"REQUEST_METHOD"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"POST"</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+            </span><span class="sc125">// check if the form is submitted</span><span class="sc118">
+            </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc121">isset</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"username"</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc121">isset</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"password"</span><span class="sc127">]))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                </span><span class="sc125">// &amp;&amp; !empty($_POST["username"]) &amp;&amp; !empty($_POST["password"])</span><span class="sc118">
+                </span><span class="sc125">// check if variables are set and not empty</span><span class="sc118">
+                </span><span class="sc125">// this is done to prevent show code of php code error</span><span class="sc118">
+                </span><span class="sc123">$username</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"username"</span><span class="sc127">];</span><span class="sc118">
+                </span><span class="sc123">$password</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"password"</span><span class="sc127">];</span><span class="sc118">
+    
+                </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$username</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"jack"</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc123">$password</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"123"</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Welcome </span><span class="sc126">$username</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+                </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$username</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"blake"</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc123">$password</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"123"</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Welcome </span><span class="sc126">$username</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+                </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$username</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"john"</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc123">$password</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"123"</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Welcome </span><span class="sc126">$username</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+                </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Your username or password is invalid!&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+                </span><span class="sc127">}</span><span class="sc118">
+            </span><span class="sc127">}</span><span class="sc118">
+        </span><span class="sc127">}</span><span class="sc118">
+        </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+    
+    </span><span class="sc1">&lt;/html&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Sample post</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;title&gt;</span><span class="sc0">
+                Sample Data Processing
+            </span><span class="sc1">&lt;/title&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;form</span><span class="sc8"> </span><span class="sc3">action</span><span class="sc8">=</span><span class="sc6">"</span><span class="sc18">&lt;?php</span><span class="sc118"> </span><span class="sc121">htmlspecialchars</span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc120">'PHP_SELF'</span><span class="sc127">]);</span><span class="sc118"> </span><span class="sc18">?&gt;</span><span class="sc6">"</span><span class="sc8"> </span><span class="sc3">method</span><span class="sc8">=</span><span class="sc6">"POST"</span><span class="sc1">&gt;</span><span class="sc0">
+                </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"name"</span><span class="sc1">&gt;</span><span class="sc0">Enter your name: </span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+                </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"name"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc1">&gt;</span><span class="sc0">
+                </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"submit"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;/form&gt;</span><span class="sc0">
+            </span><span class="sc18">&lt;?php</span><span class="sc118">
+               </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc119">"REQUEST_METHOD"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"POST"</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                </span><span class="sc123">$name</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"name"</span><span class="sc127">];</span><span class="sc118">
+                </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"Hello </span><span class="sc126">$name</span><span class="sc119">, how are you?"</span><span class="sc127">;</span><span class="sc118">
+               </span><span class="sc127">}</span><span class="sc118">
+            </span><span class="sc18">?&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/html&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Sample selection order</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+        </span><span class="sc9">&lt;!-- This is more advanced now--&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;form</span><span class="sc8"> </span><span class="sc3">method</span><span class="sc8">=</span><span class="sc6">"post"</span><span class="sc8"> </span><span class="sc3">action</span><span class="sc8">=</span><span class="sc6">"</span><span class="sc18">&lt;?php</span><span class="sc118"> </span><span class="sc121">htmlspecialchars</span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc120">'PHP_SELF'</span><span class="sc127">]);</span><span class="sc118"> </span><span class="sc18">?&gt;</span><span class="sc6">"</span><span class="sc1">&gt;</span><span class="sc0">
+              </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"food_type"</span><span class="sc8"> </span><span class="sc3">value</span><span class="sc8">=</span><span class="sc6">"Ramen"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"radio"</span><span class="sc1">&gt;</span><span class="sc0">
+              </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"food_type"</span><span class="sc1">&gt;</span><span class="sc0">Ramen</span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+              </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"food_type"</span><span class="sc8"> </span><span class="sc3">value</span><span class="sc8">=</span><span class="sc6">"Samgyup"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"radio"</span><span class="sc1">&gt;</span><span class="sc0">
+              </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"food_type"</span><span class="sc1">&gt;</span><span class="sc0">Samgyup</span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+              </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"food_type"</span><span class="sc8"> </span><span class="sc3">value</span><span class="sc8">=</span><span class="sc6">"Bulgogi"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"radio"</span><span class="sc1">&gt;</span><span class="sc0">
+              </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"food_type"</span><span class="sc1">&gt;</span><span class="sc0">Bulgogi</span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+              </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+              </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"quantity"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"number"</span><span class="sc1">&gt;&lt;br&gt;</span><span class="sc0">
+              </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"submit"</span><span class="sc8"> </span><span class="sc3">value</span><span class="sc8">=</span><span class="sc6">"Send"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;/form&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;hr&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;h1&gt;</span><span class="sc0">Output:</span><span class="sc1">&lt;/h1&gt;</span><span class="sc0">
+            </span><span class="sc18">&lt;?php</span><span class="sc118">
+            </span><span class="sc125">// PHP code here:</span><span class="sc118">
+            </span><span class="sc121">function</span><span class="sc118"> getNo</span><span class="sc127">(</span><span class="sc123">$xyz</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc123">$xyz</span><span class="sc118"> </span><span class="sc127">==</span><span class="sc118"> </span><span class="sc122">1</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                    </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc119">"piece"</span><span class="sc127">;</span><span class="sc118">
+                </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$xyz</span><span class="sc118"> </span><span class="sc127">&gt;</span><span class="sc118"> </span><span class="sc122">1</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                    </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc119">"pieces"</span><span class="sc127">;</span><span class="sc118">
+                </span><span class="sc127">}</span><span class="sc118">
+            </span><span class="sc127">}</span><span class="sc118">
+    
+            </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc119">"REQUEST_METHOD"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"POST"</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc121">isset</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"food_type"</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc121">isset</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"quantity"</span><span class="sc127">])</span><span class="sc118">
+                </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc127">!</span><span class="sc121">empty</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"food_type"</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc127">!</span><span class="sc121">empty</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"quantity"</span><span class="sc127">]))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                    </span><span class="sc123">$food</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"food_type"</span><span class="sc127">];</span><span class="sc118">
+                    </span><span class="sc123">$quan</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"quantity"</span><span class="sc127">];</span><span class="sc118">
+                    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;You ordered </span><span class="sc104">{$quan}</span><span class="sc119"> "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> getNo</span><span class="sc127">(</span><span class="sc123">$quan</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">" of </span><span class="sc104">{$food}</span><span class="sc119">, thank you!&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+                </span><span class="sc127">}</span><span class="sc118">
+            </span><span class="sc127">}</span><span class="sc118">
+            </span><span class="sc18">?&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/html&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Server global variale</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc121">foreach</span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc118"> </span><span class="sc121">as</span><span class="sc118"> </span><span class="sc123">$key</span><span class="sc118"> </span><span class="sc127">=&gt;</span><span class="sc118"> </span><span class="sc123">$value</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+       </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"</span><span class="sc104">{$key}</span><span class="sc119"> =&gt; </span><span class="sc104">{$value}</span><span class="sc119"> &lt;br&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+   </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Session and login</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+    </span><span class="sc9">&lt;!-- This is more advanced now--&gt;</span><span class="sc0">
+    
+    </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+    
+    </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+        </span><span class="sc18">&lt;?php</span><span class="sc118">
+        </span><span class="sc121">session_start</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc121">isset</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"submit1"</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc127">!</span><span class="sc121">empty</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"username"</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc127">!</span><span class="sc121">empty</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"password"</span><span class="sc127">]))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+            </span><span class="sc123">$_SESSION</span><span class="sc127">[</span><span class="sc119">"username"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"username"</span><span class="sc127">];</span><span class="sc118">
+            </span><span class="sc123">$_SESSION</span><span class="sc127">[</span><span class="sc119">"password"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"password"</span><span class="sc127">];</span><span class="sc118">
+        </span><span class="sc127">}</span><span class="sc118">
+    
+        </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc121">isset</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"logout"</span><span class="sc127">]))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+            </span><span class="sc123">$_SESSION</span><span class="sc127">[</span><span class="sc119">"username"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">null</span><span class="sc127">;</span><span class="sc118">
+            </span><span class="sc123">$_SESSION</span><span class="sc127">[</span><span class="sc119">"password"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">null</span><span class="sc127">;</span><span class="sc118">
+            </span><span class="sc121">session_destroy</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc127">}</span><span class="sc118">
+        </span><span class="sc18">?&gt;</span><span class="sc0">
+    
+        </span><span class="sc1">&lt;form</span><span class="sc8"> </span><span class="sc3">method</span><span class="sc8">=</span><span class="sc6">"post"</span><span class="sc8"> </span><span class="sc3">action</span><span class="sc8">=</span><span class="sc6">""</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"username"</span><span class="sc1">&gt;</span><span class="sc0">Username: </span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"username"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"password"</span><span class="sc1">&gt;</span><span class="sc0">Password: </span><span class="sc1">&lt;/label&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"password"</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"password"</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"submit1"</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"submit"</span><span class="sc8"> </span><span class="sc3">value</span><span class="sc8">=</span><span class="sc6">"Login"</span><span class="sc1">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/form&gt;</span><span class="sc0">
+    
+        </span><span class="sc18">&lt;?php</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Username: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$_SESSION</span><span class="sc127">[</span><span class="sc120">'username'</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;Password: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$_SESSION</span><span class="sc127">[</span><span class="sc120">'password'</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc18">?&gt;</span><span class="sc0">
+    
+        </span><span class="sc1">&lt;form</span><span class="sc8"> </span><span class="sc3">method</span><span class="sc8">=</span><span class="sc6">"post"</span><span class="sc8"> </span><span class="sc3">action</span><span class="sc8">=</span><span class="sc6">""</span><span class="sc1">&gt;</span><span class="sc0">
+            </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"submit"</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"logout"</span><span class="sc8"> </span><span class="sc3">value</span><span class="sc8">=</span><span class="sc6">"Log Out"</span><span class="sc1">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;/form&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+    
+    </span><span class="sc1">&lt;/html&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Simple variables</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc123">$myvar</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc122">15</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$myvar2</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">true</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$myvar3</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"This is text"</span><span class="sc127">;</span><span class="sc118">
+    
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc119">"Variable 1 is </span><span class="sc126">$myvar</span><span class="sc119">, variable 2 is </span><span class="sc126">$myvar2</span><span class="sc119">, variable 3 is </span><span class="sc126">$myvar3</span><span class="sc119"> &lt;br&gt;"</span><span class="sc127">);</span><span class="sc118">    
+    </span><span class="sc121">echo</span><span class="sc127">(</span><span class="sc119">"Variable 1 doubled is "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$myvar</span><span class="sc118"> </span><span class="sc127">*</span><span class="sc118"> </span><span class="sc122">2</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">", and variable 1 squared is "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$myvar</span><span class="sc118"> </span><span class="sc127">*</span><span class="sc118"> </span><span class="sc123">$myvar</span><span class="sc127">);</span><span class="sc118">
+  </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Connect to database sample template</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc125">// This is a sample code to connect to a database</span><span class="sc118">
+    </span><span class="sc123">$db_server</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"localhost"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$db_user</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"root"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$db_password</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">""</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$db_name</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"test"</span><span class="sc127">;</span><span class="sc118">
+    
+    </span><span class="sc121">try</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc125">// Attempt to establish a database connection</span><span class="sc118">
+        </span><span class="sc123">$conn</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">new</span><span class="sc118"> mysqli</span><span class="sc127">(</span><span class="sc123">$db_server</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$db_user</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$db_password</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$db_name</span><span class="sc127">);</span><span class="sc118">
+    
+        </span><span class="sc125">// Check if there's an error in the database connection</span><span class="sc118">
+        </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">connect_error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+            </span><span class="sc121">throw</span><span class="sc118"> </span><span class="sc121">new</span><span class="sc118"> Exception</span><span class="sc127">(</span><span class="sc119">"Could Not Connect: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">connect_error</span><span class="sc127">);</span><span class="sc118">
+        </span><span class="sc127">}</span><span class="sc118">
+        </span><span class="sc125">// Connection successful</span><span class="sc118">
+    
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">catch</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc118">Exception </span><span class="sc123">$e</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc125">// If an error occurs during the database connection, handle it here</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"Database Connection Error: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$e</span><span class="sc127">-&gt;</span><span class="sc118">getMessage</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc121">exit</span><span class="sc127">();</span><span class="sc118"> </span><span class="sc125">// Terminate script execution</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+    </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span></div>
+     
+     <hr>
+     <span class="t2"><b>Insert with bind parameter</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc125">// Connect to database</span><span class="sc118">
+    </span><span class="sc121">require_once</span><span class="sc127">(</span><span class="sc119">"PHP_SQL_Connect_To_Database_Template_Sample.php"</span><span class="sc127">);</span><span class="sc118">
+      </span><span class="sc121">try</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc123">$sample_username</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"Kamsahamnida"</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc123">$sample_password</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"Geronimo"</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc123">$hash_pass</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">password_hash</span><span class="sc127">(</span><span class="sc123">$sample_password</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">PASSWORD_DEFAULT</span><span class="sc127">);</span><span class="sc118">
+    
+        </span><span class="sc123">$sql_query</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"
+            INSERT INTO camera (username, password, pass_plain_text)
+            VALUES (?, ?, ?)
+        "</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">prepare</span><span class="sc127">(</span><span class="sc123">$sql_query</span><span class="sc127">);</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">bind_param</span><span class="sc127">(</span><span class="sc120">'sss'</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$sample_username</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$hash_pass</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$sample_password</span><span class="sc127">);</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">execute</span><span class="sc127">();</span><span class="sc118">
+    
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"New record created successfully"</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">catch</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc118">Exception </span><span class="sc123">$e</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc120">'Connection failed: '</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$e</span><span class="sc127">-&gt;</span><span class="sc118">getMessage</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc127">}</span><span class="sc118">
+    
+        </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118">
+    </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span></div>
+     
+     <hr>
+     <span class="t2"><b>PHP and MySQL CRUD Library / Utility Scripts and Functions</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118">
+
+</span><span class="sc124">/*
+    
+This code offers an easier way to communicate with MySQL database without manually typing it.
+It comes with sanitation and pre-built console.log warnings and errors.
+CRUD:
+- Create
+- Read
+- Update
+- Delete
+
+*/</span><span class="sc118">
+</span><span class="sc123">$globalConn</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">null</span><span class="sc127">;</span><span class="sc118">
+
+</span><span class="sc124">/**
+ * Establishes a connection to the MySQL database.
+ * @param string $serverName The server name or IP address.
+ * @param string $username The database username.
+ * @param string $password The database password.
+ * @param string $databaseName The database name.
+ */</span><span class="sc118">
+</span><span class="sc121">function</span><span class="sc118"> MysqlConnectDB</span><span class="sc127">(</span><span class="sc123">$serverName</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$username</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$password</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$databaseName</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">global</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$globalConn</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">new</span><span class="sc118"> mysqli</span><span class="sc127">(</span><span class="sc123">$serverName</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$username</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$password</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$databaseName</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">connect_error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;script&gt;console.log('Connection failed: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">addslashes</span><span class="sc127">(</span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">connect_error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"');&lt;/script&gt;"</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc121">die</span><span class="sc127">(</span><span class="sc119">"Connection failed: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">connect_error</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc124">/**
+ * Sanitizes a string to prevent SQL injection.
+ * @param string $string The string to sanitize.
+ * @return string The sanitized string.
+ */</span><span class="sc118">
+</span><span class="sc121">function</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$string</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">global</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">real_escape_string</span><span class="sc127">(</span><span class="sc123">$string</span><span class="sc127">);</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc124">/**
+ * Creates a table in the database.
+ * @param string $tableName The name of the table.
+ * @param array $parameters An array of column definitions.
+ */</span><span class="sc118">
+</span><span class="sc121">function</span><span class="sc118"> MysqlCreateTable</span><span class="sc127">(</span><span class="sc123">$tableName</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$parameters</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">global</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$tableName</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$tableName</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$sanitizedParameters</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">array_map</span><span class="sc127">(</span><span class="sc120">'Sanitize'</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$parameters</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$columns</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">implode</span><span class="sc127">(</span><span class="sc119">", "</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$sanitizedParameters</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$sql</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"CREATE TABLE IF NOT EXISTS </span><span class="sc126">$tableName</span><span class="sc119"> (</span><span class="sc126">$columns</span><span class="sc119">)"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(!(</span><span class="sc123">$stmt</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">prepare</span><span class="sc127">(</span><span class="sc123">$sql</span><span class="sc127">)))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;script&gt;console.log('Error preparing table creation: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">addslashes</span><span class="sc127">(</span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"');&lt;/script&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">execute</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc124">/**
+ * Inserts records into a table.
+ * @param string $tableName The name of the table.
+ * @param array $columns An array of column names.
+ * @param array $values An array of arrays representing rows to insert.
+ */</span><span class="sc118">
+</span><span class="sc121">function</span><span class="sc118"> MysqlInsert</span><span class="sc127">(</span><span class="sc123">$tableName</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$columns</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$values</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">global</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$tableName</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$tableName</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$sanitizedColumns</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">array_map</span><span class="sc127">(</span><span class="sc120">'Sanitize'</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$columns</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$columnsString</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">implode</span><span class="sc127">(</span><span class="sc119">", "</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$sanitizedColumns</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$placeholders</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">rtrim</span><span class="sc127">(</span><span class="sc121">str_repeat</span><span class="sc127">(</span><span class="sc120">'?, '</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">count</span><span class="sc127">(</span><span class="sc123">$sanitizedColumns</span><span class="sc127">)),</span><span class="sc118"> </span><span class="sc120">', '</span><span class="sc127">);</span><span class="sc118">
+
+    </span><span class="sc123">$sql</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"INSERT INTO </span><span class="sc126">$tableName</span><span class="sc119"> (</span><span class="sc126">$columnsString</span><span class="sc119">) VALUES (</span><span class="sc126">$placeholders</span><span class="sc119">)"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(!(</span><span class="sc123">$stmt</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">prepare</span><span class="sc127">(</span><span class="sc123">$sql</span><span class="sc127">)))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;script&gt;console.log('Error preparing insert statement: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">addslashes</span><span class="sc127">(</span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"');&lt;/script&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">foreach</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$values</span><span class="sc118"> </span><span class="sc121">as</span><span class="sc118"> </span><span class="sc123">$row</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+            </span><span class="sc123">$sanitizedRow</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">array_map</span><span class="sc127">(</span><span class="sc120">'Sanitize'</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$row</span><span class="sc127">);</span><span class="sc118">
+            </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">bind_param</span><span class="sc127">(</span><span class="sc121">str_repeat</span><span class="sc127">(</span><span class="sc120">'s'</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">count</span><span class="sc127">(</span><span class="sc123">$sanitizedRow</span><span class="sc127">)),</span><span class="sc118"> </span><span class="sc127">...</span><span class="sc123">$sanitizedRow</span><span class="sc127">);</span><span class="sc118">
+            </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">execute</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc127">}</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc124">/**
+ * Selects data from a table.
+ * @param string $tableName The name of the table.
+ * @param string $column The column to retrieve.
+ * @param string $condition Optional condition for filtering results.
+ * @return string The retrieved data.
+ */</span><span class="sc118">
+</span><span class="sc121">function</span><span class="sc118"> MysqlSelect</span><span class="sc127">(</span><span class="sc123">$tableName</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$column</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$condition</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">""</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">global</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$tableName</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$tableName</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$column</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$column</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$condition</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$condition</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$whereClause</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">""</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(!</span><span class="sc121">empty</span><span class="sc127">(</span><span class="sc123">$condition</span><span class="sc127">))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc123">$whereClause</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"WHERE </span><span class="sc126">$condition</span><span class="sc119">"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+    </span><span class="sc123">$sql</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"SELECT </span><span class="sc126">$column</span><span class="sc119"> FROM </span><span class="sc126">$tableName</span><span class="sc119"> </span><span class="sc126">$whereClause</span><span class="sc119">"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(!(</span><span class="sc123">$stmt</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">prepare</span><span class="sc127">(</span><span class="sc123">$sql</span><span class="sc127">)))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;script&gt;console.log('Error preparing select statement: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">addslashes</span><span class="sc127">(</span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"');&lt;/script&gt;"</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc119">""</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">execute</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc123">$result</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">get_result</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc123">$output</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">""</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc121">while</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$row</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$result</span><span class="sc127">-&gt;</span><span class="sc118">fetch_assoc</span><span class="sc127">())</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+            </span><span class="sc123">$output</span><span class="sc118"> </span><span class="sc127">.=</span><span class="sc118"> </span><span class="sc121">reset</span><span class="sc127">(</span><span class="sc123">$row</span><span class="sc127">);</span><span class="sc118">
+        </span><span class="sc127">}</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc123">$output</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc124">/**
+ * Updates records in a table.
+ * @param string $tableName The name of the table.
+ * @param string $column The column to update.
+ * @param string $newValue The new value for the column.
+ * @param string $condition The condition to identify records to update.
+ */</span><span class="sc118">
+</span><span class="sc121">function</span><span class="sc118"> MysqlUpdate</span><span class="sc127">(</span><span class="sc123">$tableName</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$column</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$newValue</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$condition</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">global</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$tableName</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$tableName</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$column</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$column</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$newValue</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$newValue</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$condition</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$condition</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$sql</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"UPDATE </span><span class="sc126">$tableName</span><span class="sc119"> SET </span><span class="sc126">$column</span><span class="sc119"> = ? WHERE </span><span class="sc126">$condition</span><span class="sc119">"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(!(</span><span class="sc123">$stmt</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">prepare</span><span class="sc127">(</span><span class="sc123">$sql</span><span class="sc127">)))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;script&gt;console.log('Error preparing update statement: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">addslashes</span><span class="sc127">(</span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"');&lt;/script&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">bind_param</span><span class="sc127">(</span><span class="sc120">'s'</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$newValue</span><span class="sc127">);</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">execute</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc124">/**
+ * Deletes records from a table.
+ * @param string $tableName The name of the table.
+ * @param string $condition The condition to identify records to delete.
+ */</span><span class="sc118">
+</span><span class="sc121">function</span><span class="sc118"> MysqlDelete</span><span class="sc127">(</span><span class="sc123">$tableName</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$condition</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">global</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$tableName</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$tableName</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$condition</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$condition</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$sql</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"DELETE FROM </span><span class="sc126">$tableName</span><span class="sc119"> WHERE </span><span class="sc126">$condition</span><span class="sc119">"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(!(</span><span class="sc123">$stmt</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">prepare</span><span class="sc127">(</span><span class="sc123">$sql</span><span class="sc127">)))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;script&gt;console.log('Error preparing delete statement: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">addslashes</span><span class="sc127">(</span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"');&lt;/script&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">execute</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc124">/**
+ * Executes a custom SQL query.
+ * @param string $query The SQL query to execute.
+ * @return bool True on success, false on failure.
+ */</span><span class="sc118">
+</span><span class="sc121">function</span><span class="sc118"> MysqlCustomQuery</span><span class="sc127">(</span><span class="sc123">$query</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">global</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$sanitizedQuery</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> Sanitize</span><span class="sc127">(</span><span class="sc123">$query</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(!(</span><span class="sc123">$stmt</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">prepare</span><span class="sc127">(</span><span class="sc123">$sanitizedQuery</span><span class="sc127">)))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;script&gt;console.log('Error preparing custom query: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc121">addslashes</span><span class="sc127">(</span><span class="sc123">$globalConn</span><span class="sc127">-&gt;</span><span class="sc118">error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"');&lt;/script&gt;"</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc121">false</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">execute</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc123">$stmt</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118">
+        </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc121">true</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc124">/*
+    
+Syntax:
+MysqlConnectDB();
+&lt;Query&gt;
+$globalConn-&gt;close();
+------------------------------------------------------------
+
+Using this database configuration:
+$serverName = "localhost";
+$username = "root";
+$password = "";
+$databaseName = "sample_database";
+------------------------------------------------------------
+Example 1 (Create Table):
+
+MysqlConnectDB($serverName, $username, $password, $databaseName);
+MysqlCreateTable("users", [
+"id INT PRIMARY KEY AUTO_INCREMENT",
+"first_name VARCHAR(200)",
+"middle_name VARCHAR(200)",
+"last_name VARCHAR(200)"
+]);
+$globalConn-&gt;close();
+------------------------------------------------------------
+Example 2 (Insert Data):
+
+MysqlConnectDB($serverName, $username, $password, $databaseName);
+MysqlInsert("users", ["first_name", "middle_name", "last_name"], [
+["john", "calysa", "doe"],
+["jane", "calusin", "doe"],
+["jake", "himenez", "zyrus"],
+["sophia", "rain", "alkantara"],
+["patrick", "monte", "reyes"],
+["kenneth", "haque", "albino"]
+]);
+$globalConn-&gt;close();
+------------------------------------------------------------
+Example 3 (Select Data):
+
+MysqlConnectDB($serverName, $username, $password, $databaseName);
+$x = MysqlSelect("users", "first_name", "id = 3");
+$globalConn-&gt;close();
+echo $x;
+------------------------------------------------------------
+Example 4 (Update Data):
+
+MysqlConnectDB($serverName, $username, $password, $databaseName);
+MysqlUpdate("users", "first_name", "Jake", "id = 2");
+$globalConn-&gt;close();
+------------------------------------------------------------
+Example 5 (Delete Data):
+
+MysqlConnectDB($serverName, $username, $password, $databaseName);
+MysqlDelete("users", "id = 4");
+$globalConn-&gt;close();
+------------------------------------------------------------
+Example 6 (Custom Query):
+
+MysqlConnectDB($serverName, $username, $password, $databaseName);
+MysqlCustomQuery("ALTER TABLE users AUTO_INCREMENT = 1001");
+$globalConn-&gt;close();
+
+*/</span><span class="sc118">
+</span><span class="sc18">?&gt;</span></div>
+
+     <hr>
+     <span class="t2"><b>Sample registration form</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE html</span><span class="sc21">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+    
+    </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+    
+    </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+       </span><span class="sc1">&lt;h1&gt;</span><span class="sc0">Register: </span><span class="sc1">&lt;/h1&gt;</span><span class="sc0">
+       </span><span class="sc1">&lt;hr&gt;</span><span class="sc0">
+       </span><span class="sc1">&lt;form</span><span class="sc8"> </span><span class="sc3">action</span><span class="sc8">=</span><span class="sc6">"</span><span class="sc18">&lt;?php</span><span class="sc118"> </span><span class="sc121">htmlspecialchars</span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc119">"PHP_SELF"</span><span class="sc127">]);</span><span class="sc118"> </span><span class="sc18">?&gt;</span><span class="sc6">"</span><span class="sc8"> </span><span class="sc3">method</span><span class="sc8">=</span><span class="sc6">"post"</span><span class="sc1">&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"username"</span><span class="sc1">&gt;</span><span class="sc0">Username: </span><span class="sc1">&lt;/label&gt;&lt;br&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"username"</span><span class="sc1">&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;br&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;label</span><span class="sc8"> </span><span class="sc3">for</span><span class="sc8">=</span><span class="sc6">"password"</span><span class="sc1">&gt;</span><span class="sc0">Password: </span><span class="sc1">&lt;/label&gt;&lt;br&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"password"</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"password"</span><span class="sc1">&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;br&gt;&lt;br&gt;</span><span class="sc0">
+          </span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"submit"</span><span class="sc8"> </span><span class="sc3">value</span><span class="sc8">=</span><span class="sc6">"Register"</span><span class="sc1">&gt;</span><span class="sc0">
+       </span><span class="sc1">&lt;/form&gt;</span><span class="sc0">
+       </span><span class="sc1">&lt;hr&gt;</span><span class="sc0">
+       </span><span class="sc18">&lt;?php</span><span class="sc118">
+    
+       </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$_SERVER</span><span class="sc127">[</span><span class="sc119">"REQUEST_METHOD"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">===</span><span class="sc118"> </span><span class="sc119">"POST"</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+          </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc118">
+             </span><span class="sc121">isset</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"username"</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc121">isset</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"password"</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118">
+             </span><span class="sc127">!</span><span class="sc121">empty</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"username"</span><span class="sc127">])</span><span class="sc118"> </span><span class="sc127">&amp;&amp;</span><span class="sc118"> </span><span class="sc127">!</span><span class="sc121">empty</span><span class="sc127">(</span><span class="sc123">$_POST</span><span class="sc127">[</span><span class="sc119">"password"</span><span class="sc127">])</span><span class="sc118">
+          </span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+             </span><span class="sc125">// require_once("PHP_SQL_Connect.php"): </span><span class="sc118">
+               </span><span class="sc125">// This is a sample code to connect to a database</span><span class="sc118">
+               </span><span class="sc123">$db_server</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"localhost"</span><span class="sc127">;</span><span class="sc118">
+               </span><span class="sc123">$db_user</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"root"</span><span class="sc127">;</span><span class="sc118">
+               </span><span class="sc123">$db_password</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">""</span><span class="sc127">;</span><span class="sc118">
+               </span><span class="sc123">$db_name</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"test"</span><span class="sc127">;</span><span class="sc118">
+               </span><span class="sc123">$conn</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">new</span><span class="sc118"> mysqli</span><span class="sc127">(</span><span class="sc123">$db_server</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$db_user</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$db_password</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$db_name</span><span class="sc127">);</span><span class="sc118">
+    
+               </span><span class="sc125">// check Database connection if it has errors</span><span class="sc118">
+               </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">connect_error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+                  </span><span class="sc121">die</span><span class="sc127">(</span><span class="sc119">"Could Not Connect: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">connect_error</span><span class="sc127">);</span><span class="sc118">
+               </span><span class="sc127">}</span><span class="sc118">
+               </span><span class="sc125">// $conn-&gt;close(); // This would need to be type manually</span><span class="sc118">
+             </span><span class="sc125">//----------------------------------------</span><span class="sc118">
+             </span><span class="sc123">$username</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">filter_input</span><span class="sc127">(</span><span class="sc121">INPUT_POST</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"username"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">FILTER_SANITIZE_SPECIAL_CHARS</span><span class="sc127">);</span><span class="sc118">
+             </span><span class="sc123">$password</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">filter_input</span><span class="sc127">(</span><span class="sc121">INPUT_POST</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"password"</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">FILTER_SANITIZE_SPECIAL_CHARS</span><span class="sc127">);</span><span class="sc118">
+             </span><span class="sc123">$hashed_password</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">password_hash</span><span class="sc127">(</span><span class="sc123">$password</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">PASSWORD_DEFAULT</span><span class="sc127">);</span><span class="sc118">
+    
+             </span><span class="sc123">$sql_query</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"
+              INSERT INTO registered_users (username, password)
+              VALUES ('</span><span class="sc126">$username</span><span class="sc119">', '</span><span class="sc126">$hashed_password</span><span class="sc119">')
+              "</span><span class="sc127">;</span><span class="sc118">
+             </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">query</span><span class="sc127">(</span><span class="sc123">$sql_query</span><span class="sc127">);</span><span class="sc118">
+    
+             </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;You Are Now Registered!&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+             </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118">
+          </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+             </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h2&gt;Invalid Username or Passowrd&lt;/h2&gt;"</span><span class="sc127">;</span><span class="sc118">
+          </span><span class="sc127">}</span><span class="sc118">
+       </span><span class="sc127">}</span><span class="sc118">
+    
+       </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+    
+    </span><span class="sc1">&lt;/html&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Sample database connection and query</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc123">$db_server</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"localhost"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$db_user</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"root"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$db_password</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">""</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$db_name</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"test"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$conn</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">new</span><span class="sc118"> mysqli</span><span class="sc127">(</span><span class="sc123">$db_server</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$db_user</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$db_password</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$db_name</span><span class="sc127">);</span><span class="sc118">
+   
+    </span><span class="sc125">// check Database connection if it has errors</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc127">(</span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">connect_error</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+       </span><span class="sc121">die</span><span class="sc127">(</span><span class="sc119">"Could Not Connect: "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">connect_error</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+   
+    </span><span class="sc125">// Use this approach for more security</span><span class="sc118">
+    </span><span class="sc125">// require_once("PHP_Sample_Query.php"); // SQL Query</span><span class="sc118">
+    
+    </span><span class="sc125">// WARNING: Only Create table if it doesn't exist!</span><span class="sc118">
+    </span><span class="sc123">$sql_query</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"
+    CREATE TABLE `test`.`camera` ( 
+    `id` INT NOT NULL AUTO_INCREMENT , 
+    `user` VARCHAR(25) NOT NULL , 
+    `password` CHAR(255) NOT NULL , 
+    `reg_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`), UNIQUE (`user`)
+    ) 
+    ENGINE = MyISAM;
+    "</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">query</span><span class="sc127">(</span><span class="sc123">$sql_query</span><span class="sc127">);</span><span class="sc118">
+    
+    </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118">
+   </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Sample insert query</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118"> 
+    </span><span class="sc121">include</span><span class="sc127">(</span><span class="sc119">"PHP_SQL_Connect_To_Database_Template_Sample.php"</span><span class="sc127">);</span><span class="sc118">
+   
+    </span><span class="sc123">$sample_username</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"KV"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$sample_password</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"i dont know"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$hash_pass</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">password_hash</span><span class="sc127">(</span><span class="sc123">$sample_password</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc121">PASSWORD_DEFAULT</span><span class="sc127">);</span><span class="sc118">
+   
+    </span><span class="sc123">$sql_query</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"
+      /*
+      INSERT INTO camera (user, password)
+      VALUES ('Blake', 'pinetree');
+   
+      INSERT INTO camera (user, password)
+      VALUES ('John', 'pinetrees');
+      */
+   
+      INSERT INTO camera (user, password)
+      VALUES ('</span><span class="sc126">$sample_username</span><span class="sc119">', '</span><span class="sc126">$hash_pass</span><span class="sc119">');
+    "</span><span class="sc127">;</span><span class="sc118">
+   
+    </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">multi_query</span><span class="sc127">(</span><span class="sc123">$sql_query</span><span class="sc127">);</span><span class="sc118">
+   
+    </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118"> </span><span class="sc125">// This would need to be type manually</span><span class="sc118">
+   </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>Sample select query</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc121">include</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc119">"PHP_SQL_Connect_To_Database_Template_Sample.php"</span><span class="sc127">);</span><span class="sc118">
+    
+    </span><span class="sc123">$sql_query</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"
+         SELECT * FROM camera
+         WHERE user = 'KV'
+     "</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$result</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">query</span><span class="sc127">(</span><span class="sc123">$sql_query</span><span class="sc127">);</span><span class="sc118">
+    
+    </span><span class="sc125">// for sigle values</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc121">mysqli_num_rows</span><span class="sc127">(</span><span class="sc123">$result</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">&gt;</span><span class="sc118"> </span><span class="sc122">0</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+      </span><span class="sc123">$rowX</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">mysqli_fetch_assoc</span><span class="sc127">(</span><span class="sc123">$result</span><span class="sc127">);</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc123">$rowX</span><span class="sc127">[</span><span class="sc119">"id"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;br&gt;"</span><span class="sc127">;</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc123">$rowX</span><span class="sc127">[</span><span class="sc119">"user"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;br&gt;"</span><span class="sc127">;</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc123">$rowX</span><span class="sc127">[</span><span class="sc119">"reg_date"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;br&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"No User Found"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+    
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;hr&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc125">// -----------------------------</span><span class="sc118">
+    
+    </span><span class="sc123">$sql_queryY</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"
+         SELECT * FROM camera
+     "</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$resultZ</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">query</span><span class="sc127">(</span><span class="sc123">$sql_queryY</span><span class="sc127">);</span><span class="sc118">
+    
+    </span><span class="sc125">// for multiple values</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc121">mysqli_num_rows</span><span class="sc127">(</span><span class="sc123">$resultZ</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">&gt;</span><span class="sc118"> </span><span class="sc122">0</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+      </span><span class="sc121">while</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$row</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">mysqli_fetch_assoc</span><span class="sc127">(</span><span class="sc123">$resultZ</span><span class="sc127">))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc123">$row</span><span class="sc127">[</span><span class="sc119">"id"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;br&gt;"</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc123">$row</span><span class="sc127">[</span><span class="sc119">"user"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;br&gt;"</span><span class="sc127">;</span><span class="sc118">
+        </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc123">$row</span><span class="sc127">[</span><span class="sc119">"reg_date"</span><span class="sc127">]</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">"&lt;br&gt;"</span><span class="sc127">;</span><span class="sc118">
+      </span><span class="sc127">}</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118"> </span><span class="sc121">else</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"No User Found"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+    
+    </span><span class="sc123">$conn</span><span class="sc127">-&gt;</span><span class="sc118">close</span><span class="sc127">();</span><span class="sc118"> </span><span class="sc125">// This would need to be type manually</span><span class="sc118">
+    </span><span class="sc18">?&gt;</span></div>
+     
+     <hr>
+     <span class="t2"><b>String interpolation</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc1">&lt;hr&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;h1&gt;</span><span class="sc0">String Interpolation</span><span class="sc1">&lt;/h1&gt;</span><span class="sc0">
+    </span><span class="sc18">&lt;?php</span><span class="sc118"> 
+      </span><span class="sc123">$name</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"Jake Reyes"</span><span class="sc127">;</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc119">"Hello "</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc123">$name</span><span class="sc118"> </span><span class="sc127">.</span><span class="sc118"> </span><span class="sc119">" (using CONCATENATION)"</span><span class="sc127">);;</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;br&gt;"</span><span class="sc127">;</span><span class="sc118">
+      </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc119">"Hello </span><span class="sc126">$name</span><span class="sc119">!, (using INTERPOLATION)"</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span></div>
+     
+     <hr>
+     <span class="t2"><b>Useful functions</b>:</span>
+     <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc123">$name</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"Khian Calderon"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$name2</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"     KHIAN VICTORY   "</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$num</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc119">"098-765-4321"</span><span class="sc127">;</span><span class="sc118">
+    
+    </span><span class="sc125">// useful functions</span><span class="sc118">
+    </span><span class="sc123">$lowercases</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">strtolower</span><span class="sc127">(</span><span class="sc123">$name</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// returns lower cases of string</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$lowercases}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$uppercases</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">strtoupper</span><span class="sc127">(</span><span class="sc123">$name</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// returns upper cases of string</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$uppercases}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$trimmed</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">trim</span><span class="sc127">(</span><span class="sc123">$name2</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// returns a new string with all non latin alphabet removed (special characters)</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$trimmed}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+   
+    </span><span class="sc123">$padded</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc123">$name</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc122">25</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">"-"</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// adds a character on the entire length</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$padded}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$replaced</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">str_replace</span><span class="sc127">(</span><span class="sc119">"-"</span><span class="sc127">,</span><span class="sc119">"___?___"</span><span class="sc127">,</span><span class="sc123">$num</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// (What to replace?,What to replace with?,String or string variable)</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$replaced}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+   
+    </span><span class="sc123">$reversed</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">strrev</span><span class="sc127">(</span><span class="sc123">$name</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// reverses the string</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$reversed}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$comp</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">strcmp</span><span class="sc127">(</span><span class="sc123">$name</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc123">$name2</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// compares 2 strings</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$comp}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+   
+    </span><span class="sc123">$length</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">strlen</span><span class="sc127">(</span><span class="sc123">$name2</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// counts the string</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$length}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$index</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">strpos</span><span class="sc127">(</span><span class="sc123">$name</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc119">" "</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// returns the index of the first instances of the expression</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$index}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$sub</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">substr</span><span class="sc127">(</span><span class="sc123">$name</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc122">0</span><span class="sc127">,</span><span class="sc118"> </span><span class="sc122">7</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// returns the part of the string, if no index, then it will copy the entire string</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$sub}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+   
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;hr&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc125">// Implode and explode</span><span class="sc118">
+    </span><span class="sc123">$separated</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">explode</span><span class="sc127">(</span><span class="sc119">" "</span><span class="sc127">,</span><span class="sc123">$name</span><span class="sc127">);</span><span class="sc118"> </span><span class="sc125">// separates strings to array by word</span><span class="sc118">
+    </span><span class="sc121">foreach</span><span class="sc127">(</span><span class="sc123">$separated</span><span class="sc118"> </span><span class="sc121">as</span><span class="sc118"> </span><span class="sc123">$lmx</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+       </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$lmx}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+    </span><span class="sc123">$arrayName</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">array</span><span class="sc127">(</span><span class="sc119">"Khian"</span><span class="sc127">,</span><span class="sc119">"Victory"</span><span class="sc127">,</span><span class="sc119">"Calderon"</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$mixed</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">implode</span><span class="sc127">(</span><span class="sc119">"__"</span><span class="sc127">,</span><span class="sc123">$arrayName</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">echo</span><span class="sc118"> </span><span class="sc119">"&lt;h1&gt;</span><span class="sc104">{$mixed}</span><span class="sc119">&lt;/h1&gt;"</span><span class="sc127">;</span><span class="sc118">
+   </span><span class="sc18">?&gt;</span></div>
+
+
+<hr>
+<span class="t2"><b>Base 64 encoder</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc18">&lt;?php</span><span class="sc118">
+</span><span class="sc121">function</span><span class="sc118"> fileToBase64</span><span class="sc127">(</span><span class="sc123">$filePath</span><span class="sc127">)</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+    </span><span class="sc121">if</span><span class="sc118"> </span><span class="sc127">(!</span><span class="sc121">file_exists</span><span class="sc127">(</span><span class="sc123">$filePath</span><span class="sc127">))</span><span class="sc118"> </span><span class="sc127">{</span><span class="sc118">
+        </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc121">null</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc127">}</span><span class="sc118">
+    </span><span class="sc123">$fileContent</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">file_get_contents</span><span class="sc127">(</span><span class="sc123">$filePath</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc123">$base64File</span><span class="sc118"> </span><span class="sc127">=</span><span class="sc118"> </span><span class="sc121">base64_encode</span><span class="sc127">(</span><span class="sc123">$fileContent</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">return</span><span class="sc118"> </span><span class="sc123">$base64File</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc18">?&gt;</span></div>
+
+    </body>
+</html>
+
+<!-- 
+
+<hr>
+<span class="t2"><b>__</b>:</span>
+
+-->

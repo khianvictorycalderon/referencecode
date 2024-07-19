@@ -1,0 +1,62 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="batch_codes_style.css">
+        <title>Batch Codes (Archived)</title>
+    </head>
+    <body class="flex-c">
+        <span class="t2"><b>Copy self</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">copy</span><span class="sc0"> "copy_self.bat" "Duplicated Self.bat*"
+        </span><span class="sc2">copy</span><span class="sc0"> "copy_self.exe" "Duplicated Self.exe*"</span></div>
+        <br><hr>
+        <span class="t2"><b>find string in text file</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">findstr</span><span class="sc0"> /m "sasa" hope.txt
+        </span><span class="sc2">if</span><span class="sc0"> </span><span class="sc6">%errorlevel%</span><span class="sc7">==</span><span class="sc0">0 (
+        </span><span class="sc2">echo</span><span class="sc0"> sasa found
+        )
+        </span><span class="sc2">if</span><span class="sc0"> </span><span class="sc6">%errorlevel%</span><span class="sc7">==</span><span class="sc0">1 (
+        </span><span class="sc2">echo</span><span class="sc0"> sasa not found
+        )
+        </span><span class="sc2">pause</span></div>
+        
+        <br><hr>
+        <span class="t2"><b>Hello world</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">echo</span><span class="sc0"> Hello World
+        </span><span class="sc2">pause</span></div>
+
+        <br><hr>
+        <span class="t2"><b>Task kill loop</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">:loop
+        </span><span class="sc0">   </span><span class="sc2">if</span><span class="sc0"> "</span><span class="sc6">%time%</span><span class="sc0">" lss "11:09" ( taskkill /IM GeometryDash.exe )
+        </span><span class="sc2">goto</span><span class="sc0"> loop
+        </span><span class="sc3">:stopLoop</span></div>
+
+        <br><hr>
+        <span class="t2"><b>Make folder in 10 seconds delay</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">mkdir</span><span class="sc0"> "Empty Folder"
+        </span><span class="sc5">TIMEOUT</span><span class="sc0"> /T 10
+        </span><span class="sc2">mkdir</span><span class="sc0"> "Another Folder"</span></div>
+
+        <br><hr>
+        <span class="t2"><b>Time test</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0"> </span><span class="sc2">if</span><span class="sc0"> "</span><span class="sc6">%time%</span><span class="sc0">" lss "11:01" ( msg </span><span class="sc7">*</span><span class="sc0"> "Off" )
+        </span><span class="sc2">if</span><span class="sc0"> "</span><span class="sc6">%time%</span><span class="sc0">" geq "11:01" ( msg </span><span class="sc7">*</span><span class="sc0"> "On" )</span></div>
+
+        <br><hr>
+        <span class="t2"><b>Write to txt file</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">echo</span><span class="sc0"> OUTPUT Text Line 1 </span><span class="sc7">&gt;&gt;</span><span class="sc0"> "test File.txt"
+        </span><span class="sc2">echo</span><span class="sc0"> OUTPUT Text Line 2 </span><span class="sc7">&gt;&gt;</span><span class="sc0"> "test File.txt"
+        </span><span class="sc2">start</span><span class="sc0"> notepad "test File.txt"</span></div>
+    
+<br><hr>
+<span class="t2"><b>Avoid Lag</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">taskkill</span><span class="sc0"> /F /IM dllhost.exe
+</span><span class="sc5">taskkill</span><span class="sc0"> /F /IM StartMenuExperienceHost.exe
+</span><span class="sc5">taskkill</span><span class="sc0"> /F /IM SearchApp.exe
+</span><span class="sc5">taskkill</span><span class="sc0"> /F /IM RtkAudUService64.exe
+</span><span class="sc5">taskkill</span><span class="sc0"> /F /IM ctfmon.exe
+</span><span class="sc5">taskkill</span><span class="sc0"> /F /IM RuntimeBroker.exe</span></div>
+    </body>
+</html>

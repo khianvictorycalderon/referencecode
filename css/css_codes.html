@@ -1,0 +1,102 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css_codes_style.css">
+        <title>CSS Codes</title>
+    </head>
+    <body class="flex-c">
+      <span class="t2"><b>Box shadow</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">#</span><span class="sc10">box</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6">
+  box-shadow</span><span class="sc5">:</span><span class="sc8"> 0px 0px 5px 5px black</span><span class="sc5">;</span><span class="sc6"> 
+</span><span class="sc9">/*   right,down,blur radius,spread radius, color   */</span><span class="sc6">
+</span><span class="sc5">}</span></div>
+
+<hr>
+<span class="t2"><b>Grid Layout</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">&lt;</span><span class="sc5">!DOCTYPE html&gt;
+  &lt;html&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.</span><span class="sc2">0</span><span class="sc1">"</span><span class="sc5">&gt;</span><span class="sc0">
+      &lt;</span><span class="sc1">style</span><span class="sc5">&gt;</span><span class="sc0">
+        </span><span class="sc5">.</span><span class="sc2">grid-box</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6">
+          align-content</span><span class="sc5">:</span><span class="sc8"> center</span><span class="sc5">;</span><span class="sc6">
+          display</span><span class="sc5">:</span><span class="sc8"> grid</span><span class="sc5">;</span><span class="sc6">
+          grid-template-columns</span><span class="sc5">:</span><span class="sc8"> 1fr 1fr 1fr 1fr</span><span class="sc5">;</span><span class="sc6">
+          grid-gap</span><span class="sc5">:</span><span class="sc8"> 10px</span><span class="sc5">;</span><span class="sc6">
+          background-color</span><span class="sc5">:</span><span class="sc8"> #2196F3</span><span class="sc5">;</span><span class="sc6">
+          padding</span><span class="sc5">:</span><span class="sc8"> 10px</span><span class="sc5">;</span><span class="sc6">
+        </span><span class="sc5">}</span><span class="sc0">
+        </span><span class="sc5">.</span><span class="sc2">grid-box</span><span class="sc1"> </span><span class="sc5">&gt;</span><span class="sc0"> </span><span class="sc1">div</span><span class="sc5">,</span><span class="sc0"> </span><span class="sc5">.</span><span class="sc2">grid-box2</span><span class="sc1"> </span><span class="sc5">&gt;</span><span class="sc0"> </span><span class="sc1">div</span><span class="sc5">{</span><span class="sc6">
+          background-color</span><span class="sc5">:</span><span class="sc8"> rgba(255, 255, 255, 0.8)</span><span class="sc5">;</span><span class="sc6">
+          text-align</span><span class="sc5">:</span><span class="sc8"> center</span><span class="sc5">;</span><span class="sc6">
+          padding</span><span class="sc5">:</span><span class="sc8"> 20px 0</span><span class="sc5">;</span><span class="sc6">
+          font-size</span><span class="sc5">:</span><span class="sc8"> 30px</span><span class="sc5">;</span><span class="sc6">
+          height</span><span class="sc5">:</span><span class="sc8">auto</span><span class="sc5">;</span><span class="sc6">
+          align-content</span><span class="sc5">:</span><span class="sc8"> center</span><span class="sc5">;</span><span class="sc6">
+        </span><span class="sc5">}</span><span class="sc0">
+  
+        </span><span class="sc5">.</span><span class="sc2">grid-box2</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6">
+          align-content</span><span class="sc5">:</span><span class="sc8"> center</span><span class="sc5">;</span><span class="sc6">
+          display</span><span class="sc5">:</span><span class="sc8"> grid</span><span class="sc5">;</span><span class="sc6">
+          grid-template-columns</span><span class="sc5">:</span><span class="sc8"> 1fr 1fr</span><span class="sc5">;</span><span class="sc6">
+          grid-gap</span><span class="sc5">:</span><span class="sc8"> 10px</span><span class="sc5">;</span><span class="sc6">
+          background-color</span><span class="sc5">:</span><span class="sc8"> #2196F3</span><span class="sc5">;</span><span class="sc6">
+          padding</span><span class="sc5">:</span><span class="sc8"> 10px</span><span class="sc5">;</span><span class="sc6">
+        </span><span class="sc5">}</span><span class="sc0">
+  
+        </span><span class="sc5">.</span><span class="sc2">colspan2</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6">
+          grid-column</span><span class="sc5">:</span><span class="sc8"> span 2</span><span class="sc5">;</span><span class="sc6">
+        </span><span class="sc5">}</span><span class="sc0">
+        </span><span class="sc5">.</span><span class="sc2">colspan4</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6">
+          grid-column</span><span class="sc5">:</span><span class="sc8"> span 4</span><span class="sc5">;</span><span class="sc6">
+        </span><span class="sc5">}</span><span class="sc0">
+  
+        </span><span class="sc5">.</span><span class="sc2">rowspan2</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6">
+          grid-row</span><span class="sc5">:</span><span class="sc8"> span 2</span><span class="sc5">;</span><span class="sc6">
+        </span><span class="sc5">}</span><span class="sc0">
+        </span><span class="sc5">.</span><span class="sc2">rowspan4</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6">
+          grid-row</span><span class="sc5">:</span><span class="sc8"> span 4</span><span class="sc5">;</span><span class="sc6">
+        </span><span class="sc5">}</span><span class="sc0">
+  
+        </span><span class="sc5">@</span><span class="sc22">media (max-width: 768px) </span><span class="sc5">{</span><span class="sc0">
+          </span><span class="sc5">.</span><span class="sc2">grid-box</span><span class="sc5">,</span><span class="sc0"> </span><span class="sc5">.</span><span class="sc2">grid-box2</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6">
+              grid-template-columns</span><span class="sc5">:</span><span class="sc8"> auto</span><span class="sc5">;</span><span class="sc6">
+          </span><span class="sc5">}</span><span class="sc0">
+          </span><span class="sc5">.</span><span class="sc2">colspan2</span><span class="sc5">,</span><span class="sc0"> </span><span class="sc5">.</span><span class="sc2">colspan4</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6">
+              grid-column</span><span class="sc5">:</span><span class="sc8"> span 1</span><span class="sc5">;</span><span class="sc6">
+          </span><span class="sc5">}</span><span class="sc0">
+          </span><span class="sc5">.</span><span class="sc2">rowspan2</span><span class="sc5">,</span><span class="sc0"> </span><span class="sc5">.</span><span class="sc2">rowspan4</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6">
+              grid-row</span><span class="sc5">:</span><span class="sc8"> span 1</span><span class="sc5">;</span><span class="sc6">
+          </span><span class="sc5">}</span><span class="sc0">
+        </span><span class="sc5">}</span><span class="sc0">
+      &lt;/</span><span class="sc1">style</span><span class="sc5">&gt;</span><span class="sc0">
+      &lt;</span><span class="sc1">body</span><span class="sc5">&gt;</span><span class="sc0">
+          &lt;</span><span class="sc1">h1</span><span class="sc5">&gt;</span><span class="sc1">CSS Grid Layout&lt;/h1</span><span class="sc5">&gt;</span><span class="sc0">
+          &lt;</span><span class="sc1">hr</span><span class="sc5">&gt;</span><span class="sc0">
+          &lt;</span><span class="sc1">h1</span><span class="sc5">&gt;</span><span class="sc1">You may resize to see the result</span><span class="sc5">:</span><span class="sc1">&lt;/h1</span><span class="sc5">&gt;</span><span class="sc0">
+          &lt;</span><span class="sc1">div class</span><span class="sc5">="grid-box"&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div</span><span class="sc5">&gt;</span><span class="sc1">Item 1&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div</span><span class="sc5">&gt;</span><span class="sc1">Item 2&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div</span><span class="sc5">&gt;</span><span class="sc1">Item 3&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div</span><span class="sc5">&gt;</span><span class="sc1">Item 4&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div class</span><span class="sc5">="colspan2"&gt;</span><span class="sc1">Item 5&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div class</span><span class="sc5">="colspan2"&gt;</span><span class="sc1">Item 6&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div class</span><span class="sc5">="colspan4"&gt;</span><span class="sc1">Item 7&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+          &lt;/</span><span class="sc1">div</span><span class="sc5">&gt;</span><span class="sc0">
+          &lt;</span><span class="sc1">br</span><span class="sc5">&gt;</span><span class="sc0">&lt;</span><span class="sc1">br</span><span class="sc5">&gt;</span><span class="sc0">
+          &lt;</span><span class="sc1">hr</span><span class="sc5">&gt;</span><span class="sc0">
+          &lt;</span><span class="sc1">h1</span><span class="sc5">&gt;</span><span class="sc1">Another example</span><span class="sc5">:</span><span class="sc1">&lt;/h1</span><span class="sc5">&gt;</span><span class="sc0">
+          &lt;</span><span class="sc1">div class</span><span class="sc5">="grid-box2"&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div class</span><span class="sc5">="colspan2"&gt;</span><span class="sc1">Item 1&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div</span><span class="sc5">&gt;</span><span class="sc1">Item 2&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div class</span><span class="sc5">="rowspan4"&gt;</span><span class="sc1">Item 3&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div</span><span class="sc5">&gt;</span><span class="sc1">Item 4&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div</span><span class="sc5">&gt;</span><span class="sc1">Item 5&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div</span><span class="sc5">&gt;</span><span class="sc1">Item 6&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+              &lt;</span><span class="sc1">div class</span><span class="sc5">="colspan2"&gt;</span><span class="sc1">Item 7&lt;/div</span><span class="sc5">&gt;</span><span class="sc0">
+          &lt;/</span><span class="sc1">div</span><span class="sc5">&gt;</span><span class="sc0">
+      &lt;/</span><span class="sc1">body</span><span class="sc5">&gt;</span><span class="sc0">
+  &lt;/</span><span class="sc1">html</span><span class="sc5">&gt;</span></div>
+        </body>
+</html>

@@ -1,0 +1,165 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="vbscript_codes_style.css">
+        <title>VBScript Codes (Archived)</title>
+    </head>
+    <body class="flex-c">
+        <span class="t2"><b>Electric bill calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">dim</span><span class="sc0"> </span><span class="sc7">bill</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">kwh</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc0">
+        </span><span class="sc7">ch</span><span class="sc6">=</span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"What will compute?"</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">vbcrlf</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc4">"a. Kilowatts Per Hour (KWH)"</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">vbcrlf</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc4">"b. Electric Bill"</span><span class="sc6">)</span><span class="sc0">
+        
+        </span><span class="sc3">function</span><span class="sc0"> </span><span class="sc7">vbs</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc6">=</span><span class="sc4">"a"</span><span class="sc0"> </span><span class="sc3">then</span><span class="sc0">
+            </span><span class="sc7">bill</span><span class="sc6">=</span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"How much is your bill in pesos in the last 31 Days?"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">kwh</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc2">10.58</span><span class="sc0">
+            </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"You used about "</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">kwh</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc4">" Kilowatts of electricity in 31 Days"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">elseif</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc6">=</span><span class="sc4">"b"</span><span class="sc0"> </span><span class="sc3">then</span><span class="sc0">
+            </span><span class="sc7">kwh</span><span class="sc6">=</span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"How much KWH did you used in the last 31 Days?"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">kwh</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">10.58</span><span class="sc0">
+            </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"Your electric bill is about "</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc4">" pesos in 31 Days"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">else</span><span class="sc0"> 
+            </span><span class="sc7">MsgBox</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc4">"Invalid Input"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+        </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">function</span><span class="sc0"> 
+        
+        </span><span class="sc3">call</span><span class="sc0"> </span><span class="sc7">vbs</span></div>
+        
+        <hr>
+        <span class="t2"><b>Get input</b>:</span>
+        <div class=fit style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">dim</span><span class="sc0"> </span><span class="sc7">fname</span><span class="sc0">
+        </span><span class="sc7">fname</span><span class="sc6">=</span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"Enter anything : "</span><span class="sc6">)</span><span class="sc0">
+        
+        </span><span class="sc3">function</span><span class="sc0"> </span><span class="sc7">Nana</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">MsgBox</span><span class="sc0"> </span><span class="sc7">fname</span><span class="sc0">
+        </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">function</span><span class="sc0"> 
+        
+        </span><span class="sc3">call</span><span class="sc0"> </span><span class="sc7">Nana</span></div>
+
+        <hr>
+        <span class="t2"><b>Hello world</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">function</span><span class="sc0"> </span><span class="sc7">Main</span><span class="sc6">()</span><span class="sc0">
+        </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"Hello, World!"</span><span class="sc6">)</span><span class="sc0">
+</span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">function</span><span class="sc0">
+</span><span class="sc3">call</span><span class="sc0"> </span><span class="sc7">Main</span></div>
+
+        <hr>
+        <span class="t2"><b>If statement</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">dim</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc0">
+        </span><span class="sc3">function</span><span class="sc0"> </span><span class="sc7">int</span><span class="sc6">()</span><span class="sc0">
+             </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"Enter a Number"</span><span class="sc6">)</span><span class="sc0">
+             </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc6">&gt;</span><span class="sc0"> </span><span class="sc2">50</span><span class="sc0"> </span><span class="sc3">then</span><span class="sc0">
+             </span><span class="sc7">MsgBox</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc4">"Input is greather than 50"</span><span class="sc6">)</span><span class="sc0">
+             </span><span class="sc3">else</span><span class="sc0"> 
+             </span><span class="sc7">MsgBox</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc4">"Input is not greather than 50"</span><span class="sc6">)</span><span class="sc0">
+             </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+             
+        </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">function</span><span class="sc0"> 
+        
+        </span><span class="sc3">call</span><span class="sc0"> </span><span class="sc7">int</span><span class="sc6">()</span></div>
+
+        <hr>
+        <span class="t2"><b>Text to speech</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">msgBox</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">sapi</span><span class="sc0">
+        </span><span class="sc7">msgBox</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"Text to Speech Converter"</span><span class="sc6">+</span><span class="sc7">vbcrlf</span><span class="sc6">+</span><span class="sc4">"Version 1.0"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">Set</span><span class="sc0"> </span><span class="sc7">sapi</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">CreateObject</span><span class="sc6">(</span><span class="sc4">"sapi.spvoice"</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc7">sapi.Speak</span><span class="sc0"> </span><span class="sc7">msgBox</span></div>
+
+        <hr>
+        <span class="t2"><b>Password system</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">dim</span><span class="sc0"> </span><span class="sc7">pass</span><span class="sc0">
+        </span><span class="sc3">function</span><span class="sc0"> </span><span class="sc7">vbs</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">pass</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"Enter 1234 password"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">pass</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"1234"</span><span class="sc0"> </span><span class="sc3">then</span><span class="sc0">
+          </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"Password is Correct"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0">
+          </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"Password is Incorrect"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+        </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">function</span><span class="sc0">
+        </span><span class="sc3">call</span><span class="sc0"> </span><span class="sc7">vbs</span><span class="sc6">()</span></div>
+
+        <hr>
+        <span class="t2"><b>Percentage calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">dim</span><span class="sc0"> </span><span class="sc7">n</span><span class="sc6">,</span><span class="sc7">p</span><span class="sc6">,</span><span class="sc7">f</span><span class="sc0">
+        </span><span class="sc3">function</span><span class="sc0"> </span><span class="sc7">vbs</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">p</span><span class="sc6">=</span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"Enter Percentage"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">n</span><span class="sc6">=</span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"Enter Number"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">f</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">n</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">p</span><span class="sc6">)/</span><span class="sc2">100</span><span class="sc0">
+            </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc7">p</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc4">"% of "</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">n</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc4">" is "</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">f</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">function</span><span class="sc0"> 
+        
+        </span><span class="sc3">call</span><span class="sc0"> </span><span class="sc7">vbs</span></div>
+
+        <hr>
+        <span class="t2"><b>Pythagorean theorem calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">c</span><span class="sc6">,</span><span class="sc7">l1</span><span class="sc6">,</span><span class="sc7">l2</span><span class="sc6">,</span><span class="sc7">h</span><span class="sc0"> </span><span class="sc1">'choices, leg 1, leg 2, and hypoteuse
+        </span><span class="sc3">function</span><span class="sc0"> </span><span class="sc7">vbs</span><span class="sc6">()</span><span class="sc0">
+         </span><span class="sc7">c</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"What would you like to solve?"</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">vbcrlf</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc4">"a. Hypotenuse"</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">vbcrlf</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc4">"b. Legs"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">c</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"a"</span><span class="sc0"> </span><span class="sc3">then</span><span class="sc0"> 
+          </span><span class="sc7">l1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"Enter leg 1 value"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">l2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"Enter leg 2 value"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">h</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Sqr</span><span class="sc6">((</span><span class="sc7">l1</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">l1</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">l2</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">l2</span><span class="sc6">))</span><span class="sc0">
+          </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"The hypotenuse is "</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">h</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">elseif</span><span class="sc0"> </span><span class="sc7">c</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"b"</span><span class="sc0"> </span><span class="sc3">then</span><span class="sc0"> 
+          </span><span class="sc7">h</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"Enter Hypotenuse"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">l1</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"Enter one of the legs"</span><span class="sc6">)</span><span class="sc0">
+          </span><span class="sc7">l2</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">Sqr</span><span class="sc6">((</span><span class="sc7">h</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">h</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">-</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">l1</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc7">l1</span><span class="sc6">))</span><span class="sc0">
+          </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"The missing leg is "</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">l2</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">else</span><span class="sc0"> 
+         </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"Invalid Input"</span><span class="sc6">)</span><span class="sc0">
+         </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+        </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">function</span><span class="sc0">
+        </span><span class="sc3">call</span><span class="sc0"> </span><span class="sc7">vbs</span></div>
+
+        <hr>
+        <span class="t2"><b>Variables</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc0">
+        </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">y</span><span class="sc0">
+        </span><span class="sc3">function</span><span class="sc0"> </span><span class="sc7">main</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">10</span><span class="sc0">
+            </span><span class="sc7">y</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc2">15</span><span class="sc0">
+            </span><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">z</span><span class="sc0"> 
+            </span><span class="sc7">z</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">x</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc7">y</span><span class="sc0">
+            </span><span class="sc7">MsgBox</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc7">z</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">function</span><span class="sc0">
+        
+        </span><span class="sc3">call</span><span class="sc0"> </span><span class="sc7">main</span><span class="sc0">
+        </span></div>
+
+        <hr>
+        <span class="t2"><b>Water bill calculator</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">dim</span><span class="sc0"> </span><span class="sc7">bill</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">cum</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc0">
+        </span><span class="sc7">ch</span><span class="sc6">=</span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"What will compute?"</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">vbcrlf</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc4">"a. Cubic Per Meter (CUM)"</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">vbcrlf</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc4">"b. Water Bill"</span><span class="sc6">)</span><span class="sc0">
+        
+        </span><span class="sc3">function</span><span class="sc0"> </span><span class="sc7">vbs</span><span class="sc6">()</span><span class="sc0">
+            </span><span class="sc3">if</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc6">=</span><span class="sc4">"a"</span><span class="sc0"> </span><span class="sc3">then</span><span class="sc0">
+            </span><span class="sc7">bill</span><span class="sc6">=</span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"How much is your bill in pesos in the last 31 Days without tax?"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">cum</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">/</span><span class="sc0"> </span><span class="sc2">21</span><span class="sc0">
+            </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"You used about "</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">cum</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc4">" Cubic Meter of Water in 31 Days"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">elseif</span><span class="sc0"> </span><span class="sc7">ch</span><span class="sc6">=</span><span class="sc4">"b"</span><span class="sc0"> </span><span class="sc3">then</span><span class="sc0">
+            </span><span class="sc7">cum</span><span class="sc6">=</span><span class="sc7">InputBox</span><span class="sc6">(</span><span class="sc4">"How much Cubic Meter of Water did you used in the last 31 Days?"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">cum</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">21</span><span class="sc0">
+            </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"Your water bill is about "</span><span class="sc6">&amp;</span><span class="sc0"> </span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">+</span><span class="sc0"> </span><span class="sc6">((</span><span class="sc7">bill</span><span class="sc0"> </span><span class="sc6">*</span><span class="sc0"> </span><span class="sc2">12</span><span class="sc6">)/</span><span class="sc2">100</span><span class="sc6">)</span><span class="sc0"> </span><span class="sc6">&amp;</span><span class="sc4">" pesos in 31 Days on DUE with tax included"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">else</span><span class="sc0"> 
+            </span><span class="sc7">MsgBox</span><span class="sc0"> </span><span class="sc6">(</span><span class="sc4">"Invalid Input"</span><span class="sc6">)</span><span class="sc0">
+            </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">if</span><span class="sc0">
+        </span><span class="sc3">end</span><span class="sc0"> </span><span class="sc3">function</span><span class="sc0"> 
+        
+        </span><span class="sc3">call</span><span class="sc0"> </span><span class="sc7">vbs</span></div>
+
+        <hr>
+        <span class="t2"><b>Yes/No choice</b>:</span>
+        <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc3">Dim</span><span class="sc0"> </span><span class="sc7">Title</span><span class="sc6">,</span><span class="sc7">Question</span><span class="sc0">
+        </span><span class="sc7">Title</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc4">"user input in VBS with MsgBox"</span><span class="sc0">
+        </span><span class="sc7">Question</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">MsgBox</span><span class="sc6">(</span><span class="sc4">"Proceeding will wipe the contents of your C: Drive. Proceed ?"</span><span class="sc6">,</span><span class="sc7">vbYesNo</span><span class="sc6">+</span><span class="sc7">vbQuestion</span><span class="sc6">,</span><span class="sc0"> </span><span class="sc7">Title</span><span class="sc6">)</span><span class="sc0">
+        </span><span class="sc3">If</span><span class="sc0"> </span><span class="sc7">Question</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">vbYes</span><span class="sc0"> </span><span class="sc3">Then</span><span class="sc0">
+            </span><span class="sc7">MsgBox</span><span class="sc0"> </span><span class="sc4">"We proceed wipping your C:\ drive"</span><span class="sc6">,</span><span class="sc7">vbExclamation</span><span class="sc6">,</span><span class="sc7">Title</span><span class="sc0">
+            </span><span class="sc1">'Call your sub here to continue proceeding your script
+        </span><span class="sc3">ElseIf</span><span class="sc0"> </span><span class="sc7">Question</span><span class="sc0"> </span><span class="sc6">=</span><span class="sc0"> </span><span class="sc7">vbNo</span><span class="sc0"> </span><span class="sc3">Then</span><span class="sc0">
+            </span><span class="sc7">MsgBox</span><span class="sc0"> </span><span class="sc4">"Canceling the operation !"</span><span class="sc6">,</span><span class="sc7">vbCritical</span><span class="sc6">,</span><span class="sc7">Title</span><span class="sc0">
+            </span><span class="sc7">Wscript.Quit</span><span class="sc6">()</span><span class="sc0">
+        </span><span class="sc3">End</span><span class="sc0"> </span><span class="sc3">If</span></div>
+    </body>
+</html>

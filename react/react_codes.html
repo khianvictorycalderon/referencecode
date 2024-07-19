@@ -1,0 +1,881 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="react_codes_style.css">
+        <title>React + Bootstrap Codes</title>
+    </head>
+    <body class="flex-c">
+    <span class="t1">React (Vite + TS) + Bootstrap</span><br>
+    <span class="t3"><a href="react-bootstrap-project-template.zip" download>Download</a> Project Template (with Bootstrap)</span><br><br>
+    <span class="t3"><a href="https://drive.google.com/file/d/14j4dTDEkjkCO9JhQkmx0wfJZdbCv4m56/view?usp=sharing">Download</a> Advance Package <b>(Large Files)</b> (with Bootstrap, React Router, React Router Config, React Router Bootstrap, Next.js)</span>
+<hr>
+<span class="t2"><b>Hello variable</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
+</span><span class="sc2">// PascalCasing
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Message</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc2">// JavaScript XML
+</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc6">"Khian"</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">Hello</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">name</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc11">Message</span><span class="sc10">;</span></div>
+
+<hr>
+<span class="t2"><b>Import and Export</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">Message</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'./Message.tsx'</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;&lt;</span><span class="sc11">Message</span><span class="sc0"> </span><span class="sc10">/&gt;&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">;</span></div>
+
+<hr>
+<span class="t2"><b>List Group</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">ListGroup</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+</span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0"> 
+</span><span class="sc10">&lt;</span><span class="sc11">ul</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"list-group"</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">&lt;</span><span class="sc11">li</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"list-group-item"</span><span class="sc10">&gt;</span><span class="sc11">An</span><span class="sc0"> </span><span class="sc11">item</span><span class="sc10">&lt;/</span><span class="sc11">li</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">&lt;</span><span class="sc11">li</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"list-group-item"</span><span class="sc10">&gt;</span><span class="sc11">A</span><span class="sc0"> </span><span class="sc11">second</span><span class="sc0"> </span><span class="sc11">item</span><span class="sc10">&lt;/</span><span class="sc11">li</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">&lt;</span><span class="sc11">li</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"list-group-item"</span><span class="sc10">&gt;</span><span class="sc11">A</span><span class="sc0"> </span><span class="sc11">third</span><span class="sc0"> </span><span class="sc11">item</span><span class="sc10">&lt;/</span><span class="sc11">li</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">&lt;</span><span class="sc11">li</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"list-group-item"</span><span class="sc10">&gt;</span><span class="sc11">A</span><span class="sc0"> </span><span class="sc11">fourth</span><span class="sc0"> </span><span class="sc11">item</span><span class="sc10">&lt;/</span><span class="sc11">li</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">&lt;</span><span class="sc11">li</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"list-group-item"</span><span class="sc10">&gt;</span><span class="sc11">And</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc0"> </span><span class="sc11">fifth</span><span class="sc0"> </span><span class="sc11">one</span><span class="sc10">&lt;/</span><span class="sc11">li</span><span class="sc10">&gt;</span><span class="sc0">
+</span><span class="sc10">&lt;/</span><span class="sc11">ul</span><span class="sc10">&gt;</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Dynamic List Group</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">ListGroup</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">items</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc6">"name"</span><span class="sc10">:</span><span class="sc6">"Tayabas"</span><span class="sc10">,</span><span class="sc6">"id"</span><span class="sc10">:</span><span class="sc4">1</span><span class="sc10">},</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc6">"name"</span><span class="sc10">:</span><span class="sc6">"Lucena"</span><span class="sc10">,</span><span class="sc6">"id"</span><span class="sc10">:</span><span class="sc4">2</span><span class="sc10">},</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc6">"name"</span><span class="sc10">:</span><span class="sc6">"Sariaya"</span><span class="sc10">,</span><span class="sc6">"id"</span><span class="sc10">:</span><span class="sc4">3</span><span class="sc10">},</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc6">"name"</span><span class="sc10">:</span><span class="sc6">"Pagbilao"</span><span class="sc10">,</span><span class="sc6">"id"</span><span class="sc10">:</span><span class="sc4">4</span><span class="sc10">},</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc6">"name"</span><span class="sc10">:</span><span class="sc6">"Marinduque"</span><span class="sc10">,</span><span class="sc6">"id"</span><span class="sc10">:</span><span class="sc4">5</span><span class="sc10">},</span><span class="sc0">
+</span><span class="sc10">];</span><span class="sc0">
+
+</span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0"> 
+</span><span class="sc2">// This is fragment
+</span><span class="sc0">    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">ul</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"list-group"</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">{</span><span class="sc11">items</span><span class="sc10">.</span><span class="sc11">map</span><span class="sc10">(</span><span class="sc11">item</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc11">li</span><span class="sc0"> </span><span class="sc11">key</span><span class="sc10">={</span><span class="sc11">item</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc10">}&gt;{</span><span class="sc11">item</span><span class="sc10">.</span><span class="sc11">name</span><span class="sc10">}&lt;/</span><span class="sc11">li</span><span class="sc10">&gt;)}</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">ul</span><span class="sc10">&gt;</span><span class="sc0">
+</span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Conditional Rendering</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">ConditionalRedering</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+</span><span class="sc5">let</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">Math</span><span class="sc10">.</span><span class="sc11">floor</span><span class="sc10">(</span><span class="sc11">Math</span><span class="sc10">.</span><span class="sc11">random</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc4">2</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc5">let</span><span class="sc0"> </span><span class="sc11">y</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc11">x</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc0"> </span><span class="sc10">?</span><span class="sc0"> </span><span class="sc11">y</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc6">"Math is 0"</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">y</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc6">"Math is not 0"</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;{</span><span class="sc11">y</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;);</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Simple Condition</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">SimpleCondition</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+</span><span class="sc5">let</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc6">"Hello"</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc2">// &amp;&amp; acts like a ternary operator
+</span><span class="sc0">    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc11">a</span><span class="sc0"> </span><span class="sc10">===</span><span class="sc0"> </span><span class="sc6">"Hello"</span><span class="sc0"> </span><span class="sc10">&amp;&amp;</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc11">Hello</span><span class="sc0"> </span><span class="sc11">Found</span><span class="sc10">!&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;}</span><span class="sc0">
+    </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Mouse Click</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">MouseClick</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+</span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc6">"Clicked!"</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}}&gt;</span><span class="sc0">
+        </span><span class="sc11">Click</span><span class="sc0"> </span><span class="sc11">Me</span><span class="sc10">!</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Mouse Event</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Event</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+</span><span class="sc5">return</span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={(</span><span class="sc11">event</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}}&gt;</span><span class="sc11">Click</span><span class="sc0"> </span><span class="sc11">Me</span><span class="sc0"> </span><span class="sc11">To</span><span class="sc0"> </span><span class="sc11">Display</span><span class="sc0"> </span><span class="sc11">an</span><span class="sc0"> </span><span class="sc11">Event</span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Pasing Data Via Props</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">// App.tsx Code:
+</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">ListGroup</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'./component/ListGroup.tsx'</span><span class="sc0">
+
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">items</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc6">"Tayabas"</span><span class="sc10">,</span><span class="sc6">"Sariaya"</span><span class="sc10">,</span><span class="sc6">"Lucena"</span><span class="sc10">,</span><span class="sc6">"Pagbilao"</span><span class="sc10">,</span><span class="sc6">"Marinduque"</span><span class="sc10">];</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">ListGroup</span><span class="sc0"> </span><span class="sc11">items</span><span class="sc10">={</span><span class="sc11">items</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">heading</span><span class="sc10">=</span><span class="sc6">"Cities"</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0"> 
+      </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+  </span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc0">
+
+</span><span class="sc2">//------------------------------------------------
+// ListGroup.tsx Code:
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc6">"react"</span><span class="sc0">
+
+</span><span class="sc5">interface</span><span class="sc0"> </span><span class="sc11">ListGroupProps</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc11">items</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">[];</span><span class="sc0">
+  </span><span class="sc11">heading</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">ListGroup</span><span class="sc0"> </span><span class="sc10">({</span><span class="sc11">items</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">heading</span><span class="sc10">}:</span><span class="sc11">ListGroupProps</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">selectedIndex</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setSelectedIndex</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(-</span><span class="sc4">1</span><span class="sc10">);</span><span class="sc0">
+
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0"> 
+    </span><span class="sc2">// This is fragment
+</span><span class="sc0">    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;{</span><span class="sc11">heading</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">ul</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"list-group"</span><span class="sc10">&gt;</span><span class="sc0">
+          </span><span class="sc10">{</span><span class="sc11">items</span><span class="sc10">.</span><span class="sc11">map</span><span class="sc10">(</span><span class="sc0">
+            </span><span class="sc10">(</span><span class="sc11">item</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">index</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> 
+            </span><span class="sc10">&lt;</span><span class="sc11">li</span><span class="sc0"> 
+            </span><span class="sc11">className</span><span class="sc10">={</span><span class="sc0">
+              </span><span class="sc11">selectedIndex</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc11">index</span><span class="sc0">
+              </span><span class="sc10">?</span><span class="sc0"> </span><span class="sc6">"list-group-item active"</span><span class="sc0">
+              </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"list-group-item"</span><span class="sc0">
+            </span><span class="sc10">}</span><span class="sc0">
+            </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc0">
+              </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">setSelectedIndex</span><span class="sc10">(</span><span class="sc11">index</span><span class="sc10">)}</span><span class="sc0">
+            </span><span class="sc10">}</span><span class="sc0">
+            </span><span class="sc11">key</span><span class="sc10">={</span><span class="sc11">index</span><span class="sc10">}&gt;</span><span class="sc0">
+              </span><span class="sc10">{</span><span class="sc11">item</span><span class="sc10">}</span><span class="sc0">
+            </span><span class="sc10">&lt;/</span><span class="sc11">li</span><span class="sc10">&gt;</span><span class="sc0">
+            </span><span class="sc10">)}</span><span class="sc0">
+        </span><span class="sc10">&lt;/</span><span class="sc11">ul</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+  </span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Use State</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc6">"react"</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">ListGroup</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc2">// Each ListGroup can have independent useState
+</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">items</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc0">
+        </span><span class="sc10">{</span><span class="sc6">"name"</span><span class="sc10">:</span><span class="sc6">"Tayabas"</span><span class="sc10">,</span><span class="sc6">"id"</span><span class="sc10">:</span><span class="sc4">1</span><span class="sc10">},</span><span class="sc0">
+        </span><span class="sc10">{</span><span class="sc6">"name"</span><span class="sc10">:</span><span class="sc6">"Lucena"</span><span class="sc10">,</span><span class="sc6">"id"</span><span class="sc10">:</span><span class="sc4">2</span><span class="sc10">},</span><span class="sc0">
+        </span><span class="sc10">{</span><span class="sc6">"name"</span><span class="sc10">:</span><span class="sc6">"Sariaya"</span><span class="sc10">,</span><span class="sc6">"id"</span><span class="sc10">:</span><span class="sc4">3</span><span class="sc10">},</span><span class="sc0">
+        </span><span class="sc10">{</span><span class="sc6">"name"</span><span class="sc10">:</span><span class="sc6">"Pagbilao"</span><span class="sc10">,</span><span class="sc6">"id"</span><span class="sc10">:</span><span class="sc4">4</span><span class="sc10">},</span><span class="sc0">
+        </span><span class="sc10">{</span><span class="sc6">"name"</span><span class="sc10">:</span><span class="sc6">"Marinduque"</span><span class="sc10">,</span><span class="sc6">"id"</span><span class="sc10">:</span><span class="sc4">5</span><span class="sc10">},</span><span class="sc0">
+    </span><span class="sc10">];</span><span class="sc0">
+
+    </span><span class="sc2">// useState()
+</span><span class="sc0">    </span><span class="sc2">// [0] = Variable Name
+</span><span class="sc0">    </span><span class="sc2">// [1] = Update Function
+</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">selectedIndex</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setSelectedIndex</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(-</span><span class="sc4">1</span><span class="sc10">);</span><span class="sc0">
+
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0"> 
+    </span><span class="sc2">// This is fragment
+</span><span class="sc0">    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">ul</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"list-group"</span><span class="sc10">&gt;</span><span class="sc0">
+          </span><span class="sc10">{</span><span class="sc11">items</span><span class="sc10">.</span><span class="sc11">map</span><span class="sc10">(</span><span class="sc0">
+            </span><span class="sc10">(</span><span class="sc11">item</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">index</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> 
+            </span><span class="sc10">&lt;</span><span class="sc11">li</span><span class="sc0"> 
+            </span><span class="sc11">className</span><span class="sc10">={</span><span class="sc0">
+              </span><span class="sc11">selectedIndex</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc11">index</span><span class="sc0">
+              </span><span class="sc10">?</span><span class="sc0"> </span><span class="sc6">"list-group-item active"</span><span class="sc0">
+              </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"list-group-item"</span><span class="sc0">
+            </span><span class="sc10">}</span><span class="sc0">
+            </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc0">
+              </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">setSelectedIndex</span><span class="sc10">(</span><span class="sc11">index</span><span class="sc10">)}</span><span class="sc0">
+            </span><span class="sc10">}</span><span class="sc0">
+            </span><span class="sc11">key</span><span class="sc10">={</span><span class="sc11">item</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc10">}&gt;</span><span class="sc0">
+              </span><span class="sc10">{</span><span class="sc11">item</span><span class="sc10">.</span><span class="sc11">name</span><span class="sc10">}</span><span class="sc0">
+            </span><span class="sc10">&lt;/</span><span class="sc11">li</span><span class="sc10">&gt;</span><span class="sc0">
+            </span><span class="sc10">)}</span><span class="sc0">
+        </span><span class="sc10">&lt;/</span><span class="sc11">ul</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+  </span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Event Handler</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">MouseEvent</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc6">"react"</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">EventHandler</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleClick</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">MouseEvent</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">)};</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleClick</span><span class="sc10">}&gt;</span><span class="sc0">
+            </span><span class="sc11">Click</span><span class="sc0"> </span><span class="sc11">Me</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">I</span><span class="sc0"> </span><span class="sc11">am</span><span class="sc0"> </span><span class="sc11">an</span><span class="sc0"> </span><span class="sc11">Event</span><span class="sc0"> </span><span class="sc11">Handler</span><span class="sc10">!</span><span class="sc0">
+        </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Passing Data Via Props (Properties, Immutable)</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">// App.tsx Code:
+</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">ListGroup</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'./component/ListGroup.tsx'</span><span class="sc0">
+
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">items</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc6">"Tayabas"</span><span class="sc10">,</span><span class="sc6">"Sariaya"</span><span class="sc10">,</span><span class="sc6">"Lucena"</span><span class="sc10">,</span><span class="sc6">"Pagbilao"</span><span class="sc10">,</span><span class="sc6">"Marinduque"</span><span class="sc10">];</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleSelectItem</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">item</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc11">item</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">ListGroup</span><span class="sc0"> </span><span class="sc11">items</span><span class="sc10">={</span><span class="sc11">items</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">heading</span><span class="sc10">=</span><span class="sc6">"Cities"</span><span class="sc0"> </span><span class="sc11">onSelectItem</span><span class="sc10">={</span><span class="sc11">handleSelectItem</span><span class="sc10">}/&gt;</span><span class="sc0"> 
+      </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+  </span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc0">
+
+
+
+</span><span class="sc2">//----------------------------------------------------------------
+// ListGroup.tsx Code:
+</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc6">"react"</span><span class="sc0">
+
+</span><span class="sc5">interface</span><span class="sc0"> </span><span class="sc11">ListGroupProps</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc11">items</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">[];</span><span class="sc0">
+  </span><span class="sc11">heading</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc11">onSelectItem</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">item</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc5">void</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">ListGroup</span><span class="sc0"> </span><span class="sc10">({</span><span class="sc11">items</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">heading</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">onSelectItem</span><span class="sc10">}:</span><span class="sc11">ListGroupProps</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">selectedIndex</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setSelectedIndex</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(-</span><span class="sc4">1</span><span class="sc10">);</span><span class="sc0">
+
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0"> 
+    </span><span class="sc2">// This is fragment
+</span><span class="sc0">    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;{</span><span class="sc11">heading</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">ul</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"list-group"</span><span class="sc10">&gt;</span><span class="sc0">
+          </span><span class="sc10">{</span><span class="sc11">items</span><span class="sc10">.</span><span class="sc11">map</span><span class="sc10">(</span><span class="sc0">
+            </span><span class="sc10">(</span><span class="sc11">item</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">index</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> 
+            </span><span class="sc10">&lt;</span><span class="sc11">li</span><span class="sc0"> 
+            </span><span class="sc11">className</span><span class="sc10">={</span><span class="sc0">
+              </span><span class="sc11">selectedIndex</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc11">index</span><span class="sc0">
+              </span><span class="sc10">?</span><span class="sc0"> </span><span class="sc6">"list-group-item active"</span><span class="sc0">
+              </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"list-group-item"</span><span class="sc0">
+            </span><span class="sc10">}</span><span class="sc0">
+            </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc0">
+              </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+                </span><span class="sc11">setSelectedIndex</span><span class="sc10">(</span><span class="sc11">index</span><span class="sc10">);</span><span class="sc0">
+                </span><span class="sc11">onSelectItem</span><span class="sc10">(</span><span class="sc11">item</span><span class="sc10">);</span><span class="sc0">
+              </span><span class="sc10">}</span><span class="sc0">
+            </span><span class="sc10">}</span><span class="sc0">
+            </span><span class="sc11">key</span><span class="sc10">={</span><span class="sc11">index</span><span class="sc10">}&gt;</span><span class="sc0">
+              </span><span class="sc10">{</span><span class="sc11">item</span><span class="sc10">}</span><span class="sc0">
+            </span><span class="sc10">&lt;/</span><span class="sc11">li</span><span class="sc10">&gt;</span><span class="sc0">
+            </span><span class="sc10">)}</span><span class="sc0">
+        </span><span class="sc10">&lt;/</span><span class="sc11">ul</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+  </span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Passing Children Data</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">// App.tsx Code:
+</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">Alert</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc6">"./component/Alert"</span><span class="sc0">
+
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">Alert</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc11">Hello</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc11">span</span><span class="sc10">&gt;</span><span class="sc11">World</span><span class="sc10">&lt;/</span><span class="sc11">span</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;/</span><span class="sc11">Alert</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc0">
+
+</span><span class="sc2">//------------------------------------------------------
+// Alert.tsx Code:
+</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">ReactNode</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc6">"react"</span><span class="sc0">
+
+ </span><span class="sc2">// Children is a built in code, not a variable
+</span><span class="sc0"> </span><span class="sc2">// ReactNode is for HTML element
+</span><span class="sc5">interface</span><span class="sc0"> </span><span class="sc11">AlertProps</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">children</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">ReactNode</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Alert</span><span class="sc10">({</span><span class="sc0"> </span><span class="sc11">children</span><span class="sc0"> </span><span class="sc10">}:</span><span class="sc11">AlertProps</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc0">
+        </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"alert alert-primary"</span><span class="sc0">
+        </span><span class="sc10">&gt;</span><span class="sc0">
+            </span><span class="sc10">{</span><span class="sc11">children</span><span class="sc10">}</span><span class="sc0">
+        </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Reusable Button Component</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">// App.tsx Code:
+</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">Buttons</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc6">"./component/Buttons"</span><span class="sc0">
+
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">Buttons</span><span class="sc0"> </span><span class="sc11">color</span><span class="sc10">=</span><span class="sc6">"success"</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={()=&gt;{</span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc6">"Clicked!"</span><span class="sc10">)}}&gt;</span><span class="sc0">
+        </span><span class="sc11">My</span><span class="sc0"> </span><span class="sc11">Button</span><span class="sc0">
+      </span><span class="sc10">&lt;/</span><span class="sc11">Buttons</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc0">
+
+
+</span><span class="sc2">//-------------------------------------------------------
+// Buttons.tsx Code:
+</span><span class="sc0">
+</span><span class="sc5">interface</span><span class="sc0"> </span><span class="sc11">ButtonProps</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">children</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">color</span><span class="sc10">?:</span><span class="sc0"> </span><span class="sc7">'primary'</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc7">'secondary'</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc7">'success'</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc2">// Questionmark means optional
+</span><span class="sc0">    </span><span class="sc11">onClick</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc5">void</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Buttons</span><span class="sc10">({</span><span class="sc0"> </span><span class="sc11">children</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">color</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'primary'</span><span class="sc0"> </span><span class="sc10">}:</span><span class="sc0"> </span><span class="sc11">ButtonProps</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0">
+        </span><span class="sc11">className</span><span class="sc10">={</span><span class="sc7">'btn btn-'</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc11">color</span><span class="sc10">}</span><span class="sc0">
+        </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">onClick</span><span class="sc10">}</span><span class="sc0">
+        </span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">{</span><span class="sc11">children</span><span class="sc10">}</span><span class="sc0">
+        </span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Alert Visibility</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc6">"react"</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">interface</span><span class="sc0"> </span><span class="sc11">ButtonProps</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc11">children</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc11">color</span><span class="sc10">?:</span><span class="sc0"> </span><span class="sc7">'primary'</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc7">'secondary'</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc7">'success'</span><span class="sc0">
+  </span><span class="sc11">onButtonClick</span><span class="sc10">:()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc5">void</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">interface</span><span class="sc0"> </span><span class="sc11">AlertProps</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc11">children</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc11">onClose</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc5">void</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Button</span><span class="sc10">(</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">children</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">onButtonClick</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">color</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">'primary'</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">ButtonProps</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0">
+    </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">onButtonClick</span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc11">className</span><span class="sc10">={</span><span class="sc7">'btn btn-'</span><span class="sc10">+</span><span class="sc11">color</span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">{</span><span class="sc11">children</span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">AlertComponent</span><span class="sc10">({</span><span class="sc11">children</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">onClose</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">AlertProps</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"alert alert-primary alert-dismissible"</span><span class="sc0"> </span><span class="sc11">role</span><span class="sc10">=</span><span class="sc6">"alert"</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">{</span><span class="sc11">children</span><span class="sc10">}</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">onClose</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"button"</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"btn-close"</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">-</span><span class="sc11">bs</span><span class="sc10">-</span><span class="sc11">dismiss</span><span class="sc10">=</span><span class="sc6">"alert"</span><span class="sc0"> </span><span class="sc11">aria</span><span class="sc10">-</span><span class="sc11">label</span><span class="sc10">=</span><span class="sc6">"Close"</span><span class="sc10">&gt;&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">AlertVisibility</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setAlertVisibility</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc5">false</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">{</span><span class="sc11">AlertVisibility</span><span class="sc0"> </span><span class="sc10">&amp;&amp;</span><span class="sc0"> 
+        </span><span class="sc10">&lt;</span><span class="sc11">AlertComponent</span><span class="sc0">
+        </span><span class="sc11">onClose</span><span class="sc10">={()=&gt;</span><span class="sc11">setAlertVisibility</span><span class="sc10">(</span><span class="sc5">false</span><span class="sc10">)}&gt;</span><span class="sc0">
+        </span><span class="sc11">My</span><span class="sc0"> </span><span class="sc11">Alert</span><span class="sc0"> 
+        </span><span class="sc10">&lt;/</span><span class="sc11">AlertComponent</span><span class="sc10">&gt;}</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">Button</span><span class="sc0"> 
+      </span><span class="sc11">color</span><span class="sc10">=</span><span class="sc6">"secondary"</span><span class="sc0">
+      </span><span class="sc11">onButtonClick</span><span class="sc10">={()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">setAlertVisibility</span><span class="sc10">(</span><span class="sc5">true</span><span class="sc10">)}}</span><span class="sc0">
+      </span><span class="sc10">&gt;</span><span class="sc11">My</span><span class="sc0"> </span><span class="sc11">Button</span><span class="sc10">&lt;/</span><span class="sc11">Button</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc0">
+</span></div>
+
+<hr>
+<span class="t2"><b>Card</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">// App.tsx code
+  // import card.css in main.tsx
+  </span><span class="sc0">
+  </span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">Image</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'./assets/Khian_Logo.jpg'</span><span class="sc0">
+  
+  </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Card</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"card"</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">img</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"card-image"</span><span class="sc0"> </span><span class="sc11">src</span><span class="sc10">={</span><span class="sc11">Image</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">alt</span><span class="sc10">=</span><span class="sc6">"Profile Picture"</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">h2</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"card-title"</span><span class="sc10">&gt;</span><span class="sc11">Heading</span><span class="sc10">&lt;/</span><span class="sc11">h2</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">=</span><span class="sc6">"card-text"</span><span class="sc10">&gt;</span><span class="sc11">This</span><span class="sc0"> </span><span class="sc11">is</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc0"> </span><span class="sc11">description</span><span class="sc10">&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">)</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  
+  </span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+      </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+       </span><span class="sc10">&lt;</span><span class="sc11">Card</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+       </span><span class="sc10">&lt;</span><span class="sc11">Card</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+    </span><span class="sc10">)</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  
+  </span><span class="sc1">/* This works as well but not recommended due to potential errors
+  export default function App() {
+    return [
+      Card(),
+      Card(),
+      Card()
+    ]
+  }
+  */</span><span class="sc0">
+  
+  </span><span class="sc2">//----------------------------------------------------------------
+  // Card.css code:
+  </span><span class="sc0">
+  </span><span class="sc1">/*
+    
+  body {
+      background-color:hsla(0, 0%, 65%, 0.346);
+  }
+  
+  .card {
+      border: 1px solid  hsl(0, 0%, 80%);
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+      padding: 20px;
+      margin: 10px;
+      text-align:center;
+      align-items:center;
+      max-width: 250px;
+      display: inline-block;
+  }
+  
+  .card &gt; .card-image {
+      max-width: 60%;
+      height:auto;
+      border-radius:50%;
+      margin-bottom:10px;
+  }
+  
+  .card &gt; .card-title {
+      font-family: Arial, sans-serif;
+      margin:0;
+      color:hsl(0, 0%, 20%)
+  }
+  
+  .card &gt; .card-text {
+      font-family: Arial, sans-serif;
+      color:hsl(0, 0%, 30%)
+  }
+  
+  */</span></div>
+
+<hr>
+<span class="t2"><b>3 Methods of Styling</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc1">/*
+  3 methods to style in react:
+ 
+  1. External
+     - Conflicts with class name but global
+ 
+  2. Modules
+     - Requires additional setup but unique class names
+ 
+  3. Inline
+     - Minimal styling component but less maintainable
+ */</span><span class="sc0">
+ 
+ </span><span class="sc2">//--------------------------------------------------------
+ </span><span class="sc0">
+ </span><span class="sc1">/* 
+   External:
+   Simply import the css in main.tsx 
+   
+   Example:
+   import 'cssfile.css'
+ 
+   Then use the className
+ */</span><span class="sc0">
+ 
+ </span><span class="sc2">//----------------------
+ </span><span class="sc0">
+ </span><span class="sc1">/*
+  Modules:
+  Using css file as a variable and generate unique className.
+  Usually has a dedicated folder styling for a specific component.
+ 
+  Example:
+ */</span><span class="sc0">
+ 
+ </span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">CustomStyle</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'./Sample.module.css'</span><span class="sc0">
+ </span><span class="sc2">// The css file must have module name extension then css
+ </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">ModuleStyling</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+   </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+     </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc0"> </span><span class="sc11">className</span><span class="sc10">={</span><span class="sc11">CustomStyle</span><span class="sc10">.</span><span class="sc11">customStyleComponent</span><span class="sc10">}&gt;</span><span class="sc11">Hi</span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+   </span><span class="sc10">)</span><span class="sc0">
+ </span><span class="sc10">}</span><span class="sc0">
+ 
+ </span><span class="sc1">/*
+  Sample.module.css Code:
+  (For Demonstration purpose only)
+  
+ .customStyleComponent {
+     background-color:red;
+     padding:10px;
+ }
+ */</span><span class="sc0">
+ 
+ </span><span class="sc2">//----------------------
+ </span><span class="sc1">/*
+  InLine:
+  Specific styling that doesn't use a className
+  All dash must be remove and capitalized the first letter after the dash:
+  Examples:
+  a.) border-radius = borderRadius
+  b.) background-color = backgroundColor
+  And values must be string and each style must be separated by comma
+ 
+  Example of code:
+ */</span><span class="sc0">
+ </span><span class="sc2">// The css file must have module name extension then css
+ </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">InLineStyling</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+   </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">CustomSpecificStyle</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+     </span><span class="sc11">backgroundColor</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"red"</span><span class="sc10">,</span><span class="sc0">
+     </span><span class="sc11">padding</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"10px"</span><span class="sc10">,</span><span class="sc0">
+   </span><span class="sc10">}</span><span class="sc0">
+   </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+     </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc0"> </span><span class="sc11">style</span><span class="sc10">={</span><span class="sc11">CustomSpecificStyle</span><span class="sc10">}&gt;</span><span class="sc11">Hi</span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+   </span><span class="sc10">)</span><span class="sc0">
+ </span><span class="sc10">}</span><span class="sc0">
+ 
+ </span><span class="sc2">//--------------------------------------
+ </span><span class="sc0">
+ </span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+   </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+     </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">InLineStyling</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">ModuleStyling</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+     </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+   </span><span class="sc10">)</span><span class="sc0">
+ </span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Simple Read Only Parent To Child Data Passing</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Student</span><span class="sc10">({</span><span class="sc0"> 
+</span><span class="sc2">// default values, if not specified
+</span><span class="sc0">    </span><span class="sc11">desc</span><span class="sc10">=</span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+</span><span class="sc11">name</span><span class="sc10">=</span><span class="sc6">"Guest"</span><span class="sc10">,</span><span class="sc0"> 
+</span><span class="sc11">age</span><span class="sc10">=</span><span class="sc4">1</span><span class="sc10">,</span><span class="sc0"> 
+</span><span class="sc11">isStudent</span><span class="sc10">=</span><span class="sc5">false</span><span class="sc0">
+</span><span class="sc10">})</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> 
+</span><span class="sc2">// props is a variable, not a reserved keyword
+</span><span class="sc0">  </span><span class="sc2">// string for text, ReactNode for html elements (import reactnode first)
+</span><span class="sc0">  
+</span><span class="sc2">// Only display description if specified
+</span><span class="sc0">  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+</span><span class="sc10">&lt;&gt;</span><span class="sc0">
+</span><span class="sc10">{</span><span class="sc11">desc</span><span class="sc0"> </span><span class="sc10">&amp;&amp;</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">Description</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">desc</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;}</span><span class="sc0">
+</span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">Name</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">name</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+</span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">Age</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">*</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc0"> </span><span class="sc10">?</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc5">false</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+</span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">Student</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">isStudent</span><span class="sc0"> </span><span class="sc10">?</span><span class="sc0"> </span><span class="sc6">"Yes"</span><span class="sc0"> </span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"No"</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+</span><span class="sc10">&lt;</span><span class="sc11">hr</span><span class="sc10">&gt;&lt;/</span><span class="sc11">hr</span><span class="sc10">&gt;</span><span class="sc0">
+</span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+</span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+</span><span class="sc10">&lt;&gt;</span><span class="sc0">
+ </span><span class="sc10">&lt;</span><span class="sc11">Student</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">=</span><span class="sc6">"Edward"</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc10">={</span><span class="sc4">30</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">isStudent</span><span class="sc10">={</span><span class="sc5">true</span><span class="sc10">}/&gt;</span><span class="sc0">
+ </span><span class="sc10">&lt;</span><span class="sc11">Student</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">=</span><span class="sc6">"Spongebob"</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc10">={</span><span class="sc4">28</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">isStudent</span><span class="sc10">={</span><span class="sc5">false</span><span class="sc10">}/&gt;</span><span class="sc0">
+ </span><span class="sc10">&lt;</span><span class="sc11">Student</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">=</span><span class="sc6">"Ben"</span><span class="sc0"> </span><span class="sc11">age</span><span class="sc10">={</span><span class="sc4">24</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">isStudent</span><span class="sc10">={</span><span class="sc5">true</span><span class="sc10">}/&gt;</span><span class="sc0">
+ </span><span class="sc10">&lt;</span><span class="sc11">Student</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+</span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Handle Clicks</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Button</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+</span><span class="sc5">let</span><span class="sc0"> </span><span class="sc11">count</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">handleClick</span><span class="sc10">(</span><span class="sc11">name</span><span class="sc10">:</span><span class="sc11">String</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+ </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">count</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc0"> </span><span class="sc4">3</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+   </span><span class="sc11">count</span><span class="sc10">++;</span><span class="sc0">
+   </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc20">`${name}, you have clicked me ${count} times`</span><span class="sc10">)</span><span class="sc0">
+ </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+   </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc20">`${name} stop clicking me!`</span><span class="sc10">);</span><span class="sc0">
+ </span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+ </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+   </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">handleClick</span><span class="sc10">(</span><span class="sc6">"Bro"</span><span class="sc10">)}}&gt;</span><span class="sc11">Click</span><span class="sc0"> </span><span class="sc11">Me</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+   </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onDoubleClick</span><span class="sc10">={()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">handleClick</span><span class="sc10">(</span><span class="sc6">"Bro"</span><span class="sc10">)}}&gt;</span><span class="sc11">Double</span><span class="sc0"> </span><span class="sc11">Click</span><span class="sc0"> </span><span class="sc11">Me</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+ </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+</span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+ </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+  </span><span class="sc10">&lt;</span><span class="sc11">Button</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+ </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>On Change</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">React</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc0">
+
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">MyComponent</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">name</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setName</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc6">"Guest"</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">number</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setNumber</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc4">0</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">comment</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setComment</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc6">""</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">payment</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setPayment</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc6">"visa"</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">shipping</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setShipping</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc6">""</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleNameChange</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setName</span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">)</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleNumberChange</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setNumber</span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">)</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleCommentChange</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setComment</span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">)</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handlePaymentChange</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setPayment</span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">)</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleShippingChange</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setShipping</span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">)</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handleNameChange</span><span class="sc10">}/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc11">Name</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">name</span><span class="sc10">}&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">br</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handleNumberChange</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"number"</span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc11">Age</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">number</span><span class="sc10">}&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">br</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">textarea</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handleCommentChange</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">placeholder</span><span class="sc10">=</span><span class="sc6">"Enter a comment..."</span><span class="sc10">&gt;&lt;/</span><span class="sc11">textarea</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc11">Comment</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">comment</span><span class="sc10">}&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+
+      </span><span class="sc10">&lt;</span><span class="sc11">select</span><span class="sc0"> </span><span class="sc11">value</span><span class="sc10">={</span><span class="sc11">payment</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handlePaymentChange</span><span class="sc10">}&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">option</span><span class="sc0"> </span><span class="sc11">value</span><span class="sc10">=</span><span class="sc6">"gcash"</span><span class="sc10">&gt;</span><span class="sc11">GCash</span><span class="sc10">&lt;/</span><span class="sc11">option</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">option</span><span class="sc0"> </span><span class="sc11">value</span><span class="sc10">=</span><span class="sc6">"visa"</span><span class="sc10">&gt;</span><span class="sc11">VISA</span><span class="sc10">&lt;/</span><span class="sc11">option</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">option</span><span class="sc0"> </span><span class="sc11">value</span><span class="sc10">=</span><span class="sc6">"mastercard"</span><span class="sc10">&gt;</span><span class="sc11">MasterCard</span><span class="sc10">&lt;/</span><span class="sc11">option</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">option</span><span class="sc0"> </span><span class="sc11">value</span><span class="sc10">=</span><span class="sc6">"paypal"</span><span class="sc10">&gt;</span><span class="sc11">PayPal</span><span class="sc10">&lt;/</span><span class="sc11">option</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;/</span><span class="sc11">select</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc11">Payment</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">payment</span><span class="sc10">}&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+
+      </span><span class="sc10">&lt;</span><span class="sc11">br</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+
+      </span><span class="sc10">&lt;</span><span class="sc11">label</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">=</span><span class="sc6">"sampleID"</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"radio"</span><span class="sc0"> </span><span class="sc11">value</span><span class="sc10">=</span><span class="sc6">"Pick Up"</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handleShippingChange</span><span class="sc10">}/&gt;</span><span class="sc0">
+        </span><span class="sc11">Pickup</span><span class="sc0">
+      </span><span class="sc10">&lt;/</span><span class="sc11">label</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">label</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">=</span><span class="sc6">"sampleID"</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"radio"</span><span class="sc0"> </span><span class="sc11">value</span><span class="sc10">=</span><span class="sc6">"Delivery"</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handleShippingChange</span><span class="sc10">}/&gt;</span><span class="sc0">
+        </span><span class="sc11">Delivery</span><span class="sc0">
+      </span><span class="sc10">&lt;/</span><span class="sc11">label</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">MyComponent</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Use State Multiple Updater Function</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">React</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">useState</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc0">
+
+</span><span class="sc2">// Multiple Updater Function
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">var</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">count</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setCount</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc4">0</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Reset</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setCount</span><span class="sc10">(</span><span class="sc4">0</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Increase</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setCount</span><span class="sc10">(</span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">setCount</span><span class="sc10">(</span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">Decrease</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setCount</span><span class="sc10">(</span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">setCount</span><span class="sc10">(</span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc11">Count</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">count</span><span class="sc10">}&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">Decrease</span><span class="sc10">}&gt;</span><span class="sc11">Decrease</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">Reset</span><span class="sc10">}&gt;</span><span class="sc11">Reset</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">Increase</span><span class="sc10">}&gt;</span><span class="sc11">Increase</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Object Use State</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">useState</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc0">
+
+</span><span class="sc2">// Object Use State
+</span><span class="sc0">
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">car</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setCar</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">({</span><span class="sc0">
+    </span><span class="sc11">year</span><span class="sc10">:</span><span class="sc4">2004</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc11">manufacturer</span><span class="sc10">:</span><span class="sc6">"Ford"</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc11">model</span><span class="sc10">:</span><span class="sc6">"Mustang"</span><span class="sc0">
+  </span><span class="sc10">});</span><span class="sc0">
+
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleYearChange</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">any</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setCar</span><span class="sc10">(</span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">({...</span><span class="sc11">c</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">year</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">}));</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleManufacturerChange</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">any</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setCar</span><span class="sc10">(</span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">({...</span><span class="sc11">c</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">manufacturer</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">}));</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleModelChange</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">any</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setCar</span><span class="sc10">(</span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">({...</span><span class="sc11">c</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">model</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">}));</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc11">Your</span><span class="sc0"> </span><span class="sc11">car</span><span class="sc0"> </span><span class="sc11">is</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">car</span><span class="sc10">.</span><span class="sc11">year</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">car</span><span class="sc10">.</span><span class="sc11">manufacturer</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">car</span><span class="sc10">.</span><span class="sc11">model</span><span class="sc10">}&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handleYearChange</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"number"</span><span class="sc0"> </span><span class="sc11">value</span><span class="sc10">={</span><span class="sc11">car</span><span class="sc10">.</span><span class="sc11">year</span><span class="sc10">}/&gt;&lt;</span><span class="sc11">br</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handleManufacturerChange</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"text"</span><span class="sc0"> </span><span class="sc11">value</span><span class="sc10">={</span><span class="sc11">car</span><span class="sc10">.</span><span class="sc11">manufacturer</span><span class="sc10">}/&gt;&lt;</span><span class="sc11">br</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handleModelChange</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"text"</span><span class="sc0"> </span><span class="sc11">value</span><span class="sc10">={</span><span class="sc11">car</span><span class="sc10">.</span><span class="sc11">model</span><span class="sc10">}/&gt;&lt;</span><span class="sc11">br</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Array Use State</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">useState</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc0">
+
+</span><span class="sc2">// Array Use State
+</span><span class="sc0">
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">foods</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setFood</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">([</span><span class="sc0">
+    </span><span class="sc6">"Apple"</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc6">"Mango"</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc6">"Banana"</span><span class="sc0">
+  </span><span class="sc10">]);</span><span class="sc0">
+
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleAddFood</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">inputFood</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">document</span><span class="sc10">.</span><span class="sc11">getElementById</span><span class="sc10">(</span><span class="sc6">"foodInput"</span><span class="sc10">).</span><span class="sc11">value</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">document</span><span class="sc10">.</span><span class="sc11">getElementById</span><span class="sc10">(</span><span class="sc6">"foodInput"</span><span class="sc10">).</span><span class="sc11">value</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">setFood</span><span class="sc10">(</span><span class="sc11">f</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">[...</span><span class="sc11">f</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">inputFood</span><span class="sc10">]);</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+
+  </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">handleRemoveFood</span><span class="sc10">(</span><span class="sc11">index</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setFood</span><span class="sc10">(</span><span class="sc11">foods</span><span class="sc10">.</span><span class="sc11">filter</span><span class="sc10">((</span><span class="sc11">_</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc0"> </span><span class="sc10">!=</span><span class="sc0"> </span><span class="sc11">index</span><span class="sc10">));</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc11">Food</span><span class="sc0"> </span><span class="sc11">List</span><span class="sc10">:</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">ul</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">{</span><span class="sc11">foods</span><span class="sc10">.</span><span class="sc11">map</span><span class="sc10">((</span><span class="sc11">item</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">index</span><span class="sc10">)=&gt;</span><span class="sc0"> 
+        </span><span class="sc10">&lt;</span><span class="sc11">li</span><span class="sc0"> 
+           </span><span class="sc11">key</span><span class="sc10">={</span><span class="sc11">index</span><span class="sc10">}</span><span class="sc0">
+           </span><span class="sc11">onClick</span><span class="sc10">={()=&gt;{</span><span class="sc11">handleRemoveFood</span><span class="sc10">(</span><span class="sc11">index</span><span class="sc10">)}}</span><span class="sc0">
+        </span><span class="sc10">&gt;{</span><span class="sc11">item</span><span class="sc10">}&lt;/</span><span class="sc11">li</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">)}</span><span class="sc0">
+      </span><span class="sc10">&lt;/</span><span class="sc11">ul</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc10">=</span><span class="sc6">"foodInput"</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"text"</span><span class="sc0"> </span><span class="sc11">placeholder</span><span class="sc10">=</span><span class="sc6">"Enter Food Name..."</span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleAddFood</span><span class="sc10">}&gt;</span><span class="sc11">Add</span><span class="sc0"> </span><span class="sc11">Food</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Use Effect</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">useState</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">useEffect</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">count</span><span class="sc10">,</span><span class="sc11">setCount</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc4">0</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc11">useEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">document</span><span class="sc10">.</span><span class="sc11">title</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc20">`Count: ${count}`</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc10">},[</span><span class="sc11">count</span><span class="sc10">]);</span><span class="sc0">
+  </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">addCount</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setCount</span><span class="sc10">(</span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">+</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">subtractCount</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setCount</span><span class="sc10">(</span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">-</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+     </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">Count</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">count</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+     </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">addCount</span><span class="sc10">}&gt;</span><span class="sc11">Add</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+     </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">subtractCount</span><span class="sc10">}&gt;</span><span class="sc11">Subtract</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
+<span class="t2"><b>Resize Use Effect</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">useState</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">useEffect</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc0">
+
+</span><span class="sc2">// Resize useEffect
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">width</span><span class="sc10">,</span><span class="sc11">setWidth</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc11">window</span><span class="sc10">.</span><span class="sc11">innerWidth</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">height</span><span class="sc10">,</span><span class="sc11">setHeight</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc11">window</span><span class="sc10">.</span><span class="sc11">innerHeight</span><span class="sc10">);</span><span class="sc0">
+
+  </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">handleResize</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">setWidth</span><span class="sc10">(</span><span class="sc11">window</span><span class="sc10">.</span><span class="sc11">innerWidth</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">setHeight</span><span class="sc10">(</span><span class="sc11">window</span><span class="sc10">.</span><span class="sc11">innerHeight</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+
+  </span><span class="sc11">useEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc2">// Cleanup code
+</span><span class="sc0">    </span><span class="sc11">window</span><span class="sc10">.</span><span class="sc11">addEventListener</span><span class="sc10">(</span><span class="sc6">"resize"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">handleResize</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc6">"EVENT LISTENER ADDED"</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+      </span><span class="sc11">window</span><span class="sc10">.</span><span class="sc11">removeEventListener</span><span class="sc10">(</span><span class="sc6">"resize"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">handleResize</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">[]);</span><span class="sc0">
+
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc11">Width</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">width</span><span class="sc10">}&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc11">Height</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">height</span><span class="sc10">}&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+</body>
+</html>
+
+<!-- 
+
+<hr>
+<span class="t2"><b>__</b>:</span>
+
+-->

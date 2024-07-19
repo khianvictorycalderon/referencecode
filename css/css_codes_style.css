@@ -1,0 +1,133 @@
+/* This CSS design preset file was created by: Khian Victory D. Calderon */
+
+.t1 {
+    color:black;
+    font-size:3.5em;
+}
+.t2 {
+    color:black;
+    font-size:2.5em;
+}
+.t3 {
+    color:black;
+    font-size:1.5em;
+}
+.t4 {
+    color:black;
+    font-size:1em;
+}
+
+a {
+    color:purple;
+}
+
+hr {
+    width:100%;
+    margin:auto;
+}
+
+.center-h {
+    text-align:center;
+    justify-content: center;
+}
+.center-v {
+    display:flex;
+    vertical-align: middle;
+    align-items: center;
+}
+.left {
+    text-align:left;
+}
+.right {
+    text-align:right;
+}
+
+/* padding */ 
+.pd1 {
+    padding:1%;
+}
+.pd2 {
+    padding:2%
+}
+.pd3 {
+    padding:3%
+}
+.pd4 {
+    padding:4%
+}
+
+/* display flex */ 
+.flex-c {
+    display:flex;
+    flex-direction:column;
+}
+.flex-r {
+    display:flex;
+    flex-direction:row;
+}
+.flex {
+    flex:1;
+}
+
+/* sample transition enlarge */
+.ec {
+    padding:1%;
+    transition: 0.3s;
+}
+.ec:hover, .ec:active {
+    padding:3%;
+    filter:brightness(20%);
+}
+
+/* add more if necessary below ------------------------------------------------- */
+.sampleSlideLeftToRight {
+    animation:slideLeftToRight 0.5s ease-out 1s 2 forwards; /* optional: add delay */
+}
+
+@keyframes slideLeftToRight {
+    from { /* can also use percentage 0% */
+        opacity:0;
+        transform:translateX(-50px);
+    }
+    to { /* can also use percentage 100% */
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+
+.fit {
+    padding:1%;
+    width:cover;
+    margin:auto;
+}
+
+
+span {
+	font-family: 'Courier New';
+	font-size: 13pt;
+	color: #FFFFFF;
+}
+.sc1 {
+	color: #FF6600;
+}
+.sc5 {
+	font-weight: bold;
+}
+.sc6 {
+	font-weight: bold;
+	color: #999966;
+}
+.sc8 {
+	font-weight: bold;
+}
+.sc9 {
+	font-style: italic;
+	color: #00FF00;
+}
+.sc10 {
+	font-weight: bold;
+	color: #339999;
+}
+.sc14 {
+	color: #FF8080;
+}
