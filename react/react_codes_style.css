@@ -103,7 +103,7 @@ hr {
 
 
 
-span {
+span,ul {
 	font-family: 'Courier New';
 	font-size: 13pt;
 	color: #FFFFFF;
