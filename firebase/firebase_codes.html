@@ -1,0 +1,63 @@
+<!-- This HTML preset file was created by: Khian Victory D. Calderon -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="firebase_codes_style.css">
+        <title>Firebase (React) Codes</title>
+    </head>
+    <body class="flex-c">
+    <span class="t1">Firebase (NPM React Based)</span>
+<hr>
+<span class="t2"><b>Basic CRUD</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">database</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'./Firebase'</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">set</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">onValue</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">update</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">remove</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/database'</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">useEffect</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">name</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setName</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc6">""</span><span class="sc10">);</span><span class="sc0">
+
+  </span><span class="sc11">useEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc2">// Set
+</span><span class="sc0">    </span><span class="sc11">set</span><span class="sc10">(</span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">database</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"users"</span><span class="sc10">),</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">username</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"Sample UsernamefasfSAFa"</span><span class="sc10">,</span><span class="sc0">
+      </span><span class="sc11">password</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"Pfaksfjkdfs"</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc10">});</span><span class="sc0">
+
+    </span><span class="sc2">// Read
+</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">readUsernameRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">database</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"users/username"</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">unsubscribe</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">onValue</span><span class="sc10">(</span><span class="sc11">readUsernameRef</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">snapshot</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">snapshot</span><span class="sc10">.</span><span class="sc11">val</span><span class="sc10">();</span><span class="sc0">
+      </span><span class="sc11">setName</span><span class="sc10">(</span><span class="sc11">data</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">});</span><span class="sc0">
+
+    </span><span class="sc2">// Update
+</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">updates</span><span class="sc10">:</span><span class="sc11">Record</span><span class="sc10">&lt;</span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">any</span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{};</span><span class="sc0">
+    </span><span class="sc11">updates</span><span class="sc10">[</span><span class="sc6">"users/email"</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc6">"New Email"</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">update</span><span class="sc10">(</span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">database</span><span class="sc10">),</span><span class="sc11">updates</span><span class="sc10">);</span><span class="sc0">
+
+    </span><span class="sc2">// Delete
+</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">deleteRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">database</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"users/password"</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">remove</span><span class="sc10">(</span><span class="sc11">deleteRef</span><span class="sc10">);</span><span class="sc0">
+
+    </span><span class="sc2">// Clean up the listener on component unmount
+</span><span class="sc0">    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">unsubscribe</span><span class="sc10">()};</span><span class="sc0">
+  </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">[]);</span><span class="sc0"> </span><span class="sc2">// Empty dependency array means this useEffect runs once after initial render
+</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">Hello</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">name</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span></div>
+
+</body>
+</html>
+
+<!-- 
+
+<hr>
+<span class="t2"><b>__</b>:</span>
+
+-->
