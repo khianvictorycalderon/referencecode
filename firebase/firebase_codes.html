@@ -180,6 +180,158 @@
 </span><span class="sc10">}</span><span class="sc0">
 </span></div>
 
+<hr>
+<span class="t2"><b>File Storage CRUD</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">uploadBytes</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">getDownloadURL</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">deleteObject</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/storage'</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">storage</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'./Firebase'</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc2">// Function to upload a file to Firebase Storage
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">uploadFile</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">file</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">fileRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">storage</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">snapshot</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">uploadBytes</span><span class="sc10">(</span><span class="sc11">fileRef</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">file</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc7">'Upload successful!'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">snapshot</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">snapshot</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc7">'Upload failed:'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc5">throw</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc10">};</span><span class="sc0">
+
+</span><span class="sc2">// Function to get the download URL of a file
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">getFileURL</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">path</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">fileRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">storage</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">getDownloadURL</span><span class="sc10">(</span><span class="sc11">fileRef</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc7">'File URL:'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc7">'Error getting file URL:'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc5">throw</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc10">};</span><span class="sc0">
+
+</span><span class="sc2">// Function to delete a file from Firebase Storage
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">deleteFile</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">path</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">fileRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">storage</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">deleteObject</span><span class="sc10">(</span><span class="sc11">fileRef</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc7">'File deleted successfully'</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc7">'Error deleting file:'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc5">throw</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc10">};</span><span class="sc0">
+
+</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">file</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setFile</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">&lt;</span><span class="sc11">File</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">&gt;(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">filePath</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setFilePath</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">&lt;</span><span class="sc11">string</span><span class="sc10">&gt;(</span><span class="sc7">''</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">fileURL</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setFileURL</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">&lt;</span><span class="sc11">string</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">&gt;(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
+
+  </span><span class="sc2">// Handle file input change
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleFileChange</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">React</span><span class="sc10">.</span><span class="sc11">ChangeEvent</span><span class="sc10">&lt;</span><span class="sc11">HTMLInputElement</span><span class="sc10">&gt;)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">files</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">setFile</span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">files</span><span class="sc10">[</span><span class="sc4">0</span><span class="sc10">]);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">};</span><span class="sc0">
+
+  </span><span class="sc2">// Handle file upload
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleUpload</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">file</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">uploadFile</span><span class="sc10">(</span><span class="sc11">file</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc20">`uploads/${file.name}`</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'File uploaded successfully!'</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'Error uploading file.'</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'No file selected.'</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">};</span><span class="sc0">
+
+  </span><span class="sc2">// Handle getting file URL
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleGetURL</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">getFileURL</span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">setFileURL</span><span class="sc10">(</span><span class="sc11">url</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'Error getting file URL.'</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'No file path specified.'</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">};</span><span class="sc0">
+
+  </span><span class="sc2">// Handle file download
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleDownload</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">getFileURL</span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">);</span><span class="sc0">
+
+        </span><span class="sc2">// Create a temporary link element
+</span><span class="sc0">        </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">link</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">document</span><span class="sc10">.</span><span class="sc11">createElement</span><span class="sc10">(</span><span class="sc7">'a'</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">link</span><span class="sc10">.</span><span class="sc11">href</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc10">;</span><span class="sc0">
+        </span><span class="sc11">link</span><span class="sc10">.</span><span class="sc11">download</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">''</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc2">// Optional: Set a filename here if desired
+</span><span class="sc0">        </span><span class="sc11">document</span><span class="sc10">.</span><span class="sc11">body</span><span class="sc10">.</span><span class="sc11">appendChild</span><span class="sc10">(</span><span class="sc11">link</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">link</span><span class="sc10">.</span><span class="sc11">click</span><span class="sc10">();</span><span class="sc0">
+        </span><span class="sc11">document</span><span class="sc10">.</span><span class="sc11">body</span><span class="sc10">.</span><span class="sc11">removeChild</span><span class="sc10">(</span><span class="sc11">link</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'Error downloading file.'</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'No file path specified.'</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">};</span><span class="sc0">
+
+  </span><span class="sc2">// Handle file deletion
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleDelete</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">deleteFile</span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'File deleted successfully!'</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">setFileURL</span><span class="sc10">(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0"> </span><span class="sc2">// Clear the file URL if deleted
+</span><span class="sc0">      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'Error deleting file.'</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'No file path specified.'</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">};</span><span class="sc0">
+
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"file"</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handleFileChange</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleUpload</span><span class="sc10">}&gt;</span><span class="sc11">Upload</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">hr</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0">
+          </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"text"</span><span class="sc0">
+          </span><span class="sc11">value</span><span class="sc10">={</span><span class="sc11">filePath</span><span class="sc10">}</span><span class="sc0">
+          </span><span class="sc11">onChange</span><span class="sc10">={(</span><span class="sc11">e</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">setFilePath</span><span class="sc10">(</span><span class="sc11">e</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">)}</span><span class="sc0">
+          </span><span class="sc11">placeholder</span><span class="sc10">=</span><span class="sc6">"Enter file path"</span><span class="sc0">
+        </span><span class="sc10">/&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleGetURL</span><span class="sc10">}&gt;</span><span class="sc11">Get</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc0"> </span><span class="sc11">URL</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleDownload</span><span class="sc10">}&gt;</span><span class="sc11">Download</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleDelete</span><span class="sc10">}&gt;</span><span class="sc11">Delete</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">{</span><span class="sc11">fileURL</span><span class="sc0"> </span><span class="sc10">&amp;&amp;</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+          </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+            </span><span class="sc10">&lt;</span><span class="sc11">a</span><span class="sc0"> </span><span class="sc11">href</span><span class="sc10">={</span><span class="sc11">fileURL</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">download</span><span class="sc10">&gt;</span><span class="sc0">
+              </span><span class="sc11">Download</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc0">
+            </span><span class="sc10">&lt;/</span><span class="sc11">a</span><span class="sc10">&gt;</span><span class="sc0">
+          </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+        </span><span class="sc10">)}</span><span class="sc0">
+      </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+  </span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">;</span><span class="sc0">
+</span></div>
+
 </body>
 </html>
 
