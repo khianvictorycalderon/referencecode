@@ -332,6 +332,64 @@
 </span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">;</span><span class="sc0">
 </span></div>
 
+<hr>
+<span class="t2"><b>Firebase Configuration</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">// Realtime Database Configuration
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/app'</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">getDatabase</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/database'</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">firebaseConfig</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc11">apiKey</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">authDomain</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">projectId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">storageBucket</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">messagingSenderId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">appId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">measurementId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc0">
+</span><span class="sc10">};</span><span class="sc0">
+
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">app</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc10">(</span><span class="sc11">firebaseConfig</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">database</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">getDatabase</span><span class="sc10">(</span><span class="sc11">app</span><span class="sc10">);</span><span class="sc0">
+
+
+</span><span class="sc2">//---------------------------------------------------------------
+</span><span class="sc0">
+</span><span class="sc2">// Firestore Configuration
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/app'</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">getFirestore</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/firestore'</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">firebaseConfig</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc11">apiKey</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">authDomain</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">projectId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">storageBucket</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">messagingSenderId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">appId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">measurementId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc0">
+</span><span class="sc10">};</span><span class="sc0">
+
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">app</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc10">(</span><span class="sc11">firebaseConfig</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">firestore</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">getFirestore</span><span class="sc10">(</span><span class="sc11">app</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc2">//---------------------------------------------------------------
+</span><span class="sc0">
+</span><span class="sc2">// Storage Configuration
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/app'</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">getStorage</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/storage'</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">firebaseConfig</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc11">apiKey</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">authDomain</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">projectId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">storageBucket</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">messagingSenderId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">appId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">measurementId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc0">
+</span><span class="sc10">};</span><span class="sc0">
+
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">app</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc10">(</span><span class="sc11">firebaseConfig</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">storage</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">getStorage</span><span class="sc10">(</span><span class="sc11">app</span><span class="sc10">);</span></div>
+
 </body>
 </html>
 
