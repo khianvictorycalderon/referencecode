@@ -16,6 +16,73 @@
 	</ul>
     <a href=""></a>
 <hr>
+<span class="t2"><b>Useful React Hooks</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useLayoutEffect</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">useRef</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">useContext</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">createContext</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">useEffect</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc6">"react"</span><span class="sc0">
+
+</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc2">// Most useful React Hooks
+</span><span class="sc0">  </span><span class="sc2">// 1. useState - When data changes, re-render the UI
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">count</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setCount</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc4">0</span><span class="sc10">);</span><span class="sc0">
+
+  </span><span class="sc2">// 2. useEffect - When mounted, when state changes
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">onMount</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc7">'Component mounted!'</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc2">// Any other side effects
+</span><span class="sc0">    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc5">import</span><span class="sc10">.</span><span class="sc11">meta</span><span class="sc10">.</span><span class="sc11">env</span><span class="sc10">.</span><span class="sc11">VITE_HIDDEN_KEY</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">};</span><span class="sc0">
+  </span><span class="sc11">useEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">onMount</span><span class="sc10">();</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc2">// when component is destroyed
+</span><span class="sc0">    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">},</span><span class="sc0">
+  </span><span class="sc10">[]</span><span class="sc0"> </span><span class="sc2">// dependecies (the variable we want to detect that changed)
+</span><span class="sc0">  </span><span class="sc10">);</span><span class="sc0">
+
+  </span><span class="sc2">// 3. useContext - Share data without passing props
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">valueList</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">first</span><span class="sc10">:</span><span class="sc6">"Value is first"</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc11">last</span><span class="sc10">:</span><span class="sc6">"Value is last"</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">contextValue</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useContext</span><span class="sc10">(</span><span class="sc11">createContext</span><span class="sc10">(</span><span class="sc11">valueList</span><span class="sc10">));</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">arrayList</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc6">"zero"</span><span class="sc10">,</span><span class="sc6">"one"</span><span class="sc10">,</span><span class="sc6">"two"</span><span class="sc10">,</span><span class="sc6">"three"</span><span class="sc10">,</span><span class="sc6">"four"</span><span class="sc10">,</span><span class="sc6">"five"</span><span class="sc10">,</span><span class="sc6">"six"</span><span class="sc10">];</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">arrayContextValue</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useContext</span><span class="sc10">(</span><span class="sc11">createContext</span><span class="sc10">(</span><span class="sc11">arrayList</span><span class="sc10">));</span><span class="sc0">
+
+  </span><span class="sc2">// 4. useRef - mutable but not re-render the UI
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">inputValueReference</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useRef</span><span class="sc10">&lt;</span><span class="sc11">HTMLInputElement</span><span class="sc10">&gt;(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">alertUserInput</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc2">// Check if the input is true / not null / has value
+</span><span class="sc0">    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">inputValueReference</span><span class="sc10">.</span><span class="sc11">current</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc11">inputValueReference</span><span class="sc10">.</span><span class="sc11">current</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">);</span><span class="sc0"> 
+      </span><span class="sc2">// Access the input value
+</span><span class="sc0">    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">};</span><span class="sc0">
+
+  </span><span class="sc2">// 5. useLayoutEffect - Exactly like useEffect but blocks visual updates until your callback is finished
+</span><span class="sc0">  </span><span class="sc2">// Runs after the UI is updated
+</span><span class="sc0">  </span><span class="sc11">useLayoutEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc6">"UI Showed"</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">[]);</span><span class="sc0">
+
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc10">&lt;&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">useState</span><span class="sc0"> </span><span class="sc10">&lt;</span><span class="sc11">br</span><span class="sc10">/&gt;</span><span class="sc0"> </span><span class="sc11">Value</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">count</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">setCount</span><span class="sc10">(</span><span class="sc11">count</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">count</span><span class="sc10">+</span><span class="sc4">1</span><span class="sc10">)}&gt;</span><span class="sc11">Add</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+     </span><span class="sc10">&lt;</span><span class="sc11">hr</span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">useContext</span><span class="sc0"> </span><span class="sc11">with</span><span class="sc0"> </span><span class="sc11">JSON</span><span class="sc10">&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;{</span><span class="sc11">contextValue</span><span class="sc10">.</span><span class="sc11">last</span><span class="sc10">}&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">useContext</span><span class="sc0"> </span><span class="sc11">with</span><span class="sc0"> </span><span class="sc11">array</span><span class="sc10">&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">p</span><span class="sc10">&gt;{</span><span class="sc11">arrayContextValue</span><span class="sc10">[</span><span class="sc4">5</span><span class="sc10">]}&lt;/</span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc0">
+     </span><span class="sc10">&lt;</span><span class="sc11">hr</span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">useRef</span><span class="sc10">&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"text"</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">={</span><span class="sc11">inputValueReference</span><span class="sc10">}&gt;&lt;/</span><span class="sc11">input</span><span class="sc10">&gt;&lt;</span><span class="sc11">br</span><span class="sc10">/&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">alertUserInput</span><span class="sc10">}&gt;</span><span class="sc11">Show</span><span class="sc0"> </span><span class="sc11">user</span><span class="sc0"> </span><span class="sc11">Input</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
+     </span><span class="sc10">&lt;</span><span class="sc11">hr</span><span class="sc10">/&gt;</span><span class="sc0">
+    </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
+  </span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">}</span></div>
+
+<hr>
 <span class="t2"><b>Hello variable</b>:</span>
 <div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc0">
 </span><span class="sc2">// PascalCasing
