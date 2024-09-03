@@ -9,387 +9,141 @@
     <body class="flex-c">
     <span class="t1">Firebase (NPM React Based)</span>
 <hr>
-<span class="t2"><b>Firestore CRUD (Document Model Based)</b>:</span>
-<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">firestore</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'./Firebase'</span><span class="sc10">;</span><span class="sc0">
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">doc</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setDoc</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">getDoc</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">onSnapshot</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">deleteDoc</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/firestore'</span><span class="sc10">;</span><span class="sc0">
+<span class="t2"><b>Firestore Create, Read, Update, Delete Basic Usage</b>:</span>
+<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/app'</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">getFirestore</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">doc</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setDoc</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">getDoc</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">onSnapshot</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">deleteDoc</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/firestore'</span><span class="sc10">;</span><span class="sc0">
 </span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useEffect</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc10">;</span><span class="sc0">
 
-</span><span class="sc2">// Define the type for the data you will be writing
-</span><span class="sc5">interface</span><span class="sc0"> </span><span class="sc11">Data</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc10">[</span><span class="sc11">key</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">]:</span><span class="sc0"> </span><span class="sc11">any</span><span class="sc10">;</span><span class="sc0">
-</span><span class="sc10">}</span><span class="sc0">
-
-</span><span class="sc2">// Create / Update (Update if merge is true)
-</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">writeData</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">colId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">docId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">newData</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">Data</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">isMerge</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc5">boolean</span><span class="sc10">):</span><span class="sc0"> </span><span class="sc11">Promise</span><span class="sc10">&lt;</span><span class="sc5">void</span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">docRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">doc</span><span class="sc10">(</span><span class="sc11">firestore</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">colId</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">docId</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">setDoc</span><span class="sc10">(</span><span class="sc11">docRef</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">newData</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">merge</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">isMerge</span><span class="sc0"> </span><span class="sc10">});</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc6">"Data written successfully!"</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">e</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc6">"Data write failed:"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">e</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc2">// your custom firebase configuration here
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">firebaseConfig</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc11">apiKey</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">authDomain</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">databaseURL</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">projectId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">storageBucket</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">messagingSenderId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">appId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
+  </span><span class="sc11">measurementId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc0">
 </span><span class="sc10">};</span><span class="sc0">
 
-</span><span class="sc2">// Read (On Request) and return data
-</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">readDataOnRequest</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">colId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">docId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">):</span><span class="sc0"> </span><span class="sc11">Promise</span><span class="sc10">&lt;</span><span class="sc11">Data</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">docRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">doc</span><span class="sc10">(</span><span class="sc11">firestore</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">colId</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">docId</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">docSnap</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">getDoc</span><span class="sc10">(</span><span class="sc11">docRef</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">app</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc10">(</span><span class="sc11">firebaseConfig</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">firestore_db</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">getFirestore</span><span class="sc10">(</span><span class="sc11">app</span><span class="sc10">);</span><span class="sc0">
+
+</span><span class="sc5">interface</span><span class="sc0"> </span><span class="sc11">Data</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc10">[</span><span class="sc11">key</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">]:</span><span class="sc0"> </span><span class="sc11">any</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc2">// Adjust this type to match your document structure
+</span><span class="sc10">}</span><span class="sc0">
+
+</span><span class="sc2">// Create / Update Data (Path must be an even number)
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">writeData</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">path</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">Data</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">isMerge</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc5">boolean</span><span class="sc10">):</span><span class="sc0"> </span><span class="sc11">Promise</span><span class="sc10">&lt;</span><span class="sc5">void</span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">docRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">doc</span><span class="sc10">(</span><span class="sc11">firestore_db</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">setDoc</span><span class="sc10">(</span><span class="sc11">docRef</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">merge</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">isMerge</span><span class="sc0"> </span><span class="sc10">});</span><span class="sc0">
+</span><span class="sc10">};</span><span class="sc0">
+
+</span><span class="sc2">// Read Data On Request only (Specify the field)
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">readOnce</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">path</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">field</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">):</span><span class="sc0"> </span><span class="sc11">Promise</span><span class="sc10">&lt;</span><span class="sc11">any</span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">docRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">doc</span><span class="sc10">(</span><span class="sc11">firestore_db</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">docSnap</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">getDoc</span><span class="sc10">(</span><span class="sc11">docRef</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">docSnap</span><span class="sc10">.</span><span class="sc11">exists</span><span class="sc10">())</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">docSnap</span><span class="sc10">.</span><span class="sc11">data</span><span class="sc10">();</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">[</span><span class="sc11">field</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">||</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">};</span><span class="sc0">
+
+</span><span class="sc2">// Read Data Always (Specify the field)
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">readAlways</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">path</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">field</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">callback</span><span class="sc10">?:</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">value</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">any</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc5">void</span><span class="sc10">):</span><span class="sc0"> </span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc5">void</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">docRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">doc</span><span class="sc10">(</span><span class="sc11">firestore_db</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">unsubscribe</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">onSnapshot</span><span class="sc10">(</span><span class="sc11">docRef</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">docSnap</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
     </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">docSnap</span><span class="sc10">.</span><span class="sc11">exists</span><span class="sc10">())</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
       </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">docSnap</span><span class="sc10">.</span><span class="sc11">data</span><span class="sc10">();</span><span class="sc0">
-      </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc6">"Document data:"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">;</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc6">"No such document!"</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">;</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0">
-  </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">e</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc6">"Error getting document:"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">e</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">;</span><span class="sc0">
-  </span><span class="sc10">}</span><span class="sc0">
-</span><span class="sc10">}</span><span class="sc0">
-
-</span><span class="sc2">// Read (Real Time) and return data
-</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">useRealTimeData</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">colId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">docId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">data</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setData</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">&lt;</span><span class="sc11">Data</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">&gt;(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">error</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setError</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">&lt;</span><span class="sc11">string</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">&gt;(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
-
-  </span><span class="sc11">useEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">docRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">doc</span><span class="sc10">(</span><span class="sc11">firestore</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">colId</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">docId</span><span class="sc10">);</span><span class="sc0">
-    
-    </span><span class="sc2">// Set up real-time listener
-</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">unsubscribe</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">onSnapshot</span><span class="sc10">(</span><span class="sc11">docRef</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">docSnap</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">docSnap</span><span class="sc10">.</span><span class="sc11">exists</span><span class="sc10">())</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc11">setData</span><span class="sc10">(</span><span class="sc11">docSnap</span><span class="sc10">.</span><span class="sc11">data</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc11">as</span><span class="sc0"> </span><span class="sc11">Data</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc11">setData</span><span class="sc10">(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">callback</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">callback</span><span class="sc10">(</span><span class="sc11">data</span><span class="sc10">[</span><span class="sc11">field</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">||</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
       </span><span class="sc10">}</span><span class="sc0">
-    </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc6">"Error listening to document:"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc11">setError</span><span class="sc10">(</span><span class="sc6">"Error listening to document."</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc10">});</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">callback</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">callback</span><span class="sc10">(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc6">"Error listening to document: "</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">callback</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">callback</span><span class="sc10">(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">});</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">unsubscribe</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">};</span><span class="sc0">
 
-    </span><span class="sc2">// Clean up the listener on component unmount
-</span><span class="sc0">    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">unsubscribe</span><span class="sc10">();</span><span class="sc0">
-  </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">colId</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">docId</span><span class="sc10">]);</span><span class="sc0">
-
-  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc0"> </span><span class="sc10">};</span><span class="sc0">
-</span><span class="sc10">}</span><span class="sc0">
-
-</span><span class="sc2">// Delete a document
-</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">deleteData</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">colId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">docId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">):</span><span class="sc0"> </span><span class="sc11">Promise</span><span class="sc10">&lt;</span><span class="sc5">void</span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">docRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">doc</span><span class="sc10">(</span><span class="sc11">firestore</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">colId</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">docId</span><span class="sc10">);</span><span class="sc0">
+</span><span class="sc2">// Delete Data
+</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">deleteData</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">path</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">):</span><span class="sc0"> </span><span class="sc11">Promise</span><span class="sc10">&lt;</span><span class="sc5">void</span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
   </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">docRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">doc</span><span class="sc10">(</span><span class="sc11">firestore_db</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">);</span><span class="sc0">
     </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">deleteDoc</span><span class="sc10">(</span><span class="sc11">docRef</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc6">"Document deleted successfully!"</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">e</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc6">"Error deleting document:"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">e</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc20">`Document at ${path} deleted successfully.`</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc6">"Error deleting document: "</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc5">throw</span><span class="sc0"> </span><span class="sc5">new</span><span class="sc0"> </span><span class="sc11">Error</span><span class="sc10">(</span><span class="sc7">'Failed to delete document.'</span><span class="sc10">);</span><span class="sc0">
   </span><span class="sc10">}</span><span class="sc0">
-</span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc10">};</span><span class="sc0">
 
+</span><span class="sc2">// Usages:
 </span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc2">// Use real-time data hook
-</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">realTimeData</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useRealTimeData</span><span class="sc10">(</span><span class="sc6">"SampleCollection"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"SampleDocumentID"</span><span class="sc10">);</span><span class="sc0">
-
+  </span><span class="sc2">// Create Data / Update
+</span><span class="sc0">  </span><span class="sc11">useEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">writeData</span><span class="sc10">(</span><span class="sc6">"users/user1"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">name</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"MyName"</span><span class="sc0"> </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc5">false</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">[]);</span><span class="sc0">
+  </span><span class="sc2">//---------------------------
+</span><span class="sc0">
+  </span><span class="sc2">// Read Data (On Request only)
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">dataOnReq</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setDataOnReq</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">&lt;</span><span class="sc11">string</span><span class="sc10">&gt;();</span><span class="sc0">
   </span><span class="sc11">useEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
     </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">fetchData</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc2">// Example call to writeData
-</span><span class="sc0">      </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">writeData</span><span class="sc10">(</span><span class="sc0">
-        </span><span class="sc6">"SampleCollection"</span><span class="sc10">,</span><span class="sc0"> 
-        </span><span class="sc6">"SampleDocumentID"</span><span class="sc10">,</span><span class="sc0"> 
-        </span><span class="sc10">{</span><span class="sc0"> 
-          </span><span class="sc11">email</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"sample@gmail.com"</span><span class="sc10">,</span><span class="sc0">
-        </span><span class="sc10">},</span><span class="sc0"> 
-        </span><span class="sc5">false</span><span class="sc0">
-      </span><span class="sc10">);</span><span class="sc0">
-
-      </span><span class="sc2">// Example call to readDataOnRequest and handle alert
-</span><span class="sc0">      </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">readDataOnRequest</span><span class="sc10">(</span><span class="sc6">"SampleCollection"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"SampleDocumentID"</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">data</span><span class="sc0"> </span><span class="sc10">&amp;&amp;</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">.</span><span class="sc11">email</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc20">`Email on request: ${data.email}`</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc6">"Email not found."</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">userName</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">readOnce</span><span class="sc10">(</span><span class="sc6">"users/user1"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"name"</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">setDataOnReq</span><span class="sc10">(</span><span class="sc11">userName</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">setDataOnReq</span><span class="sc10">(</span><span class="sc7">'Failed to fetch name.'</span><span class="sc10">);</span><span class="sc0">
       </span><span class="sc10">}</span><span class="sc0">
     </span><span class="sc10">};</span><span class="sc0">
-
     </span><span class="sc11">fetchData</span><span class="sc10">();</span><span class="sc0">
-
-    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">removeData</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">deleteData</span><span class="sc10">(</span><span class="sc6">"SampleCollection"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"SampleDocumentID"</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0">
-    </span><span class="sc11">removeData</span><span class="sc10">();</span><span class="sc0">
   </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">[]);</span><span class="sc0">
-
-  </span><span class="sc11">useEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">realTimeData</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc20">`Real-time email: ${realTimeData.email}`</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc20">`Real-time data error: ${error}`</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0">
-  </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">realTimeData</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">]);</span><span class="sc0">
-
-  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
-    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
-      </span><span class="sc10">{</span><span class="sc1">/* Your component JSX */</span><span class="sc10">}</span><span class="sc0">
-    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
-  </span><span class="sc10">);</span><span class="sc0">
-</span><span class="sc10">}</span><span class="sc0">
-</span></div>
-
-<hr>
-<span class="t2"><b>Realtime Database CRUD</b>:</span>
-<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">database</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'./Firebase'</span><span class="sc0">
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">set</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">onValue</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">update</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">remove</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/database'</span><span class="sc0">
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">useEffect</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc10">;</span><span class="sc0">
-
-</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">name</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setName</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">(</span><span class="sc6">""</span><span class="sc10">);</span><span class="sc0">
-
-  </span><span class="sc11">useEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc2">// Set
-</span><span class="sc0">    </span><span class="sc11">set</span><span class="sc10">(</span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">database</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"users"</span><span class="sc10">),</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc11">username</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"Sample UsernamefasfSAFa"</span><span class="sc10">,</span><span class="sc0">
-      </span><span class="sc11">password</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">"Pfaksfjkdfs"</span><span class="sc10">,</span><span class="sc0">
-    </span><span class="sc10">});</span><span class="sc0">
-
-    </span><span class="sc2">// Read
-</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">readUsernameRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">database</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"users/username"</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">unsubscribe</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">onValue</span><span class="sc10">(</span><span class="sc11">readUsernameRef</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">snapshot</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">snapshot</span><span class="sc10">.</span><span class="sc11">val</span><span class="sc10">();</span><span class="sc0">
-      </span><span class="sc11">setName</span><span class="sc10">(</span><span class="sc11">data</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc10">});</span><span class="sc0">
-
-    </span><span class="sc2">// Update
-</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">updates</span><span class="sc10">:</span><span class="sc11">Record</span><span class="sc10">&lt;</span><span class="sc11">string</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">any</span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{};</span><span class="sc0">
-    </span><span class="sc11">updates</span><span class="sc10">[</span><span class="sc6">"users/email"</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc6">"New Email"</span><span class="sc10">;</span><span class="sc0">
-    </span><span class="sc11">update</span><span class="sc10">(</span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">database</span><span class="sc10">),</span><span class="sc11">updates</span><span class="sc10">);</span><span class="sc0">
-
-    </span><span class="sc2">// Delete
-</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">deleteRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">database</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"users/password"</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc11">remove</span><span class="sc10">(</span><span class="sc11">deleteRef</span><span class="sc10">);</span><span class="sc0">
-
-    </span><span class="sc2">// Clean up the listener on component unmount
-</span><span class="sc0">    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">unsubscribe</span><span class="sc10">()};</span><span class="sc0">
-  </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">[]);</span><span class="sc0"> </span><span class="sc2">// Empty dependency array means this useEffect runs once after initial render
+  </span><span class="sc2">//---------------------------
 </span><span class="sc0">
-  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
-    </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
-      </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">Hello</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">name</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
-    </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
-  </span><span class="sc10">)</span><span class="sc0">
-</span><span class="sc10">}</span><span class="sc0">
-</span></div>
-
-<hr>
-<span class="t2"><b>File Storage CRUD</b>:</span>
-<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">uploadBytes</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">getDownloadURL</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">deleteObject</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/storage'</span><span class="sc10">;</span><span class="sc0">
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">storage</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'./Firebase'</span><span class="sc10">;</span><span class="sc0">
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'react'</span><span class="sc10">;</span><span class="sc0">
-
-</span><span class="sc2">// Function to upload a file to Firebase Storage
-</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">uploadFile</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">file</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">fileRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">storage</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">snapshot</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">uploadBytes</span><span class="sc10">(</span><span class="sc11">fileRef</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">file</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc7">'Upload successful!'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">snapshot</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">snapshot</span><span class="sc10">;</span><span class="sc0">
-  </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc7">'Upload failed:'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc5">throw</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc2">// Read Data (Always listening to state change)
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">dataListening</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setDataListening</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">&lt;</span><span class="sc11">string</span><span class="sc10">&gt;();</span><span class="sc0">
+  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">userID</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc6">"user1"</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc11">useEffect</span><span class="sc10">(()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc2">// Create a real-time listener
+</span><span class="sc0">    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">unsubscribe</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">readAlways</span><span class="sc10">(</span><span class="sc20">`users/${userID}`</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc7">'name'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">newData</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">newData</span><span class="sc0"> </span><span class="sc10">===</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">setDataListening</span><span class="sc10">(</span><span class="sc7">'Failed to fetch name.'</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">setDataListening</span><span class="sc10">(</span><span class="sc11">newData</span><span class="sc10">);</span><span class="sc0">
+      </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc10">});</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">unsubscribe</span><span class="sc10">();</span><span class="sc0">
+    </span><span class="sc10">};</span><span class="sc0">
+  </span><span class="sc10">},</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">userID</span><span class="sc10">]);</span><span class="sc0">
+  </span><span class="sc2">//---------------------------
+</span><span class="sc0">
+  </span><span class="sc2">// Delete Data
+</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleDeleteData</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">deleteData</span><span class="sc10">(</span><span class="sc20">`users/${userID}`</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc6">"Data deletion failed: "</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
   </span><span class="sc10">}</span><span class="sc0">
-</span><span class="sc10">};</span><span class="sc0">
-
-</span><span class="sc2">// Function to get the download URL of a file
-</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">getFileURL</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">path</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">fileRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">storage</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">getDownloadURL</span><span class="sc10">(</span><span class="sc11">fileRef</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc7">'File URL:'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc10">;</span><span class="sc0">
-  </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc7">'Error getting file URL:'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc5">throw</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">;</span><span class="sc0">
-  </span><span class="sc10">}</span><span class="sc0">
-</span><span class="sc10">};</span><span class="sc0">
-
-</span><span class="sc2">// Function to delete a file from Firebase Storage
-</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">deleteFile</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">path</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">fileRef</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">ref</span><span class="sc10">(</span><span class="sc11">storage</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">path</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">deleteObject</span><span class="sc10">(</span><span class="sc11">fileRef</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">log</span><span class="sc10">(</span><span class="sc7">'File deleted successfully'</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc11">console</span><span class="sc10">.</span><span class="sc11">error</span><span class="sc10">(</span><span class="sc7">'Error deleting file:'</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc5">throw</span><span class="sc0"> </span><span class="sc11">error</span><span class="sc10">;</span><span class="sc0">
-  </span><span class="sc10">}</span><span class="sc0">
-</span><span class="sc10">};</span><span class="sc0">
-
-</span><span class="sc5">function</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">file</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setFile</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">&lt;</span><span class="sc11">File</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">&gt;(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">filePath</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setFilePath</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">&lt;</span><span class="sc11">string</span><span class="sc10">&gt;(</span><span class="sc7">''</span><span class="sc10">);</span><span class="sc0">
-  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc11">fileURL</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">setFileURL</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">useState</span><span class="sc10">&lt;</span><span class="sc11">string</span><span class="sc0"> </span><span class="sc10">|</span><span class="sc0"> </span><span class="sc5">null</span><span class="sc10">&gt;(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0">
-
-  </span><span class="sc2">// Handle file input change
-</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleFileChange</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">React</span><span class="sc10">.</span><span class="sc11">ChangeEvent</span><span class="sc10">&lt;</span><span class="sc11">HTMLInputElement</span><span class="sc10">&gt;)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">files</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc11">setFile</span><span class="sc10">(</span><span class="sc11">event</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">files</span><span class="sc10">[</span><span class="sc4">0</span><span class="sc10">]);</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0">
-  </span><span class="sc10">};</span><span class="sc0">
-
-  </span><span class="sc2">// Handle file upload
-</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleUpload</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">file</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">uploadFile</span><span class="sc10">(</span><span class="sc11">file</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc20">`uploads/${file.name}`</span><span class="sc10">);</span><span class="sc0">
-        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'File uploaded successfully!'</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'Error uploading file.'</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc10">}</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'No file selected.'</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0">
-  </span><span class="sc10">};</span><span class="sc0">
-
-  </span><span class="sc2">// Handle getting file URL
-</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleGetURL</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">getFileURL</span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">);</span><span class="sc0">
-        </span><span class="sc11">setFileURL</span><span class="sc10">(</span><span class="sc11">url</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'Error getting file URL.'</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc10">}</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'No file path specified.'</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0">
-  </span><span class="sc10">};</span><span class="sc0">
-
-  </span><span class="sc2">// Handle file download
-</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleDownload</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">getFileURL</span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">);</span><span class="sc0">
-
-        </span><span class="sc2">// Create a temporary link element
-</span><span class="sc0">        </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">link</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">document</span><span class="sc10">.</span><span class="sc11">createElement</span><span class="sc10">(</span><span class="sc7">'a'</span><span class="sc10">);</span><span class="sc0">
-        </span><span class="sc11">link</span><span class="sc10">.</span><span class="sc11">href</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">url</span><span class="sc10">;</span><span class="sc0">
-        </span><span class="sc11">link</span><span class="sc10">.</span><span class="sc11">download</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc7">''</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc2">// Optional: Set a filename here if desired
-</span><span class="sc0">        </span><span class="sc11">document</span><span class="sc10">.</span><span class="sc11">body</span><span class="sc10">.</span><span class="sc11">appendChild</span><span class="sc10">(</span><span class="sc11">link</span><span class="sc10">);</span><span class="sc0">
-        </span><span class="sc11">link</span><span class="sc10">.</span><span class="sc11">click</span><span class="sc10">();</span><span class="sc0">
-        </span><span class="sc11">document</span><span class="sc10">.</span><span class="sc11">body</span><span class="sc10">.</span><span class="sc11">removeChild</span><span class="sc10">(</span><span class="sc11">link</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'Error downloading file.'</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc10">}</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'No file path specified.'</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0">
-  </span><span class="sc10">};</span><span class="sc0">
-
-  </span><span class="sc2">// Handle file deletion
-</span><span class="sc0">  </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">handleDelete</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">async</span><span class="sc0"> </span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc5">try</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc5">await</span><span class="sc0"> </span><span class="sc11">deleteFile</span><span class="sc10">(</span><span class="sc11">filePath</span><span class="sc10">);</span><span class="sc0">
-        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'File deleted successfully!'</span><span class="sc10">);</span><span class="sc0">
-        </span><span class="sc11">setFileURL</span><span class="sc10">(</span><span class="sc5">null</span><span class="sc10">);</span><span class="sc0"> </span><span class="sc2">// Clear the file URL if deleted
-</span><span class="sc0">      </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">catch</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">error</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-        </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'Error deleting file.'</span><span class="sc10">);</span><span class="sc0">
-      </span><span class="sc10">}</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-      </span><span class="sc11">alert</span><span class="sc10">(</span><span class="sc7">'No file path specified.'</span><span class="sc10">);</span><span class="sc0">
-    </span><span class="sc10">}</span><span class="sc0">
-  </span><span class="sc10">};</span><span class="sc0">
-
+  </span><span class="sc2">//---------------------------
+</span><span class="sc0">
   </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
     </span><span class="sc10">&lt;&gt;</span><span class="sc0">
-      </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
-        </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0"> </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"file"</span><span class="sc0"> </span><span class="sc11">onChange</span><span class="sc10">={</span><span class="sc11">handleFileChange</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
-        </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleUpload</span><span class="sc10">}&gt;</span><span class="sc11">Upload</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
-      </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
-      </span><span class="sc10">&lt;</span><span class="sc11">hr</span><span class="sc0"> </span><span class="sc10">/&gt;</span><span class="sc0">
-      </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
-        </span><span class="sc10">&lt;</span><span class="sc11">input</span><span class="sc0">
-          </span><span class="sc11">type</span><span class="sc10">=</span><span class="sc6">"text"</span><span class="sc0">
-          </span><span class="sc11">value</span><span class="sc10">={</span><span class="sc11">filePath</span><span class="sc10">}</span><span class="sc0">
-          </span><span class="sc11">onChange</span><span class="sc10">={(</span><span class="sc11">e</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">=&gt;</span><span class="sc0"> </span><span class="sc11">setFilePath</span><span class="sc10">(</span><span class="sc11">e</span><span class="sc10">.</span><span class="sc11">target</span><span class="sc10">.</span><span class="sc11">value</span><span class="sc10">)}</span><span class="sc0">
-          </span><span class="sc11">placeholder</span><span class="sc10">=</span><span class="sc6">"Enter file path"</span><span class="sc0">
-        </span><span class="sc10">/&gt;</span><span class="sc0">
-        </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleGetURL</span><span class="sc10">}&gt;</span><span class="sc11">Get</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc0"> </span><span class="sc11">URL</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
-        </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleDownload</span><span class="sc10">}&gt;</span><span class="sc11">Download</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
-        </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleDelete</span><span class="sc10">}&gt;</span><span class="sc11">Delete</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
-        </span><span class="sc10">{</span><span class="sc11">fileURL</span><span class="sc0"> </span><span class="sc10">&amp;&amp;</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
-          </span><span class="sc10">&lt;</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
-            </span><span class="sc10">&lt;</span><span class="sc11">a</span><span class="sc0"> </span><span class="sc11">href</span><span class="sc10">={</span><span class="sc11">fileURL</span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">download</span><span class="sc10">&gt;</span><span class="sc0">
-              </span><span class="sc11">Download</span><span class="sc0"> </span><span class="sc11">File</span><span class="sc0">
-            </span><span class="sc10">&lt;/</span><span class="sc11">a</span><span class="sc10">&gt;</span><span class="sc0">
-          </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
-        </span><span class="sc10">)}</span><span class="sc0">
-      </span><span class="sc10">&lt;/</span><span class="sc11">div</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">Data</span><span class="sc0"> </span><span class="sc11">on</span><span class="sc0"> </span><span class="sc11">Request</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">dataOnReq</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc11">Data</span><span class="sc0"> </span><span class="sc5">in</span><span class="sc0"> </span><span class="sc11">Realtime</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc11">dataListening</span><span class="sc10">}&lt;/</span><span class="sc11">h1</span><span class="sc10">&gt;</span><span class="sc0">
+      </span><span class="sc10">&lt;</span><span class="sc11">button</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">={</span><span class="sc11">handleDeleteData</span><span class="sc10">}&gt;</span><span class="sc11">Delete</span><span class="sc0"> </span><span class="sc11">Data</span><span class="sc10">&lt;/</span><span class="sc11">button</span><span class="sc10">&gt;</span><span class="sc0">
     </span><span class="sc10">&lt;/&gt;</span><span class="sc0">
   </span><span class="sc10">);</span><span class="sc0">
-</span><span class="sc10">}</span><span class="sc0">
-
-</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">default</span><span class="sc0"> </span><span class="sc11">App</span><span class="sc10">;</span><span class="sc0">
-</span></div>
-
-<hr>
-<span class="t2"><b>Firebase Configuration</b>:</span>
-<div class="fit" style="float: left; white-space: pre; line-height: 1; background: #000000; "><span class="sc2">// Realtime Database Configuration
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/app'</span><span class="sc10">;</span><span class="sc0">
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">getDatabase</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/database'</span><span class="sc10">;</span><span class="sc0">
-
-</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">firebaseConfig</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc11">apiKey</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">authDomain</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">projectId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">storageBucket</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">messagingSenderId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">appId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">measurementId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc0">
-</span><span class="sc10">};</span><span class="sc0">
-
-</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">app</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc10">(</span><span class="sc11">firebaseConfig</span><span class="sc10">);</span><span class="sc0">
-</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">database</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">getDatabase</span><span class="sc10">(</span><span class="sc11">app</span><span class="sc10">);</span><span class="sc0">
-
-
-</span><span class="sc2">//---------------------------------------------------------------
-</span><span class="sc0">
-</span><span class="sc2">// Firestore Configuration
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/app'</span><span class="sc10">;</span><span class="sc0">
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">getFirestore</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/firestore'</span><span class="sc10">;</span><span class="sc0">
-
-</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">firebaseConfig</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc11">apiKey</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">authDomain</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">projectId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">storageBucket</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">messagingSenderId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">appId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">measurementId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc0">
-</span><span class="sc10">};</span><span class="sc0">
-
-</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">app</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc10">(</span><span class="sc11">firebaseConfig</span><span class="sc10">);</span><span class="sc0">
-</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">firestore</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">getFirestore</span><span class="sc10">(</span><span class="sc11">app</span><span class="sc10">);</span><span class="sc0">
-
-</span><span class="sc2">//---------------------------------------------------------------
-</span><span class="sc0">
-</span><span class="sc2">// Storage Configuration
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/app'</span><span class="sc10">;</span><span class="sc0">
-</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0"> </span><span class="sc11">getStorage</span><span class="sc0"> </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc11">from</span><span class="sc0"> </span><span class="sc7">'firebase/storage'</span><span class="sc10">;</span><span class="sc0">
-
-</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">firebaseConfig</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
-  </span><span class="sc11">apiKey</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">authDomain</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">projectId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">storageBucket</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">messagingSenderId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">appId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc10">,</span><span class="sc0">
-  </span><span class="sc11">measurementId</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc6">""</span><span class="sc0">
-</span><span class="sc10">};</span><span class="sc0">
-
-</span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">app</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">initializeApp</span><span class="sc10">(</span><span class="sc11">firebaseConfig</span><span class="sc10">);</span><span class="sc0">
-</span><span class="sc5">export</span><span class="sc0"> </span><span class="sc5">const</span><span class="sc0"> </span><span class="sc11">storage</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">getStorage</span><span class="sc10">(</span><span class="sc11">app</span><span class="sc10">);</span></div>
-
+</span><span class="sc10">}</span></div>
 </body>
 </html>
 
